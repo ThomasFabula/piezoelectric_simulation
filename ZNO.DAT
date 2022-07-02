@@ -1,0 +1,80 @@
+/com  Materialdaten: Zinkoxid - ZnO
+/com  aus Landolt-Boernstein, LB III/17, Kap. 3.5, S.35ff
+/com
+/com density (g/cm3), T=298 K      
+dich=5.67526
+/com  melting point: T ca. 2300 K
+/com  thermal expansion coefficients
+/com  (interferometric and capacitance method)
+/com  alpha parallel c
+/com  alpha (1/K)  temp (K)
+-0.18e-7     9
+-0.59e-7    13
+-1.20e-7    17
+-2.50e-7    22.5
+-4.80e-7    30
+-7.20e-7    40
+-8.85e-7    60
+-8.65e-7    80
+-6.20e-7   100
+-1.60e-7   120
+5.00e-7    150
+15.1e-7    200
+22.5e-7    250
+29.2e-7    300
+38.2e-7    400
+43.8e-7    500
+47.0e-7    600
+49.0e-7    700
+49.8e-7    800
+/com  alpha perpendicular c
+/com  alpha (1/K)  temp (K)
+-0.09e-7     9
+-0.26e-7    13
+-0.60e-7    17
+-1.45e-7    22.5
+-2.70e-7    30
+-4.10e-7    40
+-5.15e-7    60
+-3.80e-7    80
+0.40e-7    100
+6.40e-7    120
+16.9e-7    150
+28.8e-7    200
+39.0e-7    250
+47.5e-7    300
+60.7e-7    400
+71.5e-7    500
+78.5e-7    600
+81.3e-7    700
+83.0e-7    800
+/com  thermal conductivity kappa k
+/com  (steady-state longitudinal heat flow)
+/com  wobei: k(average) = 1/3 (2*k11 + k33)
+/com  k(average) (+100 W/Km)  temp (K)
+5.30      30
+4.50      40
+3.90      50
+3.10      65  
+2.60      80
+2.10     100
+1.34     150
+0.95     200
+0.72     250
+0.54     300
+/com  elastic moduli cij (10e12 dyn/cm2), T=298 K
+/com
+/com  elastic compliances sij (10e-12 cm2/dyn), T=298 K
+/com
+/com  temp.coeff. of elastic constants Tsij (10e-5 1/K)        
+/com
+/com  piezoelectrical strain/stress coeff., RT
+/com  d33, e15, e31, e33
+/com
+/com  electromechanical coupling factor, RT
+/com  k15, k13, k33, kt
+/com 
+/com  pyroelectric constants p (10e-10 As/cm2 K)
+/com  pe parallel c     T(K)
+/com  px parallel c     T(K)
+
