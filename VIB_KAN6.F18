@@ -1,0 +1,120 @@
+/COM 
+/COM  Datei : VIB_KAN6.F18
+/COM
+/COM  Piezokeramikroehrchen
+/COM  VIBRIT 420
+/COM
+
+/prep7
+/title, Piezoroerchen VIBRIT420
+kan,6              * Harmonic Analysis
+kbc,1              * key bound. cond.: stepped loads
+harfrq,0,1e6       * 0 Hz < f < 1 MHz
+iter,40,,1         * 40 Iterationen
+dmprat,0.01        * Gte = 100
+
+/COM
+/COM   Parameter
+/COM
+rad1=.45e-3        * innerer Radius: .45 mm
+rad2=1.075e-3      * aeusserer Rad.: 1.075 mm
+hoeh=6.45e-3       * halbe Hhe:     6.45 mm
+phi=90             * Winkel: 90 Grad
+
+/COM
+/COM   Materialdaten
+/COM
+et,1,5
+nlsize,300
+dens,3,7594.3      * Dichte: kg/m3
+/COM
+/COM     CE-Matrix: Piezoelektrische Matrix
+/COM
+nl,3,271,109e9,61.8e9,54.8e9
+nl,3,277,109e9,54.8e9
+nl,3,282,88.7e9
+nl,3,286,23.7e9
+nl,3,289,22.2e9
+nl,3,291,22.2e9
+/COM
+/COM     E-Matrix (*1e9)
+/COM
+nl,3,145,-7.9e9,-7.9e9,13.9e9
+nl,3,143,11.7e9
+nl,3,138,11.7e9
+/COM
+/COM     EPS-Matrix (*1e18)
+/COM     EPS-Matrix: Dielektrizitaetsmatrix (Re)
+/COM
+nl,3,103,8.1e9
+nl,3,157,8.1e9
+nl,3,211,6.7e9
+/COM
+/COM     EPS-Matrix: Dielektrizitaetsmatrix (Im)
+/COM
+nl,3,262,-227e6,-227e6,-227e6
+
+/COM
+/COM     Geometrie erstellen
+/COM
+csys,1
+k,1,rad1
+k,2,rad2
+k,3,rad2,phi
+k,4,rad1,phi
+l,1,2
+l,2,3
+l,3,4
+l,4,1
+kgen,2,1,4,1,,,hoeh
+l,5,6
+l,6,7
+l,7,8
+l,8,5
+l,1,5
+l,2,6
+l,3,7
+l,4,8
+type,1
+mat,3
+elsi,1e-3
+v,1,2,3,4,5,6,7,8
+vmesh,1
+
+/COM
+/COM    Freiheitsgrade
+/COM
+nall
+m,all,ux
+m,all,uy
+m,all,uz
+
+/COM
+/COM    Symmetrie-Randbedingungen
+/COM
+symbc,1,2,0     * Symmetrie: phi < 0
+symbc,1,2,90    * Symmetrie: phi > 90
+symbc,1,3,0     * Symmetrie: z < 0
+
+/COM
+/COM    Elektroden definieren
+/COM
+cpsize,100
+nsel,x,rad1        * Innere Elektrode
+cp,1,volt,all      * SET1 : x = rad1
+nsel,x,rad2        * Aeussere Elektrode
+cp,2,volt,all      * SET2 : x = rad2
+nall
+m,1,volt
+m,2,volt
+
+/COM
+/COM   Spannungen anlegen
+/COM
+nt,1,volt,0
+nt,2,volt,1.0e-9   * 1 Volt
+wsort,z            * Wavefront optimieren
+cnvr,,,,,,,-1      * Vermeide Abbruch bei neg. CE-Matrix
+/view,1,1,1,1
+albc,1             * show all boundary cond.
+
