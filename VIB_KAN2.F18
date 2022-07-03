@@ -1,0 +1,124 @@
+
+/COM
+/COM  Datei : VIB_KAN2.F18
+/COM
+/COM  Piezokeramikroehrchen
+/COM  VIBRIT 420
+/COM
+
+/prep7
+/title, Piezoroerchen VIBRIT420
+kan,2              * Modalanalyse HBI
+kay,2,20           * Expandiere 20 Modes
+kay,3,20           * Drucke nur 20 Modes
+
+/COM
+/COM   Parameter
+/COM
+elgr=0.2e-3        * Elementgroesse
+rad1=.45e-3        * innerer Radius: .45 mm
+rad2=1.075e-3      * aeusserer Rad.: 1.075 mm
+hoeh=6.45e-3       * halbe Hhe:     6.45 mm
+phi=90             * Winkel: 90 Grad
+
+/COM
+/COM   Materialdaten
+/COM
+et,1,5             * Piezoelement
+nlsize,300
+dens,3,7594.3      * Dichte: kg/m3
+/COM
+/COM     CE-Matrix: Elastizitaets-Matrix
+/COM
+nl,3,271,109e9,61.8e9,54.8e9
+nl,3,277,109e9,54.8e9
+nl,3,282,88.7e9
+nl,3,286,23.7e9
+nl,3,289,22.2e9
+nl,3,291,22.2e9
+/COM
+/COM     Piezoelektrische E-Matrix (*1e9)
+/COM
+nl,3,145,-7.9e9,-7.9e9,13.9e9
+nl,3,143,11.7e9
+nl,3,138,11.7e9
+/COM
+/COM     EPS-Matrix (*1e18)
+/COM     EPS-Matrix: Dielektrizitaetsmatrix (Re)
+nl,3,103,8.1e9
+nl,3,157,8.1e9
+nl,3,211,6.7e9
+/COM
+/COM     EPS-Matrix: Dielektrizitaetsmatrix (Im)
+/COM
+nl,3,262,-227e6,-227e6,-227e6
+
+/COM
+/COM     Geometrie erstellen
+/COM
+csys,1
+k,1,rad1
+k,2,rad2
+k,3,rad2,phi
+k,4,rad1,phi
+l,1,2
+l,2,3
+l,3,4
+l,4,1
+kgen,2,1,4,1,,,hoeh
+l,5,6
+l,6,7
+l,7,8
+l,8,5
+l,1,5
+l,2,6
+l,3,7
+l,4,8
+type,1
+mat,3
+elsi,elgr
+v,1,2,3,4,5,6,7,8
+vmesh,1
+
+/COM
+/COM       Freiheitsgrade
+/COM
+nall
+nusel,y,0
+nusel,y,90
+m,all,uy
+nall
+nusel,z,0
+m,all,uz
+nall
+m,all,ux
+
+/COM
+/COM       Symmetrie-Randbedingungen
+/COM
+symbc,1,2,0
+symbc,1,2,90
+symbc,1,3,0
+wsort,z            * Wavefront optimieren
+
+/COM
+/COM       Resonanzfrequenz-Randbedingungen
+/COM       (Kurzschluss: E=0)
+nsel,x,rad1
+nt,all,volt,0      * innere Elektrode: Masse
+nsel,x,rad2
+nt,all,volt,0      * aeussere Elektrode: Masse
+nall
+lwrite             * 1.Lastschritt
+
+/COM
+/COM       Antiresonanz-Bedingung
+/COM       (offene Elektroden: D=0)
+nsel,x,rad2
+ntdel,all,volt     * Spannungen lschen
+nall
+lwrite             * 2. Lastschritt
+cnvr,,,,,,,-1      * Vermeide Abbruch durch neg. CE-Matrix
+/view,1,1,1,1
+albc,1             * show all bound. cond
+
