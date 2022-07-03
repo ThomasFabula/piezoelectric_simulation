@@ -1,0 +1,130 @@
+/COM
+/COM    Datei: Q2-THERM.F18
+/COM
+
+/PREP7
+/TITLE, Quarz-Doppelstimmgabel, thermisch belastet
+
+/COM
+/COM     Materialeigenschaften (Z-Schnitt)
+/COM
+elgr=.2    ! Elementgroesse
+TARB=298   ! Arbeitstemp. in Kelvin (=25 Celsius)
+
+/COM
+/COM   temperaturabh. Materialdaten nach BECHMANN (1985)
+/COM
+EXC0=0.8674E5
+EXC1=-48.5e-6*EXC0
+EXC2=-107e-9*EXC0
+EXC3=-70e-12*EXC0
+EXC4=0
+ALC0=1.31335e-5
+ALC1=2.50912e-8
+ALC2=-1.38655e-11
+ALC3=1.39404e-13
+ALC4=-5.07305e-16
+
+/COM
+/COM   gefittete Datenwerte
+/COM
+A1=10.3e-6
+A2=11.8e-6
+A3=13.1e-6
+A4=13.7e-6
+A5=15.6e-6
+A6=17.9e-6
+EX1=87073.949
+EX2=86927.90053
+EX3=86740.00
+EX4=86628.93214
+EX5=86220.4274
+EX6=85575.9492
+
+/COM
+/COM   Eingabe von EX, ALPX ueber Datentabelle
+/COM   (-100,-50,0,25,100,200 Celsius)
+/COM
+MPTEMP,1,173,223,273,298,373,473
+MPDATA,ALPX,1,1,A1,A2,A3,A4,A5,A6
+MPDATA,EX,1,1,EX1,EX2,EX3,EX4,EX5,EX6
+MP,NUXY,1,.123
+MP,DENS,1,2.648E-9
+
+/COM
+/COM   Analyseoptionen
+/COM
+KAN,0        ! schreibt FILE03 fuer /FREQ-Analyse
+TREF,298     ! Referenztemperatur (= 25 Celsius)
+TOFFS,0      ! absolute Nullpunktstemperatur
+TUNIF,TARB   ! Arbeitstemperatur
+KTEMP,0
+
+/COM
+/com  Variablen
+/COM
+R,1,.100
+l1=1.2
+l2=2.5
+b1=.22
+wid=.2
+abst=.15
+
+/COM
+/COM     Knotenpunkte generieren
+/COM
+K,1
+K,2,l1
+K,3,l1,b1
+K,4,l1+l2,b1
+K,5,l1+l2,b1+wid
+K,6,l1,b1+wid
+K,7,l1,b1+wid+abst
+K,8,l1+l2,b1+wid+abst
+k,9,l1+l2,b1+wid+abst+wid
+k,10,l1,b1+wid+abst+wid
+k,11,l1,b1+wid+abst+wid+b1
+k,12,,b1+wid+abst+wid+b1
+
+/COM
+/COM     Linien generieren
+/COM
+L,1,2
+RP11,1,1
+L,12,1
+
+/COM
+/COM     Flaechen generieren
+/COM
+AL,ALL
+LOCAL,11,,l1+l2
+ARSYM,1,all
+NUMMRG,KPOI
+
+/COM
+/COM    Elemente generieren:
+/COM    automatische Vernetzung
+ET,1,82,,,3    ! thickness input with R
+ELSI,elgr
+AMESH,1
+
+/COM
+/com  beginne Vernetzung vom rechten Ende
+/COM
+local,12,,2*(l1+l2)
+AMESH,2
+/COM
+/COM    Randbedingungen
+/COM
+CSYS
+/COM  linke Seite ganz eingespannt
+NSEL,X
+D,ALL,ALL
+/COM   rechte Seite in Y-Richtung eingespannt
+nsel,x,2*(l1+l2)
+d,all,uy
+nall
+WSORT
+/COM    M D O F s  auswaehlen
+total,300,1
+
