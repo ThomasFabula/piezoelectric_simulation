@@ -1,0 +1,422 @@
+/COM *********************************************************
+/COM File: RESPRES.GEO 
+/COM *********************************************************
+/COM Resonant diaphragm pressure sensor in (100)-silicon
+/COM *********************************************************
+
+/PREP7            ! enter Pre-processor
+/TITLE, Resonant diaphragm pressure sensor
+
+/COM ******* material properties for Si(110)
+EMOD=1.689e5      ! Young's modulus [N/mm2]
+POIS=0.064        ! Poisson's ratio
+RHO=2.329E-9      ! material density [kg/mm3]
+DICK=.025         ! diaphragm thickness [mm]
+LANG=9.20         ! diaphragm side length [mm]
+XANZ=10           ! number of elements along diaphragm side
+ELTY=43           ! element type: SHELL43
+XINC=LANG/XANZ    ! element size [mm]
+
+/COM ******** assign material properties
+MP,EX,1,EMOD      ! assign Young's modulus
+MP,NUXY,1,POIS    ! assign Poisson's  ratio
+MP,DENS,1,RHO     ! assign material density
+R,1,DICK          ! assign diaphragm thickness
+
+/COM ******** definition of nodes 
+n,1               ! define first node at origin
+n,xanz+1,lang     ! define node at diphragm length 
+fill              ! fill nodes between first and last node
+ngen,xanz+1,xanz+1,all,,,,xinc ! generate nodes
+
+/COM ******** definition of elements
+ET,1,ELTY            ! choose element type
+e,1,2,xanz+3,xanz+2  ! define first element
+egen,xanz,1,all      ! generate one element line
+egen,xanz,xanz+1,all ! copy element line
+
+/COM ******** definition of boundary conditions
+nsel,s,loc,x            ! select nodes on y-axis
+nsel,a,loc,y            ! select nodes on x-axis
+nsel,a,loc,x,LANG       ! additional selection of nodes
+nsel,a,loc,y,LANG
+d,all,all         ! all DOFs of selected nodes are set to zero
+ALLSEL            ! reselect all nodes, elements, ... 
+WSORT             ! optimize wavefront by renumbering
+
+/COM ******** options for graphic display
+/sho,x11          ! sets device for graphic display
+/view,1,1,1,1     ! define view
+/pbc,all,1        ! plot all boundary conditions
+save              ! save model data for further RESUME
+
+read analysis files with following commands:
+	/INP,RESP-K0,ANL : for STATIC ANALYSIS     or
+	/INP,RESP-K2,ANL : for MODAL ANALYSIS      or
+	/INP,RESP-K6,ANL : for HARMONIC ANALYSIS
+
+/COM *********************************************************
+/COM File: RESP-K0.ANL
+/COM *********************************************************
+/COM analysis options for STATIC ANALYSIS (KAN=0)
+/COM geometry defined by file: RESPRES.GEO
+/COM *********************************************************
+
+/solu            ! enter Solution-Phase
+antype,static    ! STATIC ANALYSIS  with NONLINEAR options
+nlgeom,on        ! LARGE DEFLECTION SOLUTION 
+sstif,on         ! INCLUDE STRESS STIFFENING
+pstres,on        ! include prestress effects
+nsubst,5,5       ! perform 5 iterations
+ncnv,2           ! terminate analysis if solution does notconverge
+cnvtol,u         ! displacement convergence checking is used
+cnvtol,rot       ! rotation convergence checking is also used
+TOTL=50          ! define number of MDOFs for subsequent MODAL ANALYSIS
+total,TOTL,1     ! TOTAL MASTER D.O.F., NO ROTATIONAL MDOFs
+DRUK=0.005       ! define pressure value [N/mm2], 1 bar = 0.1 N/mm2
+sf,all,PRES,DRUK ! put pressure on diaphragm
+solve   	   ! Start solution  
+fini             ! leave PRE-Processor
+
+Returned to the "BEGIN-level", you will entry the postprocessing using the predefined macro "RESP-K0.MAC" by issuing RESP-K0 for evaluating the results of the STATIC ANALYSIS:
+
+/COM *********************************************************
+/COM File: RESP-K0.MAC
+/COM *********************************************************
+/COM Resonant diaphragm pressure sensor
+/COM evaluate results of STATIC ANALYSIS (KAN=0)
+/COM *********************************************************
+
+/POST1               ! enter general Post-processor
+/VIEW,1,1,1,1        ! define viewing direction
+set,list             ! list load steps
+set                  ! load results (last iteration, if converged)
+
+/COM *************** plot stresses and displacements
+pldi,1               ! plot diaphragm deflection
+top                  ! switch to diaphragm "top"
+plns,s,x             ! plot stress SX
+plns,s,y             ! plot stress SY
+ples,s,1             ! plot stress SIG1, but unaveraged
+middle               ! switch to diaphragm "middle"
+plns,s,x             ! plot membran stress which leads to 
+                     ! stress stiffening and frequency shift
+
+/COM *************** plot along path (middle of diaphragm)
+/view,1,,,1          ! redefine viewing direction
+top
+kno1=56              ! define nodes (MESH DEPENDENT)
+kno2=66              ! define nodes (MESH DEPENDENT)
+lpath,kno1,kno2      ! define a path of nodes
+pdef,stress,s,x      ! defines a path item along the defined path
+plpa,stress          ! plot path: stress SX
+pdef,displ,u,z       ! defines a path item along the defined path
+plpa,displ           ! plot path: displacements
+
+/COM *************** write data to disk files
+/outp,res-stres,dat  ! file name for STRESS DATA
+prns                 ! write all STRESS DATA
+/outp,term
+/outp,res-disp,dat   ! file name for DISPLACEMENTS
+prdi                 ! write DISPLACEMENTS
+/outp,term
+
+leave Post-processor with "fini"-command
+
+/COM *********************************************************
+/COM File: RESP-K2.ANL
+/COM *********************************************************
+/COM analysis options for MODAL ANALYSIS (KAN=2)
+/COM geometry defined by file: RESPRES.GEO
+/COM *********************************************************
+
+/outp,modal,crm
+
+antype,modal  ! MODE-FREQUENCY ANALYSIS (default: Householder)
+modopt,,5     ! EXPAND FIRST 5 MODE SHAPES
+mxpand,5      
+TOTL=50       ! number of MDOFs 
+total,TOTL,1  ! DEFINE TOTAL MASTER D.O.F., NO ROTATIONAL MDOFs
+
+Before the preprocessing phase and solution set up phase is finished you can look for some model properties, like keypoints, lines, areas, volumes (geometric model) or elements, nodes (FE-model) using available graphic commands. 
+
+solve          ! Starts the solution
+/outp
+fini
+
+Returned to the "BEGIN-level", you will entry the postprocessing using the predefined macro "RESP-K2.MAC" by issuing:  RESP-K2 for evaluating the results of the MODAL ANALYSIS:
+
+/COM *********************************************************
+/COM File: RESP-K2.MAC
+/COM *********************************************************
+/COM Resonant diaphragm pressure sensor
+/COM evaluate results of MODAL ANALYSIS (KAN=2)
+/COM *********************************************************
+
+/POST1               ! enter general Post-processor
+/VIEW,1,1,1,1        ! define the viewing direction
+set,list             ! list eigenfrequencies
+set,1,1              ! load first load step
+plnsol,u,z           ! plot first flexure mode shape
+
+
+load further load steps by issuing: set,1,n  where n is the load step number (here: 1-5) and: plnsol,u,z  plots coressponding mode shapes. Leave Post-processor with "fini"-command.
+
+
+File: MODAL.CRM
+
+ PERFORM A MODAL ANALYSIS
+  THIS WILL BE A NEW ANALYSIS
+
+ USE HOUSEHOLDER METHOD
+  EXTRACT    5 MODES
+  PRINT      0 REDUCED MODES
+  NORMALIZE THE MODE SHAPES TO THE MASS MATRIX
+
+ NUMBER OF MODES TO EXPAND=     5
+  DO NOT CALCULATE ELEMENT RESULTS
+
+ PARAMETER TOTL     =     50.00000    
+
+ TOTAL MASTER D.O.F.=    50
+ NO ROTATIONAL MASTER KEY=  1
+
+ *****  ANSYS SOLVE    COMMAND  *****
+
+ ***** ANSYS - ENGINEERING ANALYSIS SYSTEM  REVISION 5.0A    *****
+
+  Resonant diaphragm pressure sensor                                         
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D         
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ   ROTX ROTY ROTZ 
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .MODAL                
+      EXTRACTION METHOD. . . . . . . . . . . . . .REDUCED     
+   NUMBER OF MODES TO EXTRACT. . . . . . . . . . .     5
+   NUMBER OF REDUCED MODES TO PRINT. . . . . . . .     0
+   NUMBER OF MASTER DOF. . . . . . . . . . . . . .    50
+   NUMBER OF MODES TO EXPAND . . . . . . . . . . .     5
+   ELEMENT RESULTS CALCULATION . . . . . . . . . .OFF
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS. . . . . . . . . . . .ALL DATA WRITTEN
+
+            ***** CENTROID, MASS, AND MASS MOMENTS OF INERTIA *****
+
+  CALCULATIONS ASSUME ELEMENT MASS AT ELEMENT CENTROID
+
+  TOTAL MASS =   .49282E-08
+
+                           MOM. OF INERTIA         MOM. OF INERTIA
+     CENTROID               ABOUT ORIGIN           ABOUT CENTROID
+
+  XC =   4.6000          IXX =    .1387E-06      IXX =    .3441E-07
+  YC =   4.6000          IYY =    .1387E-06      IYY =    .3441E-07
+  ZC =   .00000E+00      IZZ =    .2774E-06      IZZ =    .6882E-07
+                         IXY =   -.1043E-06      IXY =    .1323E-22
+                         IYZ =    .0000E+00      IYZ =    .0000E+00
+                         IZX =    .0000E+00      IZX =    .0000E+00
+
+  *** MASS SUMMARY BY ELEMENT TYPE ***
+
+  TYPE      MASS
+     1   .492816E-08
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum= 1909.14616 at element 20.                                      
+ Minimum= 1909.14616 at element 55.                                      
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+  TYPE  NUMBER   ENAME      TOTAL CP  AVE CP
+
+     1     100  SHELL43       1.640     .016
+ Time at end of element matrix formulation CP= 2.87.                     
+ 
+ Estimated number of active DOF= 486.                                    
+ Maximum wavefront= 124.                                                 
+ 
+ Time at end of matrix triangularization CP= 4.05.                       
+ Equation solver maximum pivot= 7635.86132 at node 20 UX.                
+ Equation solver minimum pivot= 1.29617023 at node 109 ROTZ.             
+
+     ***** EIGENVALUE (NATURAL FREQUENCY) SOLUTION *****
+
+  MODE    FREQUENCY (CYCLES/TIME)
+
+    1      4202.44957    
+    2      8728.82514    
+    3      8885.92158    
+    4      12931.8617    
+    5      16428.5348    
+
+
+   *** PROBLEM STATISTICS
+  ACTUAL NO. OF ACTIVE DEGREES OF FREEDOM =    436
+  R.M.S. WAVEFRONT SIZE =   109.6
+  NUMBER OF MASTER DEGREES OF FREEDOM =    50
+
+
+ *** ANSYS BINARY FILE STATISTICS
+  BUFFER SIZE USED=  4096
+         .531 MB WRITTEN ON ELEMENT MATRIX FILE: file.emat
+         .266 MB WRITTEN ON ELEMENT SAVED DATA FILE: file.esav
+         .391 MB WRITTEN ON TRIANGULARIZED MATRIX FILE: file.tri
+         .047 MB WRITTEN ON MODAL MATRIX FILE: file.mode
+         .125 MB WRITTEN ON RESULTS FILE: file.rst
+
+/COM *********************************************************
+/COM File: RES-LIST.MAC
+/COM *********************************************************
+/COM Macro to write results of MODAL ANALYSIS into disk file
+/COM *********************************************************
+
+/post1                  ! enter POST-processor
+/com ****************** generate listing of eigenfrequencies
+/outp,res-list,dat      ! switch output to file
+*msg,info
+ Listing of FE-model parameters (File: RES-LIST.DAT): 
+
+*msg,info
+ Material properties/geometry parameters/ANSYS-options/eigenfrequencies: 
+
+*msg,info,EMOD,POIS,RHO
+ Youngs modulus (N/mm2) %G %/Poissons ratio %G %/density (kg/mm3) %G
+
+*msg,info,LANG,DICK,XINC
+ Diaphragm: %/side length %G %/thickness %G %/element size (mm) %G
+
+*msg,info,ELTY,XANZ,TOTL
+ Element type %G %/side length division %G %/MDOFs Total %G
+
+set,list              ! write load step listing
+*msg,info
+ Additional user remarks: 
+/outp,term            ! switch back to screen output
+fini                  ! leave POST-processor
+
+
+
+
+File: RES-LIST.DAT
+
+ Listing of FE-model parameters (File: RES-LIST.DAT):                    
+ Material properties/geometry                                            
+  parameters/ANSYS-options/eigenfrequencies:                             
+ Youngs modulus (N/mm2) 168900                                           
+  Poissons ratio 6.4E-02                                                 
+  density (kg/mm3) 2.329E-09.                                            
+ Diaphragm:                                                              
+  side length 9.2                                                        
+  thickness 2.5E-02                                                      
+  element size (mm) 0.92.                                                
+ Element type 43                                                         
+  side length division 10                                                
+  MDOFs Total 50.                                                        
+
+  *****  INDEX OF DATA SETS ON RESULTS FILE  *****
+
+   SET   TIME/FREQ    LOAD STEP   SUBSTEP  CUMULATIVE
+     1  4202.4             1         1         1
+     2  8728.8             1         2         2
+     3  8885.9             1         3         3
+     4  12932.             1         4         4
+     5  16429.             1         5         5
+ Additional user remarks:                                                
+
+/COM *********************************************************
+/COM File: RES-REST.MAC
+/COM *********************************************************
+/COM Resonant diaphragm pressure sensor
+/COM   make a RESTART analysis on a static solution
+/COM   and evaluate the load dependent freuqencies by using
+/COM   the modified STIFFNESS matrix of the system
+/COM *********************************************************
+
+antype,modal         ! activate prestressed modal analysis
+total,50,1           ! -> use 50 MDOFs, exclude rotational DOFs
+modopt,,3            ! -> use Householder method
+mxpand,3             ! -> expand 3 modes to full DOF set 
+pstres,on            ! -> include prestress effects
+solve                ! start RESTART analysis
+fini                 ! back to BEGIN level
+
+/POST1               ! enter general Post-processor
+set,list             ! list load steps
+set,1,1
+/view,1,1,1,1
+pldi,1
+
+/COM *************** write data to disk files
+/outp,res-rest,dat  ! file name for altered frequencies
+                    ! due to pressure load
+set,list
+/outp,term
+
+/COM *********************************************************
+/COM File: RESP-K6.ANL
+/COM *********************************************************
+/COM analysis options for HARMONIC RESPONSE ANALYSIS (KAN=6)
+/COM geometry defined by file: RESPRES.GEO
+/COM *********************************************************
+
+/COM   ************  define parameters
+kraf=1e-7            ! excitation force
+demf=1e-3            ! damping ratio
+fsta=4000            ! start frequency
+fsto=4400            ! stop frequency
+nanz=30              ! number of iterations
+
+/COM   ************  choose analysis type
+/solu                ! enter SOLUTION
+antype,harmic        ! Reduced Harmonic Response 
+hropt,reduc
+hrout,off            ! PRINT DISPLACEMENTS AS AMPLITUDE,PHASE
+dmprat,demf          ! specify constant damping ratio
+harfrq,fsta,fsto     ! define frequency range for harmonic loads
+nsubst,nanz,,1       ! define number of frequency points 
+outres,all,all
+kbc,1                ! define stepping of loads
+
+/COM   ************  define excitation force
+nsel,s,loc,x,LANG/2        ! select midnode
+nsel,r,loc,y,LANG/2
+f,all,fz,kraf        ! define force (see also D command)
+m,all,uz             ! assign MDOF
+nlist                ! list node with excitation
+total,50,1           ! let choose MDOFs automatically
+allsel               ! reselect all nodes
+solve   		! Starts the solution
+fini    		! exists SOLUTION-phase
+
+Returned to the "BEGIN-level", you will entry the postprocessing using the predefined macro "RESP-K6.MAC":
+
+
+/COM *********************************************************
+/COM File: RESP-K6.MAC
+/COM *********************************************************
+/COM Resonant diaphragm pressure sensor
+/COM evaluate results of HARMONIC ANALYSIS (KAN=6)
+/COM *********************************************************
+
+/post26              ! enter Time-History-Postprocessor
+/view                ! reset the viewing direction 
+knot=61              ! assign midside node (MESH DEPENDENT)
+file,file,rfrq       ! switch to FILE10.DAT
+nsol,2,knot,u,z      ! specify nodal postdata to be stored
+/grid,1              ! PUT GRID ON PLOTS
+/axlab,y,ampl        ! define y-axis label
+plva,2               ! plot amplitude (variable 2)
+
+plcp,1               ! define phase angle to display
+/axlab,y,phas        ! define y-axis label
+plva,2               ! plot phase angle
+
+prcp,1               ! define output form: AMPLITUDE, PHASE
+/outp,resp-k6,dat    ! switch output data to file: RESP-K6.DAT
+prva,2               ! write data
+/outp,term           ! switch back to screen output
+
+
