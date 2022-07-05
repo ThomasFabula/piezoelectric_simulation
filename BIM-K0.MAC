@@ -1,0 +1,28 @@
+/COM *********************************************************
+/COM
+/COM File: BIM-K0.MAC
+/COM
+/COM *********************************************************
+/COM Piezoelectric BIMORPH Microactuator
+/COM evaluate results of STATIC ANALYSIS (KAN=0)
+/COM *********************************************************
+
+/POST1               ! enter general Post-processor
+/VIEW,1,1,1,1        ! define viewing direction
+! /VUP,,Z            ! for horizontal display
+set                  ! load results (last iteration, if converged)
+
+/COM *************** plot stresses and displacements
+pldi,1               ! plot diaphragm deflection
+plns,volt            ! plot electric voltage distribution
+plns,s,1             ! plot stress SIG1, but unaveraged
+plns,u,z             ! plot displacements in z-direction
+
+/COM *********************************************************
+/COM to look for more items enter:
+/COM
+/COM   plns,ITEM,COMP  : where ITEM is S, U and COMP is X, Y, Z, 1
+/COM
+/COM leave Post-processor with "fini"-command
+
+/COM ***************** MACRO finished successfully ***************
