@@ -1,0 +1,80 @@
+/COM *********************************************************
+/COM
+/COM File: BIM-K2.ANL
+/COM
+/COM *********************************************************
+/COM analysis options for MODAL ANALYSIS (KAN=2)
+/COM geometry defined by file: BIMORPH.GEO
+/COM *********************************************************
+
+/COM ******** define ANSYS-options
+antype,modal  ! MODE-FREQUENCY ANALYSIS (default: Householder)
+modopt,,5     ! EXPAND FIRST 5 MODE SHAPES
+mxpand,5      ! PRINT 5 NORMALIZED MODE SHAPES
+TOTL=50       ! number of MDOFs
+total,TOTL    ! DEFINE TOTAL MASTER D.O.F. 
+
+/com ******** electrical boundary conditions
+/COM    ***** resonancy frequencies (short circuit: E=0)
+nsel,s,loc,z,dick
+d,all,volt,0      ! bottom electrode: ground
+nsel,s,loc,z,dges
+d,all,volt,0      ! top electrode: ground
+esel,s,type,,2
+nsle,s,1
+d,all,mag         ! fix MAG- and TEMP-DOF of all nodes related
+d,all,temp        ! to elements of type 2 (SOLID5)
+allsel
+fini              ! return to the "BEGIN-level"
+/solu             ! Entering solution mode
+solve             ! start solution to calculate resonancy freq.
+fini              ! return to the "BEGIN-level"
+
+/COM ******** Evaluation of results of the first MODAL analysis
+/POST1            ! Entering genral post-processor
+set,1,1           ! load results of first calculation
+
+/COM ***** generate listing of eigenfrequencies
+/outp,bimorph1,dat    ! switch output to file: BIMORPH.DAT
+*msg,info
+ Resonance-/antiresonance frequencies (File: BIMORPH.DAT):
+set,list              ! write load step listing
+/outp,term            ! switch back to screen output
+fini                  ! return to the "BEGIN-level"
+
+/COM    ***** antiresonancy frequencies (open circuit: D=0)
+/solu                 ! enter solution mode for second calculation
+nsel,s,loc,z,dges
+ddel,all,volt      ! delete voltages on top electrode
+allsel
+solve              ! start solution to calculate antiresonancy freq.
+fini               ! return to the "BEGIN-level"
+
+/COM ******** Evaluation of results of the second MODAL analysis
+/POST1            ! Entering genral post-processor
+set,1,1           ! load results of first calculation
+
+/COM ***** generate listing of eigenfrequencies
+/outp,bimorph2,dat    ! switch output to file: BIMORPH.DAT
+set,list              ! write load step listing
+ *msg,info
+ Additional user remarks:
+/outp,term            ! switch back to screen output
+
+/sys,cat bimorph*.dat > bimorph.dat
+/sys,rm bimorph1.dat bimorph2.dat
+
+/COM ***********************************************
+/COM *  This Solution starts automatically.        *
+/COM *  Two load steps were defined to calculate   *
+/COM *  the resonancy and the antiresonacy         *
+/COM *  frequencies. The results are listed        *
+/COM *  in file 'bimorph.dat'.                     *
+/COM ***********************************************
+/COM
+/COM Returned to the "BEGIN-level", you will entry the postprocessing
+/COM using the predefined macro "BIM-K2.MAC" by issuing:
+/COM
+/COM    BIM-K2 : for figuring the results of the MODAL ANALYSIS
+/COM
+/COM ******************************************************************
