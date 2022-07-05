@@ -1,0 +1,146 @@
+/COM    Quarz-Doppelstimmgabel
+/COM    (3-dim. Struktur)
+/COM    Piezoelektrisch berechnet
+/COM
+/COM    Datei: D-KAN6.F18
+/COM
+
+
+/PREP7
+/COM
+/TITLE, Quarz-DETF2, 3D-piezoelektrisch
+/COM
+/COM
+kan,6              * Frequenzganganalyse
+kbc,1              * stepped loads
+harfrq,1e4,1.2e5   * Frequenzbereich
+iter,50,,1         * Anzahl Iterationen
+dmprat,1e-4        * Guete: 10000
+/COM   Parameter
+elgr=0.25          * Elementgroesse [mm]
+elty=98            * Elementtyp: STIF5 bzw. 98
+thik=.125          * Materialdicke [mm]
+
+
+/COM
+/COM   Materialdaten
+/COM
+et,3,elty          * Piezoelement
+/com   nlsize,300
+dens,3,2.648-9     * Dichte von Quarz [kg/mm3]
+/COM
+/COM     CE-Matrix: Elastizitaetsmodul-Matrix
+/COM     T=25 Grad-C, in [N/mm2], adiabatisch
+/COM     (aus: Tichy/Gautschi)
+/COM
+nl,3,271,86.8e3,7.04e3,11.91e3,-18.04e3
+nl,3,277,86.8e3,11.91e3,18.04e3
+nl,3,282,105.75e3
+nl,3,286,58.2e3
+nl,3,289,58.2e3,-18.04e3
+nl,3,291,39.88e3
+/COM
+/COM     E-Matrix: Piezoelektrische-Modulmatrix
+/COM     T=20 Grad-C, in [C/mm2]
+/COM
+nl,3,133,.171e-6,-.171e-6,0,-.041e-6
+nl,3,143,.041e-6,-.171e-6
+/COM
+/COM     EPS-Matrix: Dielektrizitaetsmatrix (Re)
+/COM     eps0 = 8.854e-18 [C/Vmm]
+/COM
+nl,3,103,39.967e-18
+nl,3,157,39.967e-18
+nl,3,211,41.029e-18
+/COM     EPS-Matrix: Dielektrizitaetsmatrix (Im)
+
+
+/COM
+/COM     Geometrie erstellen: Z-Schnitt
+/COM
+/COM     Knotenpunkte generieren
+K,1
+K,2,1.17,.105
+K,3,1.17,.158
+K,4,1.223,.211
+K,5,3.8,.211
+K,6,3.8,.45
+K,7,1.223,.45
+K,8,1.17,.503
+K,9,1.17,.577
+K,10,1.223,.63
+K,11,3.8,.63
+K,12,3.8,.869
+K,13,1.223,.869
+K,14,1.17,.922
+K,15,1.17,.975
+K,16,0,1.08
+
+/COM
+/COM     Linien generieren
+/COM
+L,1,2
+RP15,1,1
+L,16,1
+/COM
+/COM     Flaechen generieren
+/COM
+AL,ALL
+AGEN,2,ALL,,,,,thik
+L,1,17
+RP15,1,1
+L,16,32
+A,1,17,32,16
+A,1,2,18,17
+RP15,1,1,1,1
+
+/COM
+/COM     Volumen aus Einzelflaechen
+/COM
+VA,ALL
+TYPE,3
+MAT,3
+ELSI,elgr
+VMESH,1    * Struktur vernetzen
+/COM     2. Haelfte generieren
+LOCAL,11,,3.8
+VSYM,1,ALL
+csys
+NUMMRG,NODE    * Knoten verbinden
+/COM     Festhalte-Randbedingungen
+nsel,x
+nasel,x,7.6
+d,all,ux
+d,all,uy
+d,all,uz
+/COM     alle anderen Freiheitsgrade festsetzen
+nall    
+d,all,temp
+d,all,mag
+
+/COM
+/COM     Freiheitsgrade MDOFs
+/com nsel,pick   * per Hand selektieren
+/com m,all,ux
+/com m,all,uy
+/com m,all,uz
+wsort,x     * wavefront erniedrigen
+
+/COM
+/COM     elektrische Festhaltebedingungen
+/COM
+/COM     Kurzschluss: E=0
+/com nsel,z
+/com nt,all,volt,0
+/com nsel,z,thik
+/com nt,all,volt,0
+/com lwrit    * Schreibe Lastfall 1
+/COM
+/COM     Offene Elektroden: D=0
+/com nsel,z,thik
+/com ntdel,all,volt
+/com nall
+/com lwrit    * Schreibe Lastfall 2
+cnvr,,,,,,,-1   * Vermeide Abbruch infolge negativer CE-Matrix
+/view,1,1,1,1
+
