@@ -1,0 +1,55 @@
+/COM *********************************************************
+/COM
+/COM File: BIMORPH.MAT 
+/COM
+/COM *********************************************************
+/COM Material properties for: VIBRIT420 piezoceramic 
+/COM from: Siemens-Datenblatt VIBRIT, Stand 1981
+/COM *********************************************************
+
+/PREP7             ! enter Pre-processor
+mp,dens,3,7594.3      ! material density [kg/m3]
+
+/COM ******** CE-matrix: stiffness moduli [N/m2]
+tb,anel,3
+c11=1.092e11
+c12=0.6178e11
+c13=0.5485e11
+c33=0.8867e11
+c44=0.2222e11
+c66=0.2370e11
+tbdata,1,c11,c12,c13,0,0,0
+tbdata,7,c11,c13,0,0,0,c33
+tbdata,13,0,0,0,c66,0,0
+tbdata,19,c44,0,c44
+
+/COM ******* e-matrix: piezoelectric moduli [N/mV] (*1e9)
+tb,piez,3
+ecc=1e9       ! scaling of the electrical values (ECCARDT)
+e31=-7.853*ecc
+e33=13.93*ecc
+e15=-11.67*ecc
+tbdata,1,0,0,e31,0,0,e31
+tbdata,7,0,0,e33,0,e15,0
+tbdata,13,e15,0,0,0,0,0
+
+/COM ******** eps-matrix: permittivities (*1e18)
+ep11=1600
+ep33=1600
+eps0=8.854e-12*ecc*ecc
+ep11=ep11*eps0
+ep33=ep33*eps0
+mp,perx,3,ep11
+mp,pery,3,ep11
+mp,perz,3,ep33
+
+/COM ******** dummy material properties
+mp,murx,3,1  ! create dummy properties
+mp,kxx,3,1   ! to avoid warning messages
+
+/COM ***********************************************************
+/COM read geometry file with following command:
+/COM
+/COM  /INP,BIMORPH,GEO : geometry of piezoelectric microactuator
+/COM
+/COM ***********************************************************
