@@ -1,0 +1,141 @@
+/COM,ANSYS REVISION  5.0                     10:34:21    07/15/1994
+
+ *** WARNING ***                         CP=     15.160   TIME= 10:34:41
+ Number greater than 1.0E32. Value of zero used.                         
+
+ *** ERROR ***                           CP=     15.160   TIME= 10:34:41
+ Name more than 8 characters.                                            
+
+ *** WARNING ***                         CP=    252.000   TIME= 10:38:38
+ PLO is not a recognized PREP7 command, abbreviation, or macro.          
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP=    285.230   TIME= 10:39:11
+ /ZOOM command is only supported in menu mode.                           
+  Command ignored.                                                       
+
+ *** WARNING ***                         CP=    514.210   TIME= 10:43:00
+ Lines 58, 60, 62, and 53 do not lie on a common                         
+  coordinate value in the currently active coordinate system             
+  (CSYS).  A non-planar area (Coons patch) will be fitted.               
+
+ *** WARNING ***                         CP=    522.280   TIME= 10:43:08
+ Lines 71, 73, 75, and 66 do not lie on a common                         
+  coordinate value in the currently active coordinate system             
+  (CSYS).  A non-planar area (Coons patch) will be fitted.               
+
+ *** WARNING ***                         CP=    627.580   TIME= 10:44:54
+ Meshing of area 9 produced 6 poorly shaped faces.                       
+
+ *** ERROR ***                           CP=    634.940   TIME= 10:45:01
+ Cannot get attached element information for area 8. Please send data    
+  to your ASD.                                                           
+
+ *** WARNING ***                         CP=    785.490   TIME= 10:47:31
+ VMEH is not a recognized PREP7 command, abbreviation, or macro.         
+  This command will be ignored.                                          
+
+ *** ERROR ***                           CP=    796.640   TIME= 10:47:43
+ Cannot get attached element information for area 8. Please send data    
+  to your ASD.                                                           
+
+ *** WARNING ***                         CP=    957.070   TIME= 10:50:23
+ KSLA is not a recognized PREP7 command, abbreviation, or macro.         
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP=   1015.410   TIME= 10:51:21
+ AAPLO is not a recognized PREP7 command, abbreviation, or macro.        
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP=   1335.240   TIME= 10:56:41
+ # is not a recognized PREP7 command, abbreviation, or macro.            
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP=   1337.710   TIME= 10:56:44
+ ALLLS is not a recognized PREP7 command, abbreviation, or macro.        
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP=   1353.470   TIME= 10:56:59
+ Unknown NUMMRG label= AREA.  Valid labels = NODE ELEM KP MAT TYPE REAL  
+  CP CE ALL.  The NUMMRG command is ignored.                             
+
+ *** WARNING ***                         CP=   1378.680   TIME= 10:57:25
+ Due to merge, line 17 is now meshed.                                    
+
+ *** ERROR ***                           CP=   1389.390   TIME= 10:57:35
+ Cannot get attached element information for area 8. Please send data    
+  to your ASD.                                                           
+
+ *** ERROR ***                           CP=   2883.260   TIME= 11:22:29
+ Cannot get attached element information for area 8. Please send data    
+  to your ASD.                                                           
+
+ *** WARNING ***                         CP=   2908.410   TIME= 11:22:54
+ The item label AREA is not recognized by the NSEL command.              
+  The NSEL command is ignored.                                           
+
+ *** ERROR ***                           CP=   2946.090   TIME= 11:23:32
+ Element 1 is attached to VOLUME 1 and cannot be changed                 
+  Use MODMSH command to dissociate model.                                
+
+ *** ERROR ***                           CP=   2955.040   TIME= 11:23:41
+ Element 2 is attached to VOLUME 1 and cannot be changed                 
+  Use MODMSH command to dissociate model.                                
+
+ *** ERROR ***                           CP=   2956.420   TIME= 11:23:42
+ Element 3 is attached to VOLUME 1 and cannot be changed                 
+  Use MODMSH command to dissociate model.                                
+
+ *** ERROR ***                           CP=   2956.860   TIME= 11:23:43
+ Element 4 is attached to VOLUME 1 and cannot be changed                 
+  Use MODMSH command to dissociate model.                                
+
+ *** ERROR ***                           CP=   2957.740   TIME= 11:23:44
+ Element 5 is attached to VOLUME 1 and cannot be changed                 
+  Use MODMSH command to dissociate model.                                
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP=   2958.450   TIME= 11:23:44
+ Element 6 is attached to VOLUME 1 and cannot be changed                 
+  Use MODMSH command to dissociate model.                                
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP=   2962.460   TIME= 11:23:48
+ Element 7 is attached to VOLUME 1 and cannot be changed                 
+  Use MODMSH command to dissociate model.                                
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP=   2962.510   TIME= 11:23:48
+ Element 8 is attached to VOLUME 1 and cannot be changed                 
+  Use MODMSH command to dissociate model.                                
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP=   2962.510   TIME= 11:23:48
+ Element 9 is attached to VOLUME 1 and cannot be changed                 
+  Use MODMSH command to dissociate model.                                
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP=   2962.510   TIME= 11:23:48
+ Element 10 is attached to VOLUME 1 and cannot be changed                
+  Use MODMSH command to dissociate model.                                
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP=   2962.570   TIME= 11:23:49
+ Element 11 is attached to VOLUME 1 and cannot be changed                
+  Use MODMSH command to dissociate model.                                
+
+ *** ERROR ***     SUPPRESSED MESSAGE    CP=   2962.570   TIME= 11:23:49
+ Element 12 is attached to VOLUME 1 and cannot be changed                
+  Use MODMSH command to dissociate model.                                
+
+ *** WARNING ***                         CP=   3073.740   TIME= 11:25:40
+ A default command range is not provided for the EDEL command.           
+  The EDEL command is ignored.                                           
+
+ *** WARNING ***                         CP=   3110.920   TIME= 11:26:17
+ Meshing of area 9 produced 6 poorly shaped faces.                       
+
+ *** ERROR ***                           CP=   3117.730   TIME= 11:26:24
+ Cannot get attached element information for area 8. Please send data    
+  to your ASD.                                                           
+
+ *** ERROR ***                           CP=   3166.180   TIME= 11:27:12
+ Cannot get attached element information for area 8. Please send data    
+  to your ASD.                                                           
+
+ *** WARNING ***                         CP=   3174.200   TIME= 11:27:20
+ Help for "ASD " not found.                                              
