@@ -1,0 +1,28 @@
+/COM *********************************************************
+/COM
+/COM File: BIM-K2.MAC
+/COM
+/COM *********************************************************
+/COM Piezoelectric BIMORPH Microactuator
+/COM evaluate results of MODAL ANALYSIS (KAN=2)
+/COM *********************************************************
+
+/POST1               ! enter general Post-processor
+/VIEW,1,1,1,1        ! define the viewing direction
+set,list             ! list eigenfrequencie
+
+/COM ******** load resonance frequency of calculation
+set,1,1              ! load first load step, first iteration
+plnsol,u,z           ! plot first flexure mode shape
+
+/COM ******** load/plot further mode shapes
+set,1,2
+plns,u,z              ! plot second  mode shape
+set,1,3
+plns,u,z              ! plot third   mode shape
+set,1,4
+plns,u,z              ! plot fourth  mode shape
+set,1,5
+plns,u,z              ! plot fifth   mode shape
+
+/COM ***************** MACRO finished successfully ***************
