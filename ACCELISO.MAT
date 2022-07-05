@@ -1,0 +1,28 @@
+/COM **********************************************************
+/COM
+/COM File: ACCELISO.MAT
+/COM
+/COM **********************************************************
+/COM
+/COM ------------------ Definition of the parameter for
+/COM                    the assignment of the element type
+/COM
+ELTY=45                ! parameter for assignment of
+                       ! 3-D solids with 8 nodes (STIF45)
+/COM
+/COM ------------------ Isotropic material proerties of silicon
+/COM                         based on <110>-direction
+/COM
+MP,EX,1,1.689e5        ! Young's modulus of material no.1
+MP,NUXY,1,0.0624       ! Poisson's ratio "     "      " "
+MP,DENS,1,2.329E-9     ! material density "    "      " "
+/COM
+/COM **********************************************************
+/COM
+/COM Next step: Generating the geometry and definiton of the
+/COM            analysis type with the command:
+/COM
+/COM                     ********************
+/COM                     *  /INP,accel,geo  *
+/COM                     ********************
+/COM **********************************************************
