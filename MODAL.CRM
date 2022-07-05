@@ -1,0 +1,115 @@
+
+
+ PERFORM A MODAL ANALYSIS
+  THIS WILL BE A NEW ANALYSIS
+
+
+ USE HOUSEHOLDER METHOD
+  EXTRACT    5 MODES
+  PRINT      0 REDUCED MODES
+  NORMALIZE THE MODE SHAPES TO THE MASS MATRIX
+
+
+ NUMBER OF MODES TO EXPAND=     5
+  DO NOT CALCULATE ELEMENT RESULTS
+
+ PARAMETER TOTL     =     50.00000    
+
+ TOTAL MASTER D.O.F.=    50
+ NO ROTATIONAL MASTER KEY=  1
+
+ *****  ANSYS SOLVE    COMMAND  *****
+
+ ***** ANSYS - ENGINEERING ANALYSIS SYSTEM  REVISION 5.0A    *****
+ HAHN-SCHICKARD    VERSION=HP 9000/7XX   11:35:43  AUG 24, 1994 CP=      1.000
+ FOR SUPPORT CALL THOMAS FABULA    PHONE 07721/943-239    FAX                 
+
+  Resonant diaphragm pressure sensor                                           
+
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D         
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ   ROTX ROTY ROTZ 
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .MODAL                
+      EXTRACTION METHOD. . . . . . . . . . . . . .REDUCED     
+   NUMBER OF MODES TO EXTRACT. . . . . . . . . . .     5
+   NUMBER OF REDUCED MODES TO PRINT. . . . . . . .     0
+   NUMBER OF MASTER DOF. . . . . . . . . . . . . .    50
+   NUMBER OF MODES TO EXPAND . . . . . . . . . . .     5
+   ELEMENT RESULTS CALCULATION . . . . . . . . . .OFF
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS. . . . . . . . . . . .ALL DATA WRITTEN
+ 
+
+
+
+            ***** CENTROID, MASS, AND MASS MOMENTS OF INERTIA *****
+
+  CALCULATIONS ASSUME ELEMENT MASS AT ELEMENT CENTROID
+
+
+  TOTAL MASS =   .49282E-08
+
+                           MOM. OF INERTIA         MOM. OF INERTIA
+     CENTROID               ABOUT ORIGIN           ABOUT CENTROID
+
+  XC =   4.6000          IXX =    .1387E-06      IXX =    .3441E-07
+  YC =   4.6000          IYY =    .1387E-06      IYY =    .3441E-07
+  ZC =   .00000E+00      IZZ =    .2774E-06      IZZ =    .6882E-07
+                         IXY =   -.1043E-06      IXY =    .1323E-22
+                         IYZ =    .0000E+00      IYZ =    .0000E+00
+                         IZX =    .0000E+00      IZX =    .0000E+00
+
+
+  *** MASS SUMMARY BY ELEMENT TYPE ***
+
+  TYPE      MASS
+     1   .492816E-08
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum= 1909.14616 at element 20.                                      
+ Minimum= 1909.14616 at element 55.                                      
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+  TYPE  NUMBER   ENAME      TOTAL CP  AVE CP
+
+     1     100  SHELL43       1.640     .016
+ Time at end of element matrix formulation CP= 2.87.                     
+ 
+ Estimated number of active DOF= 486.                                    
+ Maximum wavefront= 124.                                                 
+ 
+ Time at end of matrix triangularization CP= 4.05.                       
+ Equation solver maximum pivot= 7635.86132 at node 20 UX.                
+ Equation solver minimum pivot= 1.29617023 at node 109 ROTZ.             
+
+
+     ***** EIGENVALUE (NATURAL FREQUENCY) SOLUTION *****
+
+  MODE    FREQUENCY (CYCLES/TIME)
+
+    1      4202.44957    
+    2      8728.82514    
+    3      8885.92158    
+    4      12931.8617    
+    5      16428.5348    
+
+
+   *** PROBLEM STATISTICS
+  ACTUAL NO. OF ACTIVE DEGREES OF FREEDOM =    436
+  R.M.S. WAVEFRONT SIZE =   109.6
+  NUMBER OF MASTER DEGREES OF FREEDOM =    50
+
+
+ *** ANSYS BINARY FILE STATISTICS
+  BUFFER SIZE USED=  4096
+         .531 MB WRITTEN ON ELEMENT MATRIX FILE: file.emat
+         .266 MB WRITTEN ON ELEMENT SAVED DATA FILE: file.esav
+         .391 MB WRITTEN ON TRIANGULARIZED MATRIX FILE: file.tri
+         .047 MB WRITTEN ON MODAL MATRIX FILE: file.mode
+         .125 MB WRITTEN ON RESULTS FILE: file.rst
