@@ -1,0 +1,169 @@
+/COM
+/COM    Quarz-Doppelstimmgabel
+/COM    ETA aehnliche 3D-Struktur
+/COM    Piezoelektrisch berechnet
+/COM
+/COM    Datei: D2PIEZO.F18
+/COM
+
+/PREP7
+/TITLE, Quarz-D2PIEZO, 3D-piezoelektrisch
+
+/COM
+/COM   Parameter
+/COM
+elgr=0.25          * Elementgroesse [mm]
+elty=98            * Elementtyp: STIF5 bzw. 98
+thik=.125          * Materialdicke [mm]
+/COM   Materialdaten
+et,3,elty          * Piezoelement
+/com   nlsize,300
+
+
+/COM
+/COM  Materialdaten 
+/COM
+dens,3,2.648-9     * Dichte von Quarz [kg/mm3]
+/COM
+/COM     CE-Matrix: Elastizitaetsmodul-Matrix
+/COM     T=25 Grad-C, in [N/mm2], adiabatisch
+/COM     (aus: Tichy/Gautschi)
+/COM
+nl,3,271,86.8e3,7.04e3,11.91e3,-18.04e3
+nl,3,277,86.8e3,11.91e3,18.04e3
+nl,3,282,105.75e3
+nl,3,286,58.2e3
+nl,3,289,58.2e3,-18.04e3
+nl,3,291,39.88e3
+
+/COM
+/COM     E-Matrix: Piezoelektrische-Modulmatrix
+/COM     T=20 Grad-C, in [C/mm2]
+/COM
+nl,3,133,.171e-6,-.171e-6,0,-.041e-6
+nl,3,143,.041e-6,-.171e-6
+
+/COM
+/COM     EPS-Matrix: Dielektrizitaetsmatrix (Re)
+/COM     eps0 = 8.854e-18 [C/Vmm]
+/COM
+nl,3,103,39.967e-18
+nl,3,157,39.967e-18
+nl,3,211,41.029e-18
+
+/COM
+/COM     EPS-Matrix: Dielektrizitaetsmatrix (Im)
+/COM
+/COM     Geometrie erstellen: Z-Schnitt
+/COM
+
+/COM
+/COM     Knotenpunkte generieren
+/COM
+K,1
+K,2,2.5
+K,3,2.5,.85
+K,4,3.1,.85
+K,5,3.1
+K,6,3.7
+K,7,3.7,.9
+K,8,4.9,1.12
+K,9,7.5,1.12
+K,10,7.5,1.36
+K,11,4.9,1.36
+K,12,4.9,1.54
+K,13,7.5,1.54
+K,14,7.5,1.78
+K,15,4.9,1.78
+K,16,3.7,2.0
+K,17,3.7,2.9
+K,18,3.1,2.9
+K,19,3.1,2.05
+k,20,2.5,2.05
+K,21,2.5,2.9
+K,22,0,2.9
+/COM
+/COM     Linien generieren
+/COM
+L,1,2
+RP21,1,1
+L,22,1
+/COM
+/COM     Flaechen generieren
+/COM
+AL,ALL
+/COM
+/COM     Zweite Flaeche definieren
+/COM
+AGEN,2,ALL,,,,,thik
+/COM
+/COM     vertikale Linien ziehen
+/COM
+L,1,23
+RP21,1,1
+L,22,44
+/COM
+/COM     Randflaechen definieren
+/COM
+A,1,23,44,22
+A,1,2,24,23
+RP21,1,1,1,1
+/COM
+/COM     Volumen aus Einzelflaechen
+/COM
+VA,ALL
+TYPE,3
+MAT,3
+ELSI,elgr
+VMESH,1  * Struktur vernetzen
+/COM
+/COM     2. Haelfte generieren
+/COM
+LOCAL,11,,7.5
+VSYM,1,ALL
+csys
+NUMMRG,NODE    * Knoten verbinden
+
+/COM
+/COM     Festhalte-Randbedingungen
+/COM     beide Enden fixieren
+/COM
+nsel,x
+nasel,x,15
+d,all,ux
+d,all,uy
+d,all,uz
+
+/COM
+/COM     alle anderen Freiheitsgrade festsetzen
+/COM
+nall    
+d,all,temp
+d,all,mag
+wsort,x     * wavefront erniedrigen
+
+/COM
+/COM     elektrische Festhaltebedingungen
+/COM
+/COM     Kurzschluss: E=0
+/COM
+nsel,z
+nt,all,volt,0
+nsel,z,thik
+nt,all,volt,0
+lwrit    * Schreibe Lastfall 1
+
+/COM
+/COM     Offene Elektroden: D=0
+/COM
+nsel,z,thik
+ntdel,all,volt
+nall
+lwrit    * Schreibe Lastfall 2
+cnvr,,,,,,,-1   * Vermeide Abbruch infolge negativer CE-Matrix
+/view,1,1,1,1
+/type,1,3
+/COM
+/COM      M D O F s  selektieren...!!!
+/COM
+
