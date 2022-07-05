@@ -1,0 +1,37 @@
+/COM **********************************************************
+/COM
+/COM File: ACCEL.POS
+/COM
+/COM **********************************************************
+/COM
+/POST1             ! enters the postprocessing phase
+/COM
+/COM -------------------- Options for graphic display
+/COM
+/vup,,z            ! defines the orientation of
+                   ! the display coordinate system
+/VIEW,,-1,1,1      ! defines the viewing direction
+/TYPE,,3           ! hidden line display
+set                ! reads data from the postdata file
+                   ! for postprocessing
+/COM
+/COM ------- command sequence for a) -------------------
+/COM
+plnsol,u,z         ! displays contours of nodal data
+                   ! for the z-displacements
+/COM
+/COM ------- command sequence for b) -------------------
+/COM
+plnsol,s,x         ! displays contours of nodal data
+                   ! for averaged normal stress
+                   ! (x-direction)
+/COM
+/COM ------- command sequence for c) -------------------
+/COM
+plesol,sdsg        ! displays contours of absolute value
+                   ! of the maximum variation of any
+                   ! nodal stress component for each
+                   ! element (only for isotropic
+                   ! calculations available!)
+/COM
+/COM **********************************************************
