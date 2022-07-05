@@ -1,0 +1,53 @@
+/COM *********************************************************
+/COM
+/COM File: BIM-K0.ANL
+/COM
+/COM *********************************************************
+/COM analysis options for STATIC ANALYSIS (KAN=0)
+/COM geometry defined by file: BIMORPH.GEO
+/COM *********************************************************
+
+/COM ******** define parameters
+druk=10e5          ! mechanical pressure [Pa]
+span=100           ! electrical voltage [V]
+nspa=span*1e-9     ! normalized voltage
+
+/COM *********************************************************
+/COM define mechanical load --> calculate electrical reaction
+! nsel,s,loc,z,dges
+! sf,all,pres,druk
+! allsel
+/COM *********************************************************
+/COM define electrical load --> calculate mechanical reaction
+nsel,s,loc,z,dick        ! select bottom electrode
+d,all,volt,0      ! ground electrode
+nsel,s,loc,z,dges        ! select top electrode
+d,all,volt,nspa   ! put voltage on electrode
+allsel
+/COM  fix the MAG- and TEMP-DOF --> better convergence behavior
+esel,s,type,,2
+nsle,s,1
+d,all,TEMP
+d,all,MAG
+allsel
+/COM *********************************************************
+
+/COM ******** ANSYS-analysis options
+antype,static      ! STATIC ANALYSIS
+! nlgeom,on        ! LARGE DEFLECTION SOLUTION
+! sstif,on         ! INCLUDE STRESS STIFFENING
+! nsubst,5,5       ! perform 5 iterations
+
+/COM ***********************************************
+/COM *  fini    ! Preprocessing phase is finished  *
+/COM *  /solu   ! Entering the solution mode       *
+/COM *  solve   ! Start the solution               *
+/COM *  fini                                       *
+/COM ***********************************************
+/COM
+/COM Returned to the "BEGIN-level", you will entry the postprocessing
+/COM using the predefined macro "BIM-K0.MAC" by issuing:
+/COM
+/COM    BIM-K0 : for evaluating the results of the STATIC ANALYSIS
+/COM
+/COM ******************************************************************
