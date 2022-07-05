@@ -1,0 +1,68 @@
+/COM **********************************************************
+/COM
+/COM File: ACCEL.PAR
+/COM
+/COM **********************************************************
+/COM
+/PREP7               ! enters the preprocessor
+/COM
+/COM ********************************* Definition of parameters
+/COM
+/COM -------------- Parameters for the specification
+/COM              of the element type and acceleration
+/COM
+ELTY=45              ! element type: 3-D 8-node solid
+                     !               (STIF45)
+acx=0.0              ! acceleration in x-direction [mm/sý]
+acy=0.0              !      "        " y-   "
+acz=9810*20          !      "        " z-   "
+/COM
+/COM ----------------------- Material proerties of silicon
+/COM                         in <110>-direction
+/COM
+SIEM=1.689e5         ! averaged Young's modulus [N/mm2]
+SIPO=0.0624          ! averaged Poisson's ratio
+SIRO=2.329E-9        ! material density [kg/mm2]
+c11=1.674e5          ! parameters for the 3 independant
+c12=0.652e5          1 modulus of elasticity...
+c44=0.796e5
+/COM
+/COM ------------- Parameters for definition of the solid model
+/COM               unit of length: mm
+/COM
+beax=1.50            ! length of the elastic beamy
+beay=0.100           ! with of the      "     "
+beaz=0.050           ! thickness of the "     "
+seix=0.5             ! x-dimension of the seismic mass (bottom)
+seiy=0.5             ! y-dimension "   "     "     "      "
+seiz=0.500           ! z-dimension "   "     "     "
+frax=0.2             ! x-dimension of the frame (bottom)
+fray=0.2             ! y-dimesion  "   "    "
+diez=0.525           ! wafer thickness
+/COM
+/COM -------------- Parameters for definition of line divisions
+/COM
+bdix=40          ! divisions along the x-direction of the beam
+bdiy=3           !    "        "    "  y-    "     "   "   "
+bdiz=2           !    "        "    "  z-    "     "   "   "
+sdix=2           ! divisions along the edges of
+sdiy=2           ! the seismic mass (x-,y-,z-direction)
+sdiz=2
+fdix=3           ! divisions along th edges of the silicon
+fdiy=4           ! frame (x-,y-,z-direction)
+fdiz=2
+/COM
+/COM **********************************************************
+/COM
+/COM Before the definition of the material data
+/COM you can overwrite some predefined values of the
+/COM parameters as follows:
+/COM
+/COM                       <name>=<value>
+/COM
+/COM next step: definiton of material data with the command:
+/COM
+/COM             *******************
+/COM             *  /INP,accel,mat *
+/COM             *******************
+/COM **********************************************************
