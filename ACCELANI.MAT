@@ -1,0 +1,47 @@
+/COM **********************************************************
+/COM
+/COM File: ACCELANI.MAT
+/COM
+/COM **********************************************************
+/COM
+/COM ------------------ Definition of the parameter for
+/COM                    the assignment of the element type
+/COM
+ELTY=64              ! 3-D solids with 8 nodes (STIF45)
+/COM
+/COM ------------------ Definition of the material density
+/COM
+MP,DENS,1,2.329e-9   ! material density [kg/mm2]
+/COM
+/com --------------- Anisotropic material properties of silicon
+/COM
+c11=1.674e5          ! parameters for the 3 independant
+c12=0.652e5          ! modulus of elasticity...
+c44=0.796e5
+/COM ------------------ Definition of the anisotropic data
+/COM                    according to the nonlinear table
+/COM
+tb,ANEL,1,1                  ! activates a nonlinear data table
+tbdata,1,c11,c12,c12,0,0,0   ! defines nonlinear table:
+tbdata,7,c11,c12,0,0,0,c11   ! material number 1
+tbdata,13,0,0,0,c44,0,0
+tbdata,19,c44,0,c44
+/COM Rotation of the element coordinate system relative
+/COM to the global Cartesian coordinate system referred to
+/COM the <110>-direction of the silicon structure
+/COM
+local,11,0,,,,45     ! definition of a local coordinate system
+esys,11              ! assigns the element coordinate system
+                     ! number 11 to all the elements
+csys,0               ! reactivates the global coordinate system
+/COM
+/COM **********************************************************
+/COM
+/COM next step: Generating the geometry and definiton of the
+/COM            analysis type with the command:
+/COM
+/COM                     ******************
+/COM                     * /INP,accel,geo *
+/COM                     ******************
+/COM
+/COM **********************************************************
