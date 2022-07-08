@@ -1,0 +1,144 @@
+/COM    Datei: MULTI.DAT
+
+/com    Materialdaten fuer Multilayerberechnung
+/com    zur Zeit implementierte Materialien:
+/com    MATERIAL 1:    Si3N4    -  Siliziumnitrid
+/com    MATERIAL 2:    SiO2     -  Siliziumoxid
+/com    MATERIAL 3:    Si       -  Silizium
+/com    MATERIAL 4:    PYREX    -  PYREX-Borsilikatglas
+/com    MATERIAL 5:    ZnO      -  Zinkoxid
+
+/com    Bezugstemperatur: T=25 C
+
+/com  --------------------------------------------------------
+/COM  Materialwerte Si3N4 (MATERIAL 1)
+SNEM=3.89e5        ! mittlerer E-Modul    [N/mm2]
+SNPO=0.3           ! mittlere Poissonzahl
+SNRO=3.1E-9        ! Materialdichte       [kg/mm2]
+SNAL=.8e-6         ! therm. Ausdehnung    [1/K]
+SNCP=711           ! Spez. Waermekapaz.   [J/kg*K]
+SNLA=25e-3         ! Waermeleitfaehigkeit [W/mm*K]
+SNBR=5000          ! Bruchspannung        [N/mm2]
+MP,EX,1,SNEM    $MP,NUXY,1,SNPO     $MP,DENS,1,SNRO
+
+/com  Materialwerte zuweisen
+/com  Eingabe von EX, ALPX ueber Datentabelle
+/com   (25,100,200,...,1100 Celsius)
+/com  Materialdaten aus DA K.Hiltmann S.65
+MPTEMP,1,298,373,473,573,673,773
+MPTEMP,7,873,973,1073,1173,1273,1373
+a1=0.80e-6   $a2=1.85e-6   $a3=2.78e-6   $a4=3.31e-6
+a5=3.61e-6   $a6=3.78e-6   $a7=3.88e-6   $a8=3.94e-6
+a9=3.97e-6   $a10=3.99e-6  $a11=4.00e-6  $a12=4.00e-6
+MPDATA,ALPX,1,1,a1,a2,a3,a4,a5,a6
+MPDATA,ALPX,1,7,a7,a8,a9,a10,a11,a12
+
+/com  --------------------------------------------------------
+/COM  Materialwerte SiO2 (MATERIAL 2)
+/com  Materialdaten aus DA K.Hiltmann S.58
+SOEX=3.89e5        ! mittlerer E-Modul    [N/mm2]
+SOPO=0.3           ! mittlere Poissonzahl
+SORO=2.20E-9       ! Materialdichte       [kg/mm2]
+SOAL=.609e-6       ! therm. Ausdehnung    [1/K]
+SOCP=691           ! Spez. Waermekapaz.   [J/kg*K]
+SOLA=1.256e-3      ! Waermeleitfaehigkeit [W/mm*K]
+MP,DENS,2,SORO
+MPTEMP,1,298,373,473,573,673,773
+MPTEMP,7,873,973,1073,1173,1273
+e1=0.73e5   $e2=0.74e5   $e3=0.75e5   $e4=0.76e5
+e5=0.77e5   $e6=0.78e5   $e7=0.79e5   $e8=0.80e5
+e9=0.81e5   $e10=0.82e5  $e11=0.83e5
+MPDATA,EX,2,1,e1,e2,e3,e4,e5,e6
+MPDATA,EX,2,7,e7,e8,e9,e10,e11
+n1=0.17   $n2=n1    $n3=n2    $n4=n2    $n5=n2
+n6=0.18   $n7=0.19  $n8=n7    $n9=0.20  $n10=n9    $n11=n9
+MPDATA,NUXY,2,1,n1,n2,n3,n4,n5,n6
+MPDATA,NUXY,2,7,n7,n8,n9,n10,n11
+a1=0.609e-6  $a2=a1    $a3=0.595e-6  $a4=0.536e-6  $a5=0.480e-6
+a6=0.392e-6  $a7=a6    $a8=a6        $a9=0.371e-6  $a10=a9        $a11=a9
+MPDATA,ALPX,2,1,a1,a2,a3,a4,a5,a6
+MPDATA,ALPX,2,7,a7,a8,a9,a10,a11
+
+/com  --------------------------------------------------------
+/COM  Materialwerte Si<100> in (110-Richtung) (MATERIAL 3)
+/com  Daten aus DA Hiltmann S.46
+SIEM=1.689e5       ! mittlerer E-Modul    [N/mm2]
+SIPO=0.0624        ! mittlere Poissonzahl
+SIRO=2.329E-9      ! Materialdichte       [kg/mm2]
+SIAL=2.6e-6        ! therm. Ausdehnung    [1/K]
+SICP=703           ! Spez. Waermekapaz.   [J/kg*K]
+SILA=156e-3        ! Waermeleitfaehigkeit [W/mm*K]
+SIBR=300           ! Bruchspannung        [N/mm2]
+MPTEMP,1,298,373,473,573,673,773
+MPTEMP,7,873,973,1073,1173,1273,1373
+r1=2.33e-9  $r2=r1   $r3=r1    $r4=2.32e-9
+r5=r4       $r6=r4   $r7=r4    $r8=2.31e-9
+r9=r8       $r10=2.30e-9       $r11=r10    $r12=r10
+MPDATA,DENS,3,1,r1,r2,r3,r4,r5,r6
+MPDATA,DENS,3,7,r7,r8,r9,r10,r11,r12
+/com  Eingabe von C11 in Abh. der Temp.
+c1=16.0e5    $c2=15.95e5   $c3=15.86e5   $c4=15.73e5
+c5=15.57e5   $c6=15.42e5   $c7=15.27e5   $c8=15.14e5
+c9=14.96e5   $c10=14.75e5  $c11=14.51e5  $c12=14.32e5
+MPDATA,EX,3,1,c1,c2,c3,c4,c5,c6
+MPDATA,EX,3,7,c7,c8,c9,c10,c11,c12
+a1=2.6e-6    $a2=3.1e-6    $a3=3.4e-6    $a4=3.7e-6
+a5=3.9e-6    $a6=4.1e-6    $a7=4.3e-6    $a8=4.4e-6
+a9=4.5e-6    $a10=4.6e-6   $a11=a10      $a12=a10
+MPDATA,ALPX,3,1,a1,a2,a3,a4,a5,a6
+MPDATA,ALPX,3,7,a7,a8,a9,a10,a11,a12
+
+/com  --------------------------------------------------------
+/COM  Materialwerte PYREX - Borosilikatglas
+/com  Corning Code 7740 (MATERIAL 4)
+/com  Daten aus: Schroeder - Spezialglastechnik
+PYEM=.61e5         ! mittlerer E-Modul    [N/mm2]
+PYPO=0.20          ! mittlere Poissonzahl
+PYRO=2.23E-9       ! Materialdichte       [kg/mm2]
+PYAL=3.2e-6        ! therm. Ausdehnung    [1/K]
+/COM  zuweisen der Materialeigenschaften
+MP,EX,4,PYEM  $MP,NUXY,4,PYPO  $MP,DENS,4,PYRO  $MP,ALPX,4,PYAL
+
+/com  --------------------------------------------------------
+/COM  Materialwerte ZnO (MATERIAL 5)
+/com  Daten aus Landolt-Boernstein fuer Bulk-Material
+ZNES=1.211e5       ! mittlerer E-Modul, senkrecht zur c-Achse [N/mm2]
+ZNEP=2.097e5       ! mittlerer E-Modul, parallel  zur c-Achse [N/mm2]
+ZNPO=0.36          ! mittlere Poissonzahl
+ZNRO=5.675E-9      ! Materialdichte   [kg/mm2]
+ZNAS=4.75e-6       ! therm. Ausdehnung, senkrecht zur c-Achse T=300K [1/K]
+ZNAP=2.92e-6       ! therm. Ausdehnung, parallel  zur c-Achse T=300K [1/K]
+/COM  zuweisen der Materialeigenschaften
+MP,EX,5,ZNEP   $MP,NUXY,5,ZNPO  $MP,DENS,5,ZNRO
+
+/com  anisotrope Elastizitaetsmoduln (T=25 C)
+/com  zur Verwendung in den Elementen: STIF5, STIF64
+zc11=2.097e5
+zc12=1.211e5
+zc13=1.051e5
+zc33=2.109e5
+zc44=.4429e5
+
+/com Temperaturdaten
+MPTEMP,1,9,13,17,22.5,30,40
+MPTEMP,7,60,80,100,120,150,200
+MPTEMP,13,250,300,400,500,600,700
+MPTEMP,19,800
+/com  parallel: Thermische Ausdehnungskoeffizienten
+ap1=-.18e-7  $ap2=-.59e-7  $ap3=-1.2e-7 $ap4=-2.5e-7  $ap5=-4.8e-7 $ap6=-7.2e-7
+ap7=-8.85e-7 $ap8=-8.65e-7 $ap9=-6.2e-7 $ap10=-1.6e-7 $ap11=5.0e-7 $ap12=15.1e-7
+ap13=22.5e-7 $ap14=29.2e-7 $ap15=38.2e-7 $ap16=43.8e-7 $ap17=47e-7 $ap18=49e-7
+ap19=49.8e-7
+/com  senkrecht: Thermische Ausdehnungskoeffizienten
+as1=-.09e-7  $as2=-.26e-7  $as3=-.6e-7  $as4=-1.45e-7 $as5=-2.7e-7  $as6=-4.1e-7
+as7=-5.15e-7 $as8=-3.8e-7  $as9=.4e-7   $as10=6.4e-7  $as11=16.9e-7 $as12=28.8e-7
+as13=39e-7   $as14=47.5e-7 $as15=60.7e-7 $as16=71.5e-7 $as17=78.5e-7 $as18=81.3e-7
+as19=83e-7
+MPDATA,ALPX,5,1,ap1,ap2,ap3,ap4,ap5,ap6
+MPDATA,ALPX,5,7,ap7,ap8,ap9,ap10,ap11,ap12
+MPDATA,ALPX,5,13,ap13,ap14,ap15,ap16,ap17,ap18
+MPDATA,ALPX,5,19,ap19
+
+/com  Dateiende
+/com  --------------------------------------------------------
+
