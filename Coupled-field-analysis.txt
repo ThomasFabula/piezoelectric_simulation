@@ -1,0 +1,787 @@
+Materialparameter-Formate:
+==========================
+input:  Meter-Kilogramm-Second-Ampere     (*.MAT)
+output: Meter-Kilogramm-Second-NanoAmpere (*.DAT)
+
+"dens"
+x.x
+"ce" or "se"
+x.x  x.x  x.x  x.x  x.x  x.x
+x.x  x.x  x.x  x.x  x.x  x.x
+x.x  x.x  x.x  x.x  x.x  x.x
+x.x  x.x  x.x  x.x  x.x  x.x
+x.x  x.x  x.x  x.x  x.x  x.x
+x.x  x.x  x.x  x.x  x.x  x.x
+"e " or "d "
+x.x  x.x  x.x  x.x  x.x  x.x
+x.x  x.x  x.x  x.x  x.x  x.x
+x.x  x.x  x.x  x.x  x.x  x.x
+"es" (=εs), "et" (=εt), "bs" (=ßs), or "bt" (=ßt)  (Real & Imaginary Matrix)
+x.x  x.x  x.x         x.x  x.x  x.x
+x.x  x.x  x.x         x.x  x.x  x.x
+x.x  x.x  x.x         x.x  x.x  x.x
+Indices of c-,s-,e-,d-matrix: 1=xx 2=yy 3=zz 6=xy 4=yz 5=xz
+Indices of   ε-, ß-   matrix: 1=Rx 2=Ry 3=Rz 1=Ix 2=Iy 3=Iz
+
+
+==============================================================================
+
+
+Datei:  ALN.MAT
+
+dens
+  3260
+se
+  3.53e-12  -1.01e-12 -0.76e-12   0        0         0
+ -1.01e-12   3.53e-12 -0.76e-12   0        0         0
+ -0.76e-12  -0.76e-12  3.00e-12   0        0         0
+     0         0         0      8.50e-12   0         0
+     0         0         0        0       8.50e-12   0
+     0         0         0        0        0       9.00e-12
+d
+     0         0         0        0     -4.08e-12    0
+     0         0         0      -4.08e-12  0         0
+  -2.0e-12  -2.0e-12   5.53e-12   0        0         0
+et
+     8.0e-11   0          0              0         0          0
+     0         8.0e-11    0              0         0          0
+     0         0          9.5e-11        0         0          0
+
+
+==============================================================================
+
+
+Datei: SI.MAT
+
+dens
+  2329
+ce
+  1.674e11   0.652e11  0.652e11    0        0         0
+  0.652e11   1.674e11  0.652e11    0        0         0
+  0.652e11   0.652e11  1.674e11    0        0         0
+     0         0         0      0.796e11    0         0
+     0         0         0        0       0.796e11    0
+     0         0         0        0        0       0.796e11
+d
+     0         0         0        0        0         0
+     0         0         0        0        0         0
+     0         0         0        0        0         0
+et
+     0         0          0              0         0          0
+     0         0          0              0         0          0
+     0         0          0              0         0          0
+
+
+==============================================================================
+
+Datei:   VIBRIT.MAT
+
+dens
+  7600
+se
+  15.4e-12  -5.7e-12  -6.0e-12    0        0         0
+  -5.7e-12  15.4e-12  -6.0e-12    0        0         0
+  -6.0e-12  -6.0e-12  18.7e-12    0        0         0
+     0         0         0     42.2e-12    0         0
+     0         0         0        0        45e-12    0
+     0         0         0        0        0         45e-12
+d
+     0         0         0        0        0         525e-12
+     0         0         0        0        525e-12   0
+     -160e-12  -160e-12  355e-12  0        0         0
+et
+     14.16e-9  0          0           -227e-12  0          0
+     0         14.16e-9   0           0         -227e-12   0
+     0         0          14.16e-9    0         0          -227e-12
+
+==============================================================================
+
+Datei:   ZNO.MAT
+
+dens
+  5675
+ce
+  2.10e11    1.21e11   1.05e11    0        0         0
+  1.21e11    2.10e11   1.05e11    0        0         0
+  1.05e11    1.05e11   2.11e11    0        0         0
+     0         0         0      0.42e11    0         0
+     0         0         0        0       0.42e11    0
+     0         0         0        0        0       0.44e11
+d
+     0         0         0        0     -8.3e-12     0
+     0         0         0      -8.3e-12   0         0
+  -5.0e-12  -5.0e-12  12.4e-12    0        0         0
+et
+     7.38e-11  0          0              0         0          0
+     0         7.38e-11   0              0         0          0
+     0         0          7.83e-11       0         0          0
+
+==============================================================================
+
+/COM  Datei: ALN.DAT
+
+/COM  Materialdaten von Aluminiumnitrid
+/COM  Quelle: 
+/COM  J.Franz, Piezoelektrische Sensoren auf Siliziumbasis...
+/COM  VDI-Bericht Nr.87, VDI-Verlag, 1988
+ 
+c***********************************************
+c*** Material 3                                *
+c*** Full Piezo Matrix                         *
+c*** with NanoAmpere (1e-9)                    *
+c***      TeraVolt (1e9)                       *
+c***      AtoFarad (1e-18)                     *
+c***********************************************
+dens,3, 3.260e+03
+nlsize,300
+c*** ce matrix:
+nl,3,271, 344.3e+09, 124.1e+09, 118.7e+09, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,277, 344.3e+09, 118.7e+09, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,282, 393.5e+09, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,286, 117.6e+09, 0.000e+00, 0.000e+00
+nl,3,289, 117.6e+09, 0.000e+00
+nl,3,291, 111.1e+09
+c*** e matrix:
+nl,3,133, 0.000e+00, 0.000e+00, 0.000e+00, 0.000e+00,-480.0e+06, 0.000e+00
+nl,3,139, 0.000e+00, 0.000e+00, 0.000e+00,-480.0e+06, 0.000e+00, 0.000e+00
+nl,3,145,-280.6e+06,-280.6e+06, 1.701e+09, 0.000e+00, 0.000e+00, 0.000e+00
+c*** epsilon-s matrix:
+nl,3,103, 78.04e+06
+nl,3,157, 78.04e+06
+nl,3,211, 84.47e+06
+nl,3,262, 0.000e+00, 0.000e+00, 0.000e+00
+c***********************************************
+c*** Material 4                                *
+c*** Isoparametric Piezo-Material Properties   *
+c*** for E=0                                   *
+c***********************************************
+dens,4, 3.260e+03
+ex,4, 283.3e+09
+ey,4, 283.3e+09
+ez,4, 333.3e+09
+nuxy,4, 0.286
+nuxz,4, 0.253
+nuyz,4, 0.253
+gxy,4, 117.6e+09
+gxz,4, 117.6e+09
+gyz,4, 111.1e+09
+c***********************************************
+c*** Material 5                                *
+c*** Isoparametric Piezo-Material Properties   *
+c*** for D=0                                   *
+c***********************************************
+dens,5, 3.260e+03
+ex,5, 286.4e+09
+ey,5, 286.4e+09
+ez,5, 369.0e+09
+nuxy,5, 0.300
+nuxz,5, 0.242
+nuyz,5, 0.242
+gxy,5, 120.5e+09
+gxz,5, 120.5e+09
+gyz,5, 111.1e+09
+
+==============================================================================
+
+/com  Datei: SI.DAT
+/com  Materialdaten fuer Silizium
+
+c***********************************************
+c*** Material 3                                *
+c*** Full Piezo Matrix                         *
+c*** with NanoAmpere (1e-9)                    *
+c***      TeraVolt (1e9)                       *
+c***      AtoFarad (1e-18)                     *
+c***********************************************
+dens,3, 2.329e+03
+nlsize,300
+c*** ce matrix:
+nl,3,271, 167.4e+09, 65.20e+09, 65.20e+09, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,277, 167.4e+09, 65.20e+09, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,282, 167.4e+09, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,286, 79.60e+09, 0.000e+00, 0.000e+00
+nl,3,289, 79.60e+09, 0.000e+00
+nl,3,291, 79.60e+09
+c*** e matrix:
+nl,3,133, 0.000e+00, 0.000e+00, 0.000e+00, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,139, 0.000e+00, 0.000e+00, 0.000e+00, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,145, 0.000e+00, 0.000e+00, 0.000e+00, 0.000e+00, 0.000e+00, 0.000e+00
+c*** epsilon-s matrix:
+nl,3,103, 0.000e+00
+nl,3,157, 0.000e+00
+nl,3,211, 0.000e+00
+nl,3,262, 0.000e+00, 0.000e+00, 0.000e+00
+c***********************************************
+c*** Material 4                                *
+c*** Isoparametric Piezo-Material Properties   *
+c*** for E=0                                   *
+c***********************************************
+dens,4, 2.329e+03
+ex,4, 130.8e+09
+ey,4, 130.8e+09
+ez,4, 130.8e+09
+nuxy,4, 0.280
+nuxz,4, 0.280
+nuyz,4, 0.280
+gxy,4, 79.60e+09
+gxz,4, 79.60e+09
+gyz,4, 79.60e+09
+c***********************************************
+c*** Material 5                                *
+c*** Isoparametric Piezo-Material Properties   *
+c*** for D=0                                   *
+c***********************************************
+dens,5, 2.329e+03
+ex,5, 130.8e+09
+ey,5, 130.8e+09
+ez,5, 130.8e+09
+nuxy,5, 0.280
+nuxz,5, 0.280
+nuyz,5, 0.280
+gxy,5, 79.60e+09
+gxz,5, 79.60e+09
+gyz,5, 79.60e+09
+
+==============================================================================
+
+/COM    Datei:     QUARZ.DAT
+
+/COM    Materialdaten vom Quarzkristall
+/COM    Literatur: Tichy/Gautschi
+/com    Refernztemperatur T = 25 Grad-C
+
+mp,dens,3,2.648-9  ! Dichte von Quarz [kg/mm3]
+/COM
+/COM     CE-Matrix: Elastizitaetsmodul-Matrix
+/COM     T=25 Grad-C, in [N/mm2], adiabatisch
+/COM
+nl,3,271,86.8e3,7.04e3,11.91e3,-18.04e3
+nl,3,277,86.8e3,11.91e3,18.04e3
+nl,3,282,105.75e3
+nl,3,286,58.2e3
+nl,3,289,58.2e3,-18.04e3
+nl,3,291,39.88e3
+/COM
+/COM     E-Matrix: Piezoelektrische-Modulmatrix
+/COM     T=20 Grad-C, in [C/mm2]
+/COM
+nl,3,133,.171e-6,-.171e-6,0,-.041e-6
+nl,3,143,.041e-6,-.171e-6
+/COM
+/COM     EPS-Matrix: Dielektrizitaetsmatrix (Re)
+/COM     eps0 = 8.854e-18 [C/Vmm]
+/COM
+nl,3,103,39.967e-18
+nl,3,157,39.967e-18
+nl,3,211,41.029e-18
+/COM     EPS-Matrix: Dielektrizitaetsmatrix (Im)
+/COM
+
+==============================================================================
+
+/COM  Datei: VIBRIT.DAT
+
+/prep7
+/com  ********************************************
+/COM    Materialdaten VIBRIT420
+/com    Quelle: Siemens-Datenblatt VIBRIT, Stand 1981
+
+nlsize,300         ! Speicher reservieren fuer NL-Table
+dens,3,7594.3      ! Dichte: [kg/m3]
+/COM     CE-Matrix: Elastizitaets-Moduln [N/m3]
+nl,3,271,109e9,61.8e9,54.8e9
+nl,3,277,109e9,54.8e9
+nl,3,282,88.7e9
+nl,3,286,22.2e9
+nl,3,289,22.2e9
+nl,3,291,23.7e9
+/COM     E-Matrix: Piezoelektrische Moduln (*1e9)
+nl,3,145,-5.4e9,-5.4e9,13.5e9
+nl,3,143,11.7e9
+nl,3,138,11.7e9
+/COM     EPS-Matrix (*1e18)
+/COM     EPS-Matrix: Dielektrizitaetskonstanten (Re)
+nl,3,103,8.0e9
+nl,3,157,8.0e9
+nl,3,211,6.7e9
+/COM     EPS-Matrix: Dielektrizitaetskonstanten (Im)
+/com  nl,3,262,-12.9e6,-12.9e6,-10.7e6
+/com  ********************************************
+
+==============================================================================
+
+/COM  Datei: ZNO.DAT
+
+/COM  Materialdaten von Zinkoxyd
+/COM  Quelle: Landolt-Boernstein
+/COM  Referenztemperatur: 25 Celsius
+
+c***********************************************
+c*** Material 3                                *
+c*** Full Piezo Matrix                         *
+c*** with NanoAmpere (1e-9)                    *
+c***      TeraVolt (1e9)                       *
+c***      AtoFarad (1e-18)                     *
+c***********************************************
+dens,3, 5.675e+03
+nlsize,300
+c*** ce matrix:
+nl,3,271, 210.0e+09, 121.0e+09, 105.0e+09, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,277, 210.0e+09, 105.0e+09, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,282, 211.0e+09, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,286, 42.00e+09, 0.000e+00, 0.000e+00
+nl,3,289, 42.00e+09, 0.000e+00
+nl,3,291, 44.00e+09
+c*** e matrix:
+nl,3,133, 0.000e+00, 0.000e+00, 0.000e+00, 0.000e+00,-348.6e+06, 0.000e+00
+nl,3,139, 0.000e+00, 0.000e+00, 0.000e+00,-348.6e+06, 0.000e+00, 0.000e+00
+nl,3,145,-353.0e+06,-353.0e+06, 1.566e+09, 0.000e+00, 0.000e+00, 0.000e+00
+c*** epsilon-s matrix:
+nl,3,103, 70.91e+06
+nl,3,157, 70.91e+06
+nl,3,211, 55.35e+06
+nl,3,262, 0.000e+00, 0.000e+00, 0.000e+00
+c***********************************************
+c*** Material 4                                *
+c*** Isoparametric Piezo-Material Properties   *
+c*** for E=0                                   *
+c***********************************************
+dens,4, 5.675e+03
+ex,4, 127.8e+09
+ey,4, 127.8e+09
+ez,4, 144.4e+09
+nuxy,4, 0.436
+nuxz,4, 0.317
+nuyz,4, 0.317
+gxy,4, 42.00e+09
+gxz,4, 42.00e+09
+gyz,4, 44.00e+09
+c***********************************************
+c*** Material 5                                *
+c*** Isoparametric Piezo-Material Properties   *
+c*** for D=0                                   *
+c***********************************************
+dens,5, 5.675e+03
+ex,5, 132.0e+09
+ey,5, 132.0e+09
+ez,5, 184.9e+09
+nuxy,5, 0.483
+nuxz,5, 0.293
+nuyz,5, 0.293
+gxy,5, 43.65e+09
+gxz,5, 43.65e+09
+gyz,5, 44.00e+09
+
+==============================================================================
+
+/COM    Datei: MULTI.DAT
+
+/com    Materialdaten fuer Multilayerberechnung
+/com    zur Zeit implementierte Materialien:
+/com    MATERIAL 1:    Si3N4    -  Siliziumnitrid
+/com    MATERIAL 2:    SiO2     -  Siliziumoxid
+/com    MATERIAL 3:    Si       -  Silizium
+/com    MATERIAL 4:    PYREX    -  PYREX-Borsilikatglas
+/com    MATERIAL 5:    ZnO      -  Zinkoxid
+
+/com    Bezugstemperatur: T=25 C
+
+/com  --------------------------------------------------------
+/COM  Materialwerte Si3N4 (MATERIAL 1)
+SNEM=3.89e5        ! mittlerer E-Modul    [N/mm2]
+SNPO=0.3           ! mittlere Poissonzahl
+SNRO=3.1E-9        ! Materialdichte       [kg/mm2]
+SNAL=.8e-6         ! therm. Ausdehnung    [1/K]
+SNCP=711           ! Spez. Waermekapaz.   [J/kg*K]
+SNLA=25e-3         ! Waermeleitfaehigkeit [W/mm*K]
+SNBR=5000          ! Bruchspannung        [N/mm2]
+MP,EX,1,SNEM    $MP,NUXY,1,SNPO     $MP,DENS,1,SNRO
+
+/com  Materialwerte zuweisen
+/com  Eingabe von EX, ALPX ueber Datentabelle
+/com   (25,100,200,...,1100 Celsius)
+/com  Materialdaten aus DA K.Hiltmann S.65
+MPTEMP,1,298,373,473,573,673,773
+MPTEMP,7,873,973,1073,1173,1273,1373
+a1=0.80e-6   $a2=1.85e-6   $a3=2.78e-6   $a4=3.31e-6
+a5=3.61e-6   $a6=3.78e-6   $a7=3.88e-6   $a8=3.94e-6
+a9=3.97e-6   $a10=3.99e-6  $a11=4.00e-6  $a12=4.00e-6
+MPDATA,ALPX,1,1,a1,a2,a3,a4,a5,a6
+MPDATA,ALPX,1,7,a7,a8,a9,a10,a11,a12
+
+/com  --------------------------------------------------------
+/COM  Materialwerte SiO2 (MATERIAL 2)
+/com  Materialdaten aus DA K.Hiltmann S.58
+SOEX=3.89e5        ! mittlerer E-Modul    [N/mm2]
+SOPO=0.3           ! mittlere Poissonzahl
+SORO=2.20E-9       ! Materialdichte       [kg/mm2]
+SOAL=.609e-6       ! therm. Ausdehnung    [1/K]
+SOCP=691           ! Spez. Waermekapaz.   [J/kg*K]
+SOLA=1.256e-3      ! Waermeleitfaehigkeit [W/mm*K]
+MP,DENS,2,SORO
+MPTEMP,1,298,373,473,573,673,773
+MPTEMP,7,873,973,1073,1173,1273
+e1=0.73e5   $e2=0.74e5   $e3=0.75e5   $e4=0.76e5
+e5=0.77e5   $e6=0.78e5   $e7=0.79e5   $e8=0.80e5
+e9=0.81e5   $e10=0.82e5  $e11=0.83e5
+MPDATA,EX,2,1,e1,e2,e3,e4,e5,e6
+MPDATA,EX,2,7,e7,e8,e9,e10,e11
+n1=0.17   $n2=n1    $n3=n2    $n4=n2    $n5=n2
+n6=0.18   $n7=0.19  $n8=n7    $n9=0.20  $n10=n9    $n11=n9
+MPDATA,NUXY,2,1,n1,n2,n3,n4,n5,n6
+MPDATA,NUXY,2,7,n7,n8,n9,n10,n11
+a1=0.609e-6  $a2=a1    $a3=0.595e-6  $a4=0.536e-6  $a5=0.480e-6
+a6=0.392e-6  $a7=a6    $a8=a6        $a9=0.371e-6  $a10=a9  $a11=a9
+MPDATA,ALPX,2,1,a1,a2,a3,a4,a5,a6
+MPDATA,ALPX,2,7,a7,a8,a9,a10,a11
+
+/com  --------------------------------------------------------
+/COM  Materialwerte Si<100> in (110-Richtung) (MATERIAL 3)
+/com  Daten aus DA Hiltmann S.46
+SIEM=1.689e5       ! mittlerer E-Modul    [N/mm2]
+SIPO=0.0624        ! mittlere Poissonzahl
+SIRO=2.329E-9      ! Materialdichte       [kg/mm2]
+SIAL=2.6e-6        ! therm. Ausdehnung    [1/K]
+SICP=703           ! Spez. Waermekapaz.   [J/kg*K]
+SILA=156e-3        ! Waermeleitfaehigkeit [W/mm*K]
+SIBR=300           ! Bruchspannung        [N/mm2]
+MPTEMP,1,298,373,473,573,673,773
+MPTEMP,7,873,973,1073,1173,1273,1373
+r1=2.33e-9  $r2=r1   $r3=r1    $r4=2.32e-9
+r5=r4       $r6=r4   $r7=r4    $r8=2.31e-9
+r9=r8       $r10=2.30e-9       $r11=r10    $r12=r10
+MPDATA,DENS,3,1,r1,r2,r3,r4,r5,r6
+MPDATA,DENS,3,7,r7,r8,r9,r10,r11,r12
+/com  Eingabe von C11 in Abh. der Temp.
+c1=16.0e5    $c2=15.95e5   $c3=15.86e5   $c4=15.73e5
+c5=15.57e5   $c6=15.42e5   $c7=15.27e5   $c8=15.14e5
+c9=14.96e5   $c10=14.75e5  $c11=14.51e5  $c12=14.32e5
+MPDATA,EX,3,1,c1,c2,c3,c4,c5,c6
+MPDATA,EX,3,7,c7,c8,c9,c10,c11,c12
+a1=2.6e-6    $a2=3.1e-6    $a3=3.4e-6    $a4=3.7e-6
+a5=3.9e-6    $a6=4.1e-6    $a7=4.3e-6    $a8=4.4e-6
+a9=4.5e-6    $a10=4.6e-6   $a11=a10      $a12=a10
+MPDATA,ALPX,3,1,a1,a2,a3,a4,a5,a6
+MPDATA,ALPX,3,7,a7,a8,a9,a10,a11,a12
+
+/com  --------------------------------------------------------
+/COM  Materialwerte PYREX - Borosilikatglas
+/com  Corning Code 7740 (MATERIAL 4)
+/com  Daten aus: Schroeder - Spezialglastechnik
+PYEM=.61e5         ! mittlerer E-Modul    [N/mm2]
+PYPO=0.20          ! mittlere Poissonzahl
+PYRO=2.23E-9       ! Materialdichte       [kg/mm2]
+PYAL=3.2e-6        ! therm. Ausdehnung    [1/K]
+/COM  zuweisen der Materialeigenschaften
+MP,EX,4,PYEM  $MP,NUXY,4,PYPO  $MP,DENS,4,PYRO  $MP,ALPX,4,PYAL
+
+/com  --------------------------------------------------------
+/COM  Materialwerte ZnO (MATERIAL 5)
+/com  Daten aus Landolt-Boernstein fuer Bulk-Material
+ZNES=1.211e5       ! mittlerer E-Modul, senkrecht zur c-Achse [N/mm2]
+ZNEP=2.097e5       ! mittlerer E-Modul, parallel  zur c-Achse [N/mm2]
+ZNPO=0.36          ! mittlere Poissonzahl
+ZNRO=5.675E-9      ! Materialdichte   [kg/mm2]
+ZNAS=4.75e-6       ! therm. Ausdehnung, senkrecht zur c-Achse T=300K [1/K]
+ZNAP=2.92e-6       ! therm. Ausdehnung, parallel  zur c-Achse T=300K [1/K]
+/COM  zuweisen der Materialeigenschaften
+MP,EX,5,ZNEP   $MP,NUXY,5,ZNPO  $MP,DENS,5,ZNRO
+
+/com  anisotrope Elastizitaetsmoduln (T=25 C)
+/com  zur Verwendung in den Elementen: STIF5, STIF64
+zc11=2.097e5
+zc12=1.211e5
+zc13=1.051e5
+zc33=2.109e5
+zc44=.4429e5
+
+/com Temperaturdaten
+MPTEMP,1,9,13,17,22.5,30,40
+MPTEMP,7,60,80,100,120,150,200
+MPTEMP,13,250,300,400,500,600,700
+MPTEMP,19,800
+/com  parallel: Thermische Ausdehnungskoeffizienten
+ap1=-.18e-7  $ap2=-.59e-7  $ap3=-1.2e-7 $ap4=-2.5e-7  $ap5=-4.8e-7 
+ap6=-7.2e-7
+ap7=-8.85e-7 $ap8=-8.65e-7 $ap9=-6.2e-7 $ap10=-1.6e-7 $ap11=5.0e-7 
+ap12=15.1e-7
+ap13=22.5e-7 $ap14=29.2e-7 $ap15=38.2e-7 $ap16=43.8e-7 $ap17=47e-7 $ap18=49e-7
+ap19=49.8e-7
+/com  senkrecht: Thermische Ausdehnungskoeffizienten
+as1=-.09e-7  $as2=-.26e-7  $as3=-.6e-7  $as4=-1.45e-7 $as5=-2.7e-7  $as6=-4.1e-7
+as7=-5.15e-7 $as8=-3.8e-7  $as9=.4e-7   $as10=6.4e-7  $as11=16.9e-7 $as12=28.8e-7
+as13=39e-7   $as14=47.5e-7 $as15=60.7e-7 $as16=71.5e-7 $as17=78.5e-7 $as18=81.3e-7
+as19=83e-7
+MPDATA,ALPX,5,1,ap1,ap2,ap3,ap4,ap5,ap6
+MPDATA,ALPX,5,7,ap7,ap8,ap9,ap10,ap11,ap12
+MPDATA,ALPX,5,13,ap13,ap14,ap15,ap16,ap17,ap18
+MPDATA,ALPX,5,19,ap19
+
+/com  Dateiende
+/com  --------------------------------------------------------
+
+
+==============================================================================
+
+/com   MACRO: win1mat.mac  
+/com           
+/com   ALPX in Abh. der Temperatur fuer 4 Multilayer  
+/com   Darstellung von 4 rechteckig  
+/com   angeordneten Fenstern  
+/com   8 Farben  
+/com  
+/titel, Waermeausdehnkoeff.: Si3N4, SiO2, Si(110), PYREX  
+/wind,1,-1,0,0,1  
+/wind,2,0,1,0,1  
+/wind,3,-1,0,-1,0  
+/wind,4,0,1,-1,0  
+/view,1,,,1  
+/view,2,,,1  
+/view,3,,,1  
+/view,4,,,1  
+/erase  
+/com  1.Lastfall in Window 1  
+/wind,1,on  
+/wind,2,off  
+/wind,3,off  
+/wind,4,off  
+mpplo,alpx,1  
+/noerase  
+/com  2.Lastfall in Window 2  
+/wind,1,off  
+/wind,2,on  
+/wind,3,off  
+/wind,4,off  
+mpplo,alpx,2  
+/com  3.Lastfall in Window 3  
+/wind,1,off  
+/wind,2,off  
+/wind,3,on  
+/wind,4,off  
+mpplo,alpx,3  
+/com  4.Lastfall in Window 4  
+/wind,1,off  
+/wind,2,off  
+/wind,3,off  
+/wind,4,on  
+mpplo,alpx,4  
+/erase  
+
+==============================================================================
+
+/com   MACRO: win2mat.mac  
+/com           
+/com   E-Module, Dichte, Poissonzahl in Abh. der Temperatur fuer 4 Multilayer  
+/com   Darstellung von 4 rechteckig  
+/com   angeordneten Fenstern  
+/com   8 Farben  
+/com  
+/titel, Temperaturabhaengigkeit der Materialdaten: SiO2, Silizium  
+/wind,1,-1,0,0,1  
+/wind,2,0,1,0,1  
+/wind,3,-1,0,-1,0  
+/wind,4,0,1,-1,0  
+/view,1,,,1  
+/view,2,,,1  
+/view,3,,,1  
+/view,4,,,1  
+/erase  
+/com  1.Lastfall in Window 1  
+/wind,1,on  
+/wind,2,off  
+/wind,3,off  
+/wind,4,off  
+mpplo,ex,2  
+/noerase  
+/com  2.Lastfall in Window 2  
+/wind,1,off  
+/wind,2,on  
+/wind,3,off  
+/wind,4,off  
+mpplo,ex,3  
+/com  3.Lastfall in Window 3  
+/wind,1,off  
+/wind,2,off  
+/wind,3,on  
+/wind,4,off  
+mpplo,nuxy,2  
+/com  4.Lastfall in Window 4  
+/wind,1,off  
+/wind,2,off  
+/wind,3,off  
+/wind,4,on  
+mpplo,dens,3  
+/erase  
+
+==============================================================================
+
+/COM  Datei: BIMORPH.GEO
+/com  Silizium-Membran mit Piezoschicht
+/com  Geomtrie mit zwei Elementlagen
+
+
+/com  ********************************************
+/com  Einlesen der Piezoschicht-Materialdaten:
+/com   z.B.:  /inp,vibrit,dat
+/com  ********************************************
+
+/title, Bimorph-Membran: Silizium-Piezoschicht
+
+/com  ********************************************
+/COM  Materialwerte Si<110>
+/com  >>>> fuer dynamische Analyse
+SIEM=1.689e11      ! mittlerer E-Modul    [N/m2]
+SIPO=0.0625        ! mittlere Poissonzahl
+SIRO=2329          ! Materialdichte       [kg/m3]
+/com  >>>> fuer thermische Analyse
+SIAL=2.6e-6        ! therm. Ausdehnung    [1/K]
+SICP=703           ! Spez. Waermekapaz.   [J/kg*K]
+SILA=156           ! Waermeleitfaehigkeit [W/m*K]
+SIBR=300           ! Bruchspannung        [MPa]
+/COM    Materialeigenschaften zuweisen: Silizium
+MP,EX,1,SIEM
+MP,NUXY,1,SIPO
+MP,DENS,1,SIRO
+
+/com  ********************************************
+/com  Variable Parameter
+LANG=4.6e-3        ! halbe Membranseitenlaenge [m]
+DICK=20e-6         ! Si-Membrandicke [m]
+DPIZ=200e-6        ! Piezo-Dicke [m]
+ZANZ=1             ! Anzahl Elemente vertikal
+XANZ=10            ! Anzahl Elemente horizontal
+XINC=LANG/XANZ     ! Unterteilung horizontal [m]
+ZINC=DICK/ZANZ     ! Unterteilung vertikal [m]
+dges=dick+dpiz     ! Gesamtdicke
+
+/com  zwei Elementtypen festlegen
+et,1,45 ! Strukturelement: 8 Knoten, DOFs: UX,UY,UZ
+et,2,5  ! Multi-Field Elem., 8 Knoten, DOFs: UX,UY,UZ,TEMP,VOLT,MAG
+
+/com  ********************************************
+/COM  Geometrie erstellen
+/com  ********************************************
+/COM  Knoten generieren (Silizium-Membran)
+n,1                             ! erste Knotenlinie
+n,xanz+1,lang
+fill
+ngen,xanz+1,xanz+1,all,,,,xinc  ! unterste Knotenlage
+ngen,zanz+1,1000,all,,,,,zinc   ! Knotenlagen uebereinander
+
+/COM  Elemente generieren
+mat,1                           ! Material:   Nr.1
+type,1                          ! Elementtyp: Nr.1
+e,1,2,xanz+3,xanz+2,1001,1002,1000+xanz+3,1000+xanz+2
+egen,xanz,1,all
+egen,xanz,xanz+1,all
+egen,zanz,1000,all
+
+/com  Piezoschicht (1 Elementlage)
+mat,3                           ! Material:   Nr.3
+type,2                          ! Elementtyp: Nr.2
+n,2001,,,dges                   ! Knoten generieren
+n,2011,lang,,dges
+fill
+ngen,11,11,2001,2011,1,,xinc
+type,2
+mat,3
+e,1001,1002,1013,1012,2001,2002,2013,2012
+egen,xanz,1,-1
+egen,xanz,xanz+1,-10
+
+/com  ********************************************
+/COM     geometrische Randbedingungen
+nsel,z
+nrsel,x
+d,all,ux
+d,all,uy
+d,all,uz
+nsel,z
+nrsel,y,lang
+d,all,ux
+d,all,uy
+d,all,uz
+nall
+/COM  Symmetriebedingungen
+LOCAL,11,0,lang
+SYMBC,11,1
+SYMBC,11,2
+CSYS           ! urspruengliches Koord.sys.
+wsort
+
+/com  ********************************************
+/com  ANSYS-Optionen
+/pnum,mat,1    ! Materialien anzeigen
+/pbc,all,2     ! alle Randbedingungen anzeigen
+/view,1,1,1,1  ! schraege Ansicht
+
+/com  ********************************************
+/com  Einlesen der Analyse-Option:
+/com    /inp,statik,anl : fuer statische Analyse
+/com    /inp,modal,anl  : fuer dynamische Analyse
+
+/com  ********************************************
+
+==============================================================================
+
+/COM  Datei: STATIK.ANL
+
+/com  ********************************************
+/COM  ANSYS-Analyseoptionen
+kan,0              ! Modalanalyse: Householder-Verfahren
+/com kay,6,1       ! large deflection
+/com kay,8,1       ! stress stiffening
+druk=10e5          ! mechanischer Druck [Pa]
+span=100           ! elektrische Spannung [V]
+nspa=span*1e-9     ! Normierung
+
+/com  ********************************************
+/com  mechanische Last vorgeben --> elektriscHe Reaktion
+! nsel,z,dges
+! psf,all,,,druk
+! nall
+
+/com  ********************************************
+/com elektrische Last vorgeben --> mechanische Reaktion
+nsel,z,dick
+nt,all,volt,0
+nsel,z,dges
+nt,all,volt,nspa   ! Spannung anlegen
+nall
+
+cnvr,,,,,,,-1      ! Vermeide Abbruch durch neg. CE-Matrix
+afwr
+/com  ********************************************
+
+==============================================================================
+
+/COM  Datei: MODAL.ANL
+
+/com  ********************************************
+/COM  ANSYS-Analyseoptionen
+kan,2              ! Modalanalyse: Householder-Verfahren
+kay,2,5            ! 5 Eigenmoden berechnen
+kay,3,-5           ! Moden ausgeben und auf 1 normieren
+total,20           ! Anzahl der MDOFs
+
+/com  *********** elektrische Randbedingungen  *********
+/COM       Resonanzfrequenz-Randbedingungen
+/COM       (Kurzschluss: E=0)
+nsel,z,dick
+nt,all,volt,0      ! untere Elektrode: Masse
+nsel,z,dges
+nt,all,volt,0      ! obere Elektrode: Masse
+nall
+lwrite             ! 1. Lastschritt
+
+/COM       Antiresonanz-Bedingung
+/COM       (offene Elektroden: D=0)
+nsel,z,dges
+ntdel,all,volt     ! Spannungen loeschen
+nall
+lwrite             ! 2. Lastschritt
+cnvr,,,,,,,-1      ! Vermeide Abbruch durch neg. CE-Matrix
+afwr               ! Analyse-Datei FILE27.DAT schreiben
+/com  ********************************************
+
+==============================================================================
