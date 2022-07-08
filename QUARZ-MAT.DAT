@@ -1,0 +1,33 @@
+/COM    Datei:     QUARZ-MAT.DAT
+
+/COM    Materialdaten vom Quarzkristall
+/COM    Literatur: Tichy/Gautschi
+/com    Refernztemperatur T = 25 Grad-C
+
+mp,dens,3,2.648-9  ! Dichte von Quarz [kg/mm3]
+/COM
+/COM     CE-Matrix: Elastizitaetsmodul-Matrix
+/COM     T=25 Grad-C, in [N/mm2], adiabatisch
+/COM
+nl,3,271,86.8e3,7.04e3,11.91e3,-18.04e3
+nl,3,277,86.8e3,11.91e3,18.04e3
+nl,3,282,105.75e3
+nl,3,286,58.2e3
+nl,3,289,58.2e3,-18.04e3
+nl,3,291,39.88e3
+/COM
+/COM     E-Matrix: Piezoelektrische-Modulmatrix
+/COM     T=20 Grad-C, in [C/mm2]
+/COM
+nl,3,133,.171e-6,-.171e-6,0,-.041e-6
+nl,3,143,.041e-6,-.171e-6
+/COM
+/COM     EPS-Matrix: Dielektrizitaetsmatrix (Re)
+/COM     eps0 = 8.854e-18 [C/Vmm]
+/COM
+nl,3,103,39.967e-18
+nl,3,157,39.967e-18
+nl,3,211,41.029e-18
+/COM     EPS-Matrix: Dielektrizitaetsmatrix (Im)
+/COM
+
