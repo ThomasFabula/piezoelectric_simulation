@@ -1,0 +1,30 @@
+Datei: ULTRA3D.LST
+------
+
+Ergebnisse der Modalanalyse 
+
+ TITLE =  Ultraschallwandler - axialsymmetrisch
+
+  LOAD STEP =     1    ITERATION =     1    FREQ =   325.045
+  LOAD STEP =     1    ITERATION =     2    FREQ =   2475.72
+  LOAD STEP =     1    ITERATION =     3    FREQ =   3606.01
+  LOAD STEP =     1    ITERATION =     4    FREQ =   3710.07
+  LOAD STEP =     1    ITERATION =     5    FREQ =   4154.06
+  LOAD STEP =     1    ITERATION =     6    FREQ =   4876.00
+  LOAD STEP =     1    ITERATION =     7    FREQ =   5877.79
+  LOAD STEP =     1    ITERATION =     8    FREQ =   6241.34
+  LOAD STEP =     1    ITERATION =     9    FREQ =   6651.86
+  LOAD STEP =     1    ITERATION =    10    FREQ =   6685.46
+
+  LOAD STEP =     2    ITERATION =     1    FREQ =   325.047
+  LOAD STEP =     2    ITERATION =     2    FREQ =   2475.78
+  LOAD STEP =     2    ITERATION =     3    FREQ =   3606.01
+  LOAD STEP =     2    ITERATION =     4    FREQ =   3710.08
+  LOAD STEP =     2    ITERATION =     5    FREQ =   4154.07
+  LOAD STEP =     2    ITERATION =     6    FREQ =   4876.00
+  LOAD STEP =     2    ITERATION =     7    FREQ =   5877.79
+  LOAD STEP =     2    ITERATION =     8    FREQ =   6241.36
+  LOAD STEP =     2    ITERATION =     9    FREQ =   6651.85
+  LOAD STEP =     2    ITERATION =    10    FREQ =   6685.46
+  
+ 
