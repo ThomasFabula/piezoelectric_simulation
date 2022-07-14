@@ -1,0 +1,65 @@
+/COM   Datei: AMPLOUT.MAC
+/com   Amplitudendarstellung im POST26-Processor
+
+/post26      ! time history postprocessor
+/show,x11
+file,10
+
+/com  Ausgabekanal zuordnen
+disp,2,1,uz
+disp,3,3,uz
+disp,4,4,uz
+disp,5,5,uz
+disp,6,6,uz
+disp,7,7,uz
+disp,8,8,uz
+disp,9,9,uz
+disp,10,10,uz
+ 
+/com Grafische Ausgabe
+yran,,.125e-5
+grid,1
+plcp
+ylab,Ampl
+/noera
+plva,2
+plva,3
+plva,4
+plva,5
+plva,6
+plva,7
+plva,8
+plva,9
+plva,10
+
+/com Ausgabe in Dateien
+prcp,1
+/out,amp-u1,dat
+prva,2
+/out
+/out,amp-u3,dat
+prva,3
+/out
+/out,amp-u4,dat
+prva,4
+/out
+/out,amp-u5,dat
+prva,5
+/out
+/out,amp-u6,dat
+prva,6
+/out
+/out,amp-u7,dat
+prva,7
+/out
+/out,amp-u8,dat
+prva,8
+/out
+/out,amp-u9,dat
+prva,9
+/out
+/out,amp-u10,dat
+prva,10
+/out
+
+/com *******  MACRO-Ende.  *******
