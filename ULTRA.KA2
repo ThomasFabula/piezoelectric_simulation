@@ -1,0 +1,26 @@
+/COM  Datei:  ULTRA.KAN2
+
+/COM  ANSYS-Analyseoption: dynamisch
+
+kan,2
+kay,2,10
+kay,3,-10
+total,100
+/com  eventuell MDOFS manuell selektieren
+/com  nsel,pick
+/com  m,all,ux  (uy, uz)
+
+/COM  elektrische Randbedingungen
+local,11,1
+nsel,z,z2         ! Kurzschluss (E=0)
+nrsel,x,rmin,r1
+nasel,z,z4
+nt,all,volt,0
+nall
+lwrite            ! 1. L.S.
+nsel,z,z4         ! offene Elektroden (D=0)
+ntdel,all,volt
+nall
+lwrite            ! 2. L.S.
+csys
+afwr
