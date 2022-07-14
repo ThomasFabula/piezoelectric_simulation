@@ -1,0 +1,90 @@
+Datei: piezo.zno
+================
+Variation der Materialparameter und Berechnung der
+piezoelektrischen Moduln und elektromechanischen Kopplungsfaktoren:
+
+Material: ZnO, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: LB 1982
+****  piezoelektrische Koeffizienten: d_31, d_33, d_15 [C/N]:
+-5.120E-12    1.230E-11   -8.300E-12
+****  Elastizitaetsmoduln: C_11, C_12, C_13, C_33, C_44 [Pa]:
+ 2.100E+11    1.210E+11    1.050E+11    2.110E+11    4.200E+10
+**** relative Permittivitaeten: eps_11^T, eps_33^T [C/Vm]
+ 9.260E+00    8.200E+00
+**** piezoelektrische Moduln: e_31, e_33, e_15 [C/N]
+-4.032E-01    1.520E+00   -3.486E-01
+**** elektromechanischer Kopplungsfaktor:
+---> k_31 =  2.753E-01
+---------------------------------------------------------------
+Material: ZnO, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: LB 1982
+****  piezoelektrische Koeffizienten: d_31, d_33, d_15 [C/N]:
+-5.000E-12    1.230E-11   -8.300E-12
+****  Elastizitaetsmoduln: C_11, C_12, C_13, C_33, C_44 [Pa]:
+ 2.100E+11    1.210E+11    1.050E+11    2.110E+11    4.200E+10
+**** relative Permittivitaeten: eps_11^T, eps_33^T [C/Vm]
+ 9.260E+00    8.200E+00
+**** piezoelektrische Moduln: e_31, e_33, e_15 [C/N]
+-3.635E-01    1.545E+00   -3.486E-01
+**** elektromechanischer Kopplungsfaktor:
+---> k_31 =  2.689E-01
+---------------------------------------------------------------
+Material: ZnO, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: LB 1982
+****  piezoelektrische Koeffizienten: d_31, d_33, d_15 [C/N]:
+-5.000E-12    1.230E-11   -8.300E-12
+****  Elastizitaetsmoduln: C_11, C_12, C_13, C_33, C_44 [Pa]:
+ 2.100E+11    1.210E+11    1.050E+11    2.110E+11    4.200E+10
+**** relative Permittivitaeten: eps_11^T, eps_33^T [C/Vm]
+ 9.260E+00    1.000E+01
+**** piezoelektrische Moduln: e_31, e_33, e_15 [C/N]
+-3.635E-01    1.545E+00   -3.486E-01
+**** elektromechanischer Kopplungsfaktor:
+---> k_31 =  2.435E-01
+---------------------------------------------------------------
+Material: ZnO, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: LB 1982
+****  piezoelektrische Koeffizienten: d_31, d_33, d_15 [C/N]:
+-5.120E-12    1.230E-11   -8.300E-12
+****  Elastizitaetsmoduln: C_11, C_12, C_13, C_33, C_44 [Pa]:
+ 2.100E+11    1.260E+11    1.050E+11    2.110E+11    4.200E+10
+**** relative Permittivitaeten: eps_11^T, eps_33^T [C/Vm]
+ 9.260E+00    8.200E+00
+**** piezoelektrische Moduln: e_31, e_33, e_15 [C/N]
+-4.288E-01    1.520E+00   -3.486E-01
+**** elektromechanischer Kopplungsfaktor:
+---> k_31 =  2.753E-01
+---------------------------------------------------------------
+Material: ZnO, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: LB 1982
+****  piezoelektrische Koeffizienten: d_31, d_33, d_15 [C/N]:
+-5.120E-12    1.230E-11   -8.300E-12
+****  Elastizitaetsmoduln: C_11, C_12, C_13, C_33, C_44 [Pa]:
+ 1.830E+11    1.210E+11    1.050E+11    2.110E+11    4.200E+10
+**** relative Permittivitaeten: eps_11^T, eps_33^T [C/Vm]
+ 9.260E+00    8.200E+00
+**** piezoelektrische Moduln: e_31, e_33, e_15 [C/N]
+-2.650E-01    1.520E+00   -3.486E-01
+**** elektromechanischer Kopplungsfaktor:
+---> k_31 =  2.570E-01
+---------------------------------------------------------------
+Material: ZnO, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: LB 1982
+****  piezoelektrische Koeffizienten: d_31, d_33, d_15 [C/N]:
+-5.000E-12    1.230E-11   -8.300E-12
+****  Elastizitaetsmoduln: C_11, C_12, C_13, C_33, C_44 [Pa]:
+ 1.830E+11    1.210E+11    1.050E+11    2.110E+11    4.200E+10
+**** relative Permittivitaeten: eps_11^T, eps_33^T [C/Vm]
+ 9.260E+00    1.000E+01
+**** piezoelektrische Moduln: e_31, e_33, e_15 [C/N]
+-2.285E-01    1.545E+00   -3.486E-01
+**** elektromechanischer Kopplungsfaktor:
+---> k_31 =  2.273E-01
+---------------------------------------------------------------
+Material: ZnO, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: LB 1982
+****  piezoelektrische Koeffizienten: d_31, d_33, d_15 [C/N]:
+-5.000E-12    1.230E-11   -8.300E-12
+****  Elastizitaetsmoduln: C_11, C_12, C_13, C_33, C_44 [Pa]:
+ 1.830E+11    1.210E+11    1.050E+11    2.110E+11    4.200E+10
+**** relative Permittivitaeten: eps_11^T, eps_33^T [C/Vm]
+ 9.260E+00    1.100E+01
+**** piezoelektrische Moduln: e_31, e_33, e_15 [C/N]
+-2.285E-01    1.545E+00   -3.486E-01
+**** elektromechanischer Kopplungsfaktor:
+---> k_31 =  2.167E-01
+---------------------------------------------------------------
+

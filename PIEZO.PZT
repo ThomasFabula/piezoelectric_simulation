@@ -1,0 +1,18 @@
+Datei: piezo.pzt
+================
+Variation der Materialparameter und Berechnung der
+piezoelektrischen Moduln und elektromechanischen Kopplungsfaktoren:
+
+Material: PZT (VIBRIT420), hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: SIEM
+****  piezoelektrische Koeffizienten: d_31, d_33, d_15 [C/N]:
+-1.600E-10    3.550E-10   -5.250E-10
+****  Elastizitaetsmoduln: C_11, C_12, C_13, C_33, C_44 [Pa]:
+ 1.090E+11    6.178E+10    5.485E+10    8.867E+10    2.222E+10
+**** relative Permittivitaeten: eps_11^T, eps_33^T [CV/m]
+ 1.600E+03    1.600E+03
+**** piezoelektrische Moduln: e_31, e_33, e_15 [C/N]
+-7.853E+00    1.393E+01   -1.167E+01
+**** elektromechanischer Kopplungsfaktor:
+---> k_31 =  4.438E-01
+---------------------------------------------------------------
+
