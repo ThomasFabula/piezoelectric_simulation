@@ -1,0 +1,19 @@
+/COM   Datei: ULTRA.STRESS
+
+/com   STRESS-Lauf fuer Ultraschall-Wandler ULTRA3D.f18
+/com   Parameter:
+nitr=50
+fsta=0
+fsto=1e5
+
+/com   STRESS-Lauf
+/com *******  STRESS-Lauf starten  *******
+
+/stress,,,,1     ! interaktiv: YES eingeben
+iter,nitr,,1
+harf,fsta,fsto
+nstre,nitr
+end
+fini
+
+/com *******  MACRO-Ende.  *******
