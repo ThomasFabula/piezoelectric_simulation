@@ -1,0 +1,59 @@
+/COM  Datei:  ULTRA.KAN6
+
+vdim=1e-9          ! Skalierungsfaktor: elektr. Spannung
+SPAN=100*vdim      ! elektr. Spannung an der Piezokeramik [V]
+
+/com  FE-Modell: ULTRA3D.F18
+! pot1=173           ! erster Knoten: untere Elektrode
+! pot2=279           ! zweiter Knoten: obere Elektrode
+
+/COM  ANSYS-Analyseoption: transient
+kan,6              ! Harmonic Response Analysis
+kbc,1              ! Stepped loads, constant for all iterations
+ianz=50            ! Anzahl Iterationen
+fre1=0             ! Startfrequenz
+fre2=1e5           ! Stopfrequenz
+harfrq,fre1,fre2   ! Resonanzfrequenzbereich
+iter,ianz,,1       ! Anzahl Iterationen
+dmprat,0.03        ! Gesamtguetefaktor: ca. 10-30
+
+/com  eventuell weitere MDOFS manuell selektieren
+/com  nsel,pick
+/com  m,all,ux  (uy, uz)
+total,200
+
+/com   MDOFs entlang der oberen Bauteilkante setzen !!!!
+/com   um in POST26 mechanische Amplituden ansehen zu koennen !
+local,11,1
+nsel,z,z4
+nrsel,x,rmin,r1
+nrsel,y,0
+m,all,uz
+m,all,ux
+nall
+
+m,pot1,uz
+m,pot1,ux
+m,pot2,uz
+m,pot2,ux
+
+/com  *********** elektrische Randbedingungen  *********
+/COM     Elektrodenflaechen definieren 
+/COM     Potentiale an Knoten anlegen
+nsel,z,z2         ! untere Elektrode: Masse
+nrsel,x,rmin,r1
+nt,all,volt,0
+nall
+nsel,z,z4         ! obere Elektrode: Spannung
+nt,all,volt,span
+
+/com  VOLT-Freiheitsgrade definieren 
+nsel,z,z2
+nasel,z,z4
+nrsel,x,rmin,r1
+m,all,volt
+nall
+cnvr,,,,,,,-1      ! Vermeide Abbruch durch neg. CE-Matrix
+/com  ********************************************
+csys
+afwr
