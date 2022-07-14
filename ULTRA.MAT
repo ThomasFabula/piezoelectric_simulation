@@ -1,0 +1,98 @@
+/COM    Datei: ULTRA.MAT
+/COM 
+/COM    Materialdaten des Ultraschallschwingers
+/COM    -  isotrope Werkstoffgroessen
+/com    -  Piezokeramik: anisotrop
+/COM    -  Bezugstemperatur: T = 20 Grad-C
+
+/COM    Th. Fabula, N.Hey, HSG-IMIT
+/COM    letzte Aenderung: 13.10.92
+
+/PREP7
+csys,0
+/COM    ===================================
+/COM    Material Nr. 1: SILIKON
+! mp,dens,1,1200           ! Dichte  [kg/m3]
+! mp,ex,1,1.42e6           ! E-Modul [Pa]
+! mp,nuxy,1,0.4998         ! Poissonzahl
+
+/COM    ===================================
+/COM    Material Nr. 2: SOLEF 3108 (PVDF)
+mp,dens,2,1730           ! Dichte  [kg/m3]
+mp,ex,2,4.0e9            ! E-Modul [Pa]
+mp,nuxy,2,0.36           ! Poissonzahl
+
+/COM    ===================================
+/COM    Material Nr. 3: P1-88 (NAVY 2)
+/COM    elektr. Randbedingung: E = const zur
+/COM    Berechnung der Serienresonanzfrequenz
+! mp,dens,3,7700           ! Dichte  [kg/m3]
+! mp,ex,3,6.477e10         ! E-Modul [Pa]  (=1/S11E)
+! mp,nuxy,3,0.2992         ! Poissonzahl
+
+/COM    ===================================
+/COM    Material Nr. 4: P1-88 (NAVY 2)
+/COM    elektr. Randbedingung: D = const zur
+/COM    Berechnung der Parallelresonanzfrequenz
+! mp,dens,3,7700           ! Dichte  [kg/m3]
+! mp,ex,3,7.502e11         ! E-Modul [Pa]   (=1/S11D)
+! mp,nuxy,3,0.2992         ! Poissonzahl
+
+c***********************************************
+c*** Material 3                                *
+c*** Full Piezo Matrix                         *
+c*** with NanoAmpere (1e-9)                    *
+c***      TeraVolt (1e9)                       *
+c***      AtoFarad (1e-18)                     *
+c***********************************************
+! mp,damp,3,0.0125   ! mechan. Schwingungsguete: 80
+dens,3, 7.700e+03
+nlsize,300
+c*** ce matrix:
+nl,3,271, 131.3e+09, 81.44e+09, 83.01e+09, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,277, 131.3e+09, 83.01e+09, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,282, 114.6e+09, 0.000e+00, 0.000e+00, 0.000e+00
+nl,3,286, 24.98e+09, 0.000e+00, 0.000e+00
+nl,3,289, 29.46e+09, 0.000e+00
+nl,3,291, 29.46e+09
+c*** e matrix:
+nl,3,133, 0.000e+00, 0.000e+00, 0.000e+00, 0.000e+00, 11.79e+09, 0.000e+00
+nl,3,139, 0.000e+00, 0.000e+00, 0.000e+00, 9.990e+09, 0.000e+00, 0.000e+00
+nl,3,145,-4.286e+09,-4.286e+09, 17.81e+09, 0.000e+00, 0.000e+00, 0.000e+00
+c*** epsilon-s matrix:
+nl,3,103, 12.73e+09
+nl,3,157, 13.44e+09
+nl,3,211, 7.217e+09
+nl,3,262, 0.000e+00, 0.000e+00, 0.000e+00
+
+c***********************************************
+c*** Material 4                                *
+c*** Isoparametric Piezo-Material Properties   *
+c*** for E=0                                   *
+c***********************************************
+dens,4, 7.700e+03
+ex,4, 64.77e+09
+ey,4, 64.77e+09
+ez,4, 49.78e+09
+nuxy,4, 0.299
+nuxz,4, 0.390
+nuyz,4, 0.390
+gxy,4, 24.98e+09
+gxz,4, 29.46e+09
+gyz,4, 29.46e+09
+c***********************************************
+c*** Material 5                                *
+c*** Isoparametric Piezo-Material Properties   *
+c*** for D=0                                   *
+c***********************************************
+dens,5, 7.700e+03
+ex,5, 70.99e+09
+ey,5, 70.99e+09
+ez,5, 76.81e+09
+nuxy,5, 0.424
+nuxz,5, 0.364
+nuyz,5, 0.364
+gxy,5, 30.70e+09
+gxz,5, 37.43e+09
+gyz,5, 29.46e+09
+
