@@ -1,0 +1,23 @@
+/COM  Datei:  ULTRA.KAN0
+
+/COM  ANSYS-Analyseoption: statisch
+
+einh=1e-9
+span=100*einh    ! Anregungsspannung in Volt
+kan,0            ! statische Analyse
+/com Nichtlinearitaeten
+/com kay,6,1          ! large deflection
+/com kay,8,1          ! stress stiffening
+ 
+/com  Lasten definieren
+/com  elektrische Anregung der Piezokeramik
+local,11,1
+nsel,z,z2
+nrsel,x,rmin,r1
+nt,all,volt,0     ! Grundelektrode: Masse
+nall
+nsel,z,z4
+nt,all,volt,span  ! obere Elektrode: Spannung
+nall
+csys
+afwr
