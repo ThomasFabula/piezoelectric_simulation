@@ -102,4 +102,3 @@ save           ! save model data for further RESUME
 /COM   /INP,BIM-K2,ANL - MODAL ANALYSIS
 /COM
 /COM ****************************************************************** 
-
