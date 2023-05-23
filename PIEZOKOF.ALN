@@ -1,10 +1,7 @@
-Material: AlN, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: Diss. Franz 1988
+Material: AlN, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: Dissertation Franz 1988
 ****  piezoelektrische Koeffizienten: d_31, d_33, d_15 [C/N]:
 -2.00e-12   5.53e-12   -4.08e-12
 ****  Elastizitaetsmoduln: C_11, C_12, C_13, C_33, C_44 [Pa]:
 2.83e11   1.e11   1.e11   1.e11   1.e11 (???)
 **** relative Permittivitaeten: eps_11^T, eps_33^T [CV/m]
 9.0  11.4        bis 12.0
-
-
-
