@@ -1,4 +1,4 @@
-Material: ZnO, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: LB 1982
+Material: ZnO, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: Landolt-Börnstein 1982
 ****  piezoelektrische Koeffizienten: d_31, d_33, d_15 [C/N]:
 -5.12e-12   12.3e-12   -8.3e-12
 ****  Elastizitaetsmoduln: C_11, C_12, C_13, C_33, C_44 [Pa]:
@@ -6,5 +6,3 @@ Material: ZnO, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: LB 1982
 **** relative Permittivitaeten: eps_11^T, eps_33^T [CV/m]
 9.26  8.2
 
-
-
