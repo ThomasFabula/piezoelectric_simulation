@@ -3,7 +3,7 @@ Datei: piezo.zno
 Variation der Materialparameter und Berechnung der
 piezoelektrischen Moduln und elektromechanischen Kopplungsfaktoren:
 
-Material: ZnO, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: LB 1982
+Material: ZnO, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: Landolt-Börnstein 1982
 ****  piezoelektrische Koeffizienten: d_31, d_33, d_15 [C/N]:
 -5.120E-12    1.230E-11   -8.300E-12
 ****  Elastizitaetsmoduln: C_11, C_12, C_13, C_33, C_44 [Pa]:
@@ -87,4 +87,3 @@ Material: ZnO, hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: LB 1982
 **** elektromechanischer Kopplungsfaktor:
 ---> k_31 =  2.167E-01
 ---------------------------------------------------------------
-
