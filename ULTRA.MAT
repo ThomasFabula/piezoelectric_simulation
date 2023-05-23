@@ -6,7 +6,7 @@
 /COM    -  Bezugstemperatur: T = 20 Grad-C
 
 /COM    Th. Fabula, N.Hey, HSG-IMIT
-/COM    letzte Aenderung: 13.10.92
+/COM    letzte Aenderung: 13.10.1992
 
 /PREP7
 csys,0
@@ -95,4 +95,3 @@ nuyz,5, 0.364
 gxy,5, 30.70e+09
 gxz,5, 37.43e+09
 gyz,5, 29.46e+09
-
