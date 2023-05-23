@@ -1,6 +1,7 @@
 /com  Materialdaten: Zinkoxid - ZnO
-/com  aus Landolt-Boernstein, LB III/17, Kap. 3.5, S.35ff
+/com  aus Landolt-Boernstein, Landolt-Börnstein III/17, Kap. 3.5, S.35ff
 /com
+
 /com density (g/cm3), T=298 K      
 dich=5.67526
 /com  melting point: T ca. 2300 K
@@ -77,4 +78,3 @@ dich=5.67526
 /com  pyroelectric constants p (10e-10 As/cm2 K)
 /com  pe parallel c     T(K)
 /com  px parallel c     T(K)
-
