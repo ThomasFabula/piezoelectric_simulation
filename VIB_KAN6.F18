@@ -18,7 +18,7 @@ dmprat,0.01        * Gte = 100
 /COM
 rad1=.45e-3        * innerer Radius: .45 mm
 rad2=1.075e-3      * aeusserer Rad.: 1.075 mm
-hoeh=6.45e-3       * halbe Hhe:     6.45 mm
+hoeh=6.45e-3       * halbe Hoehe:     6.45 mm
 phi=90             * Winkel: 90 Grad
 
 /COM
@@ -117,4 +117,3 @@ wsort,z            * Wavefront optimieren
 cnvr,,,,,,,-1      * Vermeide Abbruch bei neg. CE-Matrix
 /view,1,1,1,1
 albc,1             * show all boundary cond.
-
