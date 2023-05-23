@@ -1,4 +1,4 @@
-Material: PZT (VIBRIT420), hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: SIEM
+Material: PZT (VIBRIT420), hexagonale Kristallsymmetrie (6mm), Lit.-Quelle: SIEMENS Datenblatt
 ****  piezoelektrische Koeffizienten: d_31, d_33, d_15 [C/N]:
 -1.600E-10    3.550E-10   -5.250E-10
 ****  Elastizitaetsmoduln: C_11, C_12, C_13, C_33, C_44 [Pa]:
