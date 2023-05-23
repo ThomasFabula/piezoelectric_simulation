@@ -3,7 +3,6 @@ echo=off
 e piezo.kof
 piezomod.exe
 type piezo.mod
-echo Ctrl-C fÅr Abbruch eingeben !
+echo Ctrl-C f√ºr Abbruch eingeben !
 pause
 goto weiter
-
