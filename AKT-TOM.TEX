@@ -1,0 +1,91 @@
+% Datei: AKT-TOM.TEX
+% Formeln zu der Aktoren-Abschätzung in LaTeX
+
+\section[Aktoren]
+{Analytische Beschreibung mikromechanischer piezoelektrischer Bimorphstrukturen}
+
+
+Die symmetrische Übertragungsmatrix [$e$] beschreibt den Biegezustand
+des Balkens bei unterschiedlichen mechanischen und elektrischen
+Belastungen und die verknüpft internen mit den externen Parametern:
+%
+\begin{eqnarray*}
+  \left(
+  \begin{array}{c}
+  \alpha \\ \delta \\ \upsilon \\ Q
+  \end{array} \right) & = &
+  \left[
+  \begin{array}{llll}
+  e_{11} & e_{12} & e_{13} & e_{14} \\
+  e_{21} & e_{22} & e_{23} & e_{24} \\
+  e_{31} & e_{32} & e_{33} & e_{34} \\
+  e_{41} & e_{42} & e_{43} & e_{44}
+  \end{array}
+ \right]
+ \left(
+ \begin{array}{c}
+ M \\ F \\ p \\ U
+ \end{array}
+\right)
+\end{eqnarray*}
+%
+Für die Komponenten $\displaystyle \frac{K}{A} \cdot e_{ij}$ der Matrix gilt:
+%
+\begin{eqnarray*}
+%e & = & A \cdot
+\left [
+\begin{array}{cccc}
+\displaystyle \frac{12L}{Kb} & \displaystyle \frac{6L^{2}}{Kb} &
+\displaystyle \frac{2L^{3}}{K} & \frac{6d_{31}BL}{K} \\
+\\
+\displaystyle \frac{6L^{2}}{Kb} & \displaystyle \frac{4L^{3}}{Kb} &
+\displaystyle \frac{3L^{4}}{2K} &
+               \displaystyle \frac{3d_{31}BL^{2}}{K}\\
+\\
+\displaystyle \frac{2L^{3}}{K} & \displaystyle \frac{3L^{4}}{2K} &
+\displaystyle \frac{3L^{5}b}{5K} & \displaystyle
+\frac{3d_{31}BL^{3}b}{K}\\
+\\
+\displaystyle \frac{6d_{31}BL}{K}     &
+\displaystyle \frac{3d_{31}BL^{2}}{K} &
+\displaystyle \frac{d_{31}BL^{3}b}{K} &
+\quad \displaystyle \frac{Lb}{Ah_{p}} % \cdot
+\left( \epsilon^{K \sigma}_{33} -
+%\frac{
+d_{31}^{2} h_{Si} (s^{Si}_{11} h_{p}^{3} +
+s^{p}_{11} h_{Si}^{3}  \right)
+\end{array}
+\right ]
+\end{eqnarray*}
+%
+mit den Abküzungen $ A, B, K $:
+%
+\begin{eqnarray*}
+   A & = & S^{Si}_{11} S^{p}_{11} \, \left( S^{p}_{11} h_{Si} \, + \,
+           S^{Si}_{11} h_{p} \right ) \\
+   B & = & \frac{h_{Si} (h_{Si} \, + \, h_{p}) }{ S^{p}_{11} h_{Si} \,
+               +  \, S^{Si}_{11} h_{p}} \\
+     &   &   \nonumber  \\
+   K & = & (S^{Si}_{11})^{2} \, (h_{p})^{4} \, + \, 4S^{Si}_{11}
+                   S^{p}_{11} h_{Si}(h_{p})^{3} \nonumber \\
+     &   & + \, 6S^{Si}_{11} S^{p}_{11}(h_{Si})^{2}(h_{p})^{2} \, + \,
+                4S^{Si}_{11} S^{p}_{11} h_{p} (h_{Si})^{3} \nonumber \\
+     &   & + \, (S^{p}_{11})^{2}(h_{Si})^{4}
+ \end{eqnarray*}
+%
+wobei:
+\begin{eqnarray*}
+ L, b                      & : &
+  \mbox{L„nge, Breite des Biegebalkens [m]} \\
+ h_{Si},h_{p}              & : &
+  \mbox{Substratdicke (hier Silizium), Piezoschichtdicke [m]}   \\
+ S^{Si}_{11}, S^{p}_{11}   & : &
+  \mbox{Steifigkeitskoeffizient des Substrats, der Piezoschicht}
+  \quad \left [ \frac{m^{2}}{N} \right ] \\
+ d_{31} & : & \mbox{transversaler piezoelektrischer Koeffizient}
+  \left [ \frac{C}{N} \right ] \\
+ \epsilon^{\sigma}_{33}    & : &
+  \mbox{Dielektrizit#tskonstante in E-Feldrichtung}
+  \left [ \frac{C}{Vm}\right ]
+\end{eqnarray*}
+
