@@ -31,13 +31,13 @@
 /COM *                                                                *
 /COM * AUTOR(EN): N. Hey, Th. Fabula                                  *
 /COM *                                                                *
-/COM * EINGABEDATUM/LETZTE AENDERUNG: 14.10.92                        *
+/COM * EINGABEDATUM/LETZTE AENDERUNG: 14.10.1992                      *
 /COM *                                                                *
 /COM ******************************************************************
 
 /SHOW,X11
 /com  Materialdaten einlesen aus: ULTRA.MAT
-/com  Werte sind definiert bzgl. karthesischen Koordinaten
+/com  Werte sind definiert bzgl. kartesischen Koordinaten
 
 /COM
 /COM ==============================
@@ -75,7 +75,7 @@ z2=z1+4.3E-3             ! + Silikon
 z3=z2+2E-3               ! + Silikon-Aussenbereich
 z4=z2+12.1E-3            ! + Piezokeramik
 z5=50E-3                 ! Hoehe der SOLEF-Aussenwandung
-phi=5                   ! Winkelbereich des "Tortenstuecks"
+phi=5                    ! Winkelbereich des "Tortenstuecks"
                          ! in Winkelgraden
 ensp=25e-3               ! Einspannung Aussenwandung
 /COM
@@ -86,7 +86,7 @@ rat3=2                   ! rad. Linient. SOLEF-Aussenwandung
 zt1=4                    ! SOLEF-Dickenteilung (Zylindergrundfl.)
 zt2=4                    ! Dickenteilung von Silikon
 zt3=2                    ! Dickenteilung Silikon-Aussenbereich
-zt4=8                   ! Dickenteilung der Piezokeramik
+zt4=8                    ! Dickenteilung der Piezokeramik
 zt5=6                    ! Hoehenteilung der SOLEF-Aussenwandung
 phit=4                   ! Teilung ueber Winkelbereich
 /COM
