@@ -17,10 +17,10 @@ nrsel,x,rmin,r1
 nasel,z,z4
 nt,all,volt,0
 nall
-lwrite            ! 1. L.S.
+lwrite            ! 1. Load Step (Lastfall)
 nsel,z,z4         ! offene Elektroden (D=0)
 ntdel,all,volt
 nall
-lwrite            ! 2. L.S.
+lwrite            ! 2. Load Step (Lastfall)
 csys
 afwr
