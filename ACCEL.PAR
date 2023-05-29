@@ -9,11 +9,11 @@
 /COM ********************************* Definition of parameters
 /COM
 /COM -------------- Parameters for the specification
-/COM              of the element type and acceleration
+/COM                of the element type and acceleration
 /COM
 ELTY=45              ! element type: 3-D 8-node solid
                      !               (STIF45)
-acx=0.0              ! acceleration in x-direction [mm/sý]
+acx=0.0              ! acceleration in x-direction [mm/s2]
 acy=0.0              !      "        " y-   "
 acz=9810*20          !      "        " z-   "
 /COM
@@ -24,7 +24,7 @@ SIEM=1.689e5         ! averaged Young's modulus [N/mm2]
 SIPO=0.0624          ! averaged Poisson's ratio
 SIRO=2.329E-9        ! material density [kg/mm2]
 c11=1.674e5          ! parameters for the 3 independant
-c12=0.652e5          1 modulus of elasticity...
+c12=0.652e5          ! 1 modulus of elasticity...
 c44=0.796e5
 /COM
 /COM ------------- Parameters for definition of the solid model
