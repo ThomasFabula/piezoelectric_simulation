@@ -120,7 +120,7 @@ et
 
 /COM  Datei: ALN.DAT
 
-/COM  Materialdaten von Aluminiumnitrid
+/COM  Materialdaten von Aluminiumnitrid (AlN)
 /COM  Quelle: 
 /COM  J.Franz, Piezoelektrische Sensoren auf Siliziumbasis...
 /COM  VDI-Bericht Nr.87, VDI-Verlag, 1988
@@ -184,7 +184,7 @@ gyz,5, 111.1e+09
 ==============================================================================
 
 /com  Datei: SI.DAT
-/com  Materialdaten fuer Silizium
+/com  Materialdaten fuer Silizium (Si)
 
 c***********************************************
 c*** Material 3                                *
@@ -248,7 +248,7 @@ gyz,5, 79.60e+09
 
 /COM    Materialdaten vom Quarzkristall
 /COM    Literatur: Tichy/Gautschi
-/com    Refernztemperatur T = 25 Grad-C
+/com    Referenztemperatur T = 25 Grad-C
 
 mp,dens,3,2.648-9  ! Dichte von Quarz [kg/mm3]
 /COM
@@ -288,7 +288,7 @@ nl,3,211,41.029e-18
 
 nlsize,300         ! Speicher reservieren fuer NL-Table
 dens,3,7594.3      ! Dichte: [kg/m3]
-/COM     CE-Matrix: Elastizitaets-Moduln [N/m3]
+/COM     CE-Matrix: Elastizitaets-Moduln [N/m2]
 nl,3,271,109e9,61.8e9,54.8e9
 nl,3,277,109e9,54.8e9
 nl,3,282,88.7e9
@@ -312,7 +312,7 @@ nl,3,211,6.7e9
 
 /COM  Datei: ZNO.DAT
 
-/COM  Materialdaten von Zinkoxyd
+/COM  Materialdaten von Zinkoxyd (ZnO)
 /COM  Quelle: Landolt-Boernstein
 /COM  Referenztemperatur: 25 Celsius
 
@@ -390,7 +390,7 @@ gyz,5, 44.00e+09
 /COM  Materialwerte Si3N4 (MATERIAL 1)
 SNEM=3.89e5        ! mittlerer E-Modul    [N/mm2]
 SNPO=0.3           ! mittlere Poissonzahl
-SNRO=3.1E-9        ! Materialdichte       [kg/mm2]
+SNRO=3.1E-9        ! Materialdichte       [kg/mm3]
 SNAL=.8e-6         ! therm. Ausdehnung    [1/K]
 SNCP=711           ! Spez. Waermekapaz.   [J/kg*K]
 SNLA=25e-3         ! Waermeleitfaehigkeit [W/mm*K]
@@ -400,7 +400,7 @@ MP,EX,1,SNEM    $MP,NUXY,1,SNPO     $MP,DENS,1,SNRO
 /com  Materialwerte zuweisen
 /com  Eingabe von EX, ALPX ueber Datentabelle
 /com   (25,100,200,...,1100 Celsius)
-/com  Materialdaten aus DA K.Hiltmann S.65
+/com  Materialdaten aus Diplomarbeit Kai Hiltmann S.65
 MPTEMP,1,298,373,473,573,673,773
 MPTEMP,7,873,973,1073,1173,1273,1373
 a1=0.80e-6   $a2=1.85e-6   $a3=2.78e-6   $a4=3.31e-6
@@ -411,10 +411,10 @@ MPDATA,ALPX,1,7,a7,a8,a9,a10,a11,a12
 
 /com  --------------------------------------------------------
 /COM  Materialwerte SiO2 (MATERIAL 2)
-/com  Materialdaten aus DA K.Hiltmann S.58
+/com  Materialdaten aus Diplomarbeit Kai Hiltmann S.58
 SOEX=3.89e5        ! mittlerer E-Modul    [N/mm2]
 SOPO=0.3           ! mittlere Poissonzahl
-SORO=2.20E-9       ! Materialdichte       [kg/mm2]
+SORO=2.20E-9       ! Materialdichte       [kg/mm3]
 SOAL=.609e-6       ! therm. Ausdehnung    [1/K]
 SOCP=691           ! Spez. Waermekapaz.   [J/kg*K]
 SOLA=1.256e-3      ! Waermeleitfaehigkeit [W/mm*K]
@@ -440,7 +440,7 @@ MPDATA,ALPX,2,7,a7,a8,a9,a10,a11
 /com  Daten aus DA Hiltmann S.46
 SIEM=1.689e5       ! mittlerer E-Modul    [N/mm2]
 SIPO=0.0624        ! mittlere Poissonzahl
-SIRO=2.329E-9      ! Materialdichte       [kg/mm2]
+SIRO=2.329E-9      ! Materialdichte       [kg/mm3]
 SIAL=2.6e-6        ! therm. Ausdehnung    [1/K]
 SICP=703           ! Spez. Waermekapaz.   [J/kg*K]
 SILA=156e-3        ! Waermeleitfaehigkeit [W/mm*K]
@@ -470,7 +470,7 @@ MPDATA,ALPX,3,7,a7,a8,a9,a10,a11,a12
 /com  Daten aus: Schroeder - Spezialglastechnik
 PYEM=.61e5         ! mittlerer E-Modul    [N/mm2]
 PYPO=0.20          ! mittlere Poissonzahl
-PYRO=2.23E-9       ! Materialdichte       [kg/mm2]
+PYRO=2.23E-9       ! Materialdichte       [kg/mm3]
 PYAL=3.2e-6        ! therm. Ausdehnung    [1/K]
 /COM  zuweisen der Materialeigenschaften
 MP,EX,4,PYEM  $MP,NUXY,4,PYPO  $MP,DENS,4,PYRO  $MP,ALPX,4,PYAL
@@ -481,7 +481,7 @@ MP,EX,4,PYEM  $MP,NUXY,4,PYPO  $MP,DENS,4,PYRO  $MP,ALPX,4,PYAL
 ZNES=1.211e5       ! mittlerer E-Modul, senkrecht zur c-Achse [N/mm2]
 ZNEP=2.097e5       ! mittlerer E-Modul, parallel  zur c-Achse [N/mm2]
 ZNPO=0.36          ! mittlere Poissonzahl
-ZNRO=5.675E-9      ! Materialdichte   [kg/mm2]
+ZNRO=5.675E-9      ! Materialdichte   [kg/mm3]
 ZNAS=4.75e-6       ! therm. Ausdehnung, senkrecht zur c-Achse T=300K [1/K]
 ZNAP=2.92e-6       ! therm. Ausdehnung, parallel  zur c-Achse T=300K [1/K]
 /COM  zuweisen der Materialeigenschaften
@@ -736,7 +736,7 @@ span=100           ! elektrische Spannung [V]
 nspa=span*1e-9     ! Normierung
 
 /com  ********************************************
-/com  mechanische Last vorgeben --> elektriscHe Reaktion
+/com  mechanische Last vorgeben --> elektrische Reaktion
 ! nsel,z,dges
 ! psf,all,,,druk
 ! nall
