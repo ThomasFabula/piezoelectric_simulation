@@ -11,7 +11,7 @@ ELTY=64              ! 3-D solids with 8 nodes (STIF45)
 /COM
 /COM ------------------ Definition of the material density
 /COM
-MP,DENS,1,2.329e-9   ! material density [kg/mm2]
+MP,DENS,1,2.329e-9   ! material density [kg/mm3]
 /COM
 /com --------------- Anisotropic material properties of silicon
 /COM
@@ -45,3 +45,4 @@ csys,0               ! reactivates the global coordinate system
 /COM                     ******************
 /COM
 /COM **********************************************************
+/COM
