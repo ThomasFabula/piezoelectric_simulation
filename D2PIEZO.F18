@@ -1,5 +1,5 @@
 /COM
-/COM    Quarz-Doppelstimmgabel
+/COM    Quarz-Doppelstimmgabel (DETF)
 /COM    ETA aehnliche 3D-Struktur
 /COM    Piezoelektrisch berechnet
 /COM
@@ -116,6 +116,7 @@ TYPE,3
 MAT,3
 ELSI,elgr
 VMESH,1  * Struktur vernetzen
+
 /COM
 /COM     2. Haelfte generieren
 /COM
@@ -128,6 +129,7 @@ NUMMRG,NODE    * Knoten verbinden
 /COM     Festhalte-Randbedingungen
 /COM     beide Enden fixieren
 /COM
+
 nsel,x
 nasel,x,15
 d,all,ux
@@ -137,6 +139,7 @@ d,all,uz
 /COM
 /COM     alle anderen Freiheitsgrade festsetzen
 /COM
+
 nall    
 d,all,temp
 d,all,mag
@@ -147,6 +150,7 @@ wsort,x     * wavefront erniedrigen
 /COM
 /COM     Kurzschluss: E=0
 /COM
+
 nsel,z
 nt,all,volt,0
 nsel,z,thik
@@ -156,6 +160,7 @@ lwrit    * Schreibe Lastfall 1
 /COM
 /COM     Offene Elektroden: D=0
 /COM
+
 nsel,z,thik
 ntdel,all,volt
 nall
@@ -163,6 +168,7 @@ lwrit    * Schreibe Lastfall 2
 cnvr,,,,,,,-1   * Vermeide Abbruch infolge negativer CE-Matrix
 /view,1,1,1,1
 /type,1,3
+
 /COM
 /COM      M D O F s  selektieren...!!!
 /COM
