@@ -224,4 +224,3 @@ eplo,ext              ! displays all the external elements
 /COM                    *  /inp,accel,pos  *
 /COM                    ********************
 /COM **********************************************************
-
