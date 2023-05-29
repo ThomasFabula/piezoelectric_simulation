@@ -19,10 +19,10 @@ nspa=span*1e-9     ! normalized voltage
 ! allsel
 /COM *********************************************************
 /COM define electrical load --> calculate mechanical reaction
-nsel,s,loc,z,dick        ! select bottom electrode
-d,all,volt,0      ! ground electrode
-nsel,s,loc,z,dges        ! select top electrode
-d,all,volt,nspa   ! put voltage on electrode
+nsel,s,loc,z,dick         ! select bottom electrode
+d,all,volt,0              ! ground electrode
+nsel,s,loc,z,dges         ! select top electrode
+d,all,volt,nspa           ! put voltage on electrode
 allsel
 /COM  fix the MAG- and TEMP-DOF --> better convergence behavior
 esel,s,type,,2
