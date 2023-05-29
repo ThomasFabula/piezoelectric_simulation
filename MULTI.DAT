@@ -14,7 +14,7 @@
 /COM  Materialwerte Si3N4 (MATERIAL 1)
 SNEM=3.89e5        ! mittlerer E-Modul    [N/mm2]
 SNPO=0.3           ! mittlere Poissonzahl
-SNRO=3.1E-9        ! Materialdichte       [kg/mm2]
+SNRO=3.1E-9        ! Materialdichte       [kg/mm3]
 SNAL=.8e-6         ! therm. Ausdehnung    [1/K]
 SNCP=711           ! Spez. Waermekapaz.   [J/kg*K]
 SNLA=25e-3         ! Waermeleitfaehigkeit [W/mm*K]
@@ -24,7 +24,7 @@ MP,EX,1,SNEM    $MP,NUXY,1,SNPO     $MP,DENS,1,SNRO
 /com  Materialwerte zuweisen
 /com  Eingabe von EX, ALPX ueber Datentabelle
 /com   (25,100,200,...,1100 Celsius)
-/com  Materialdaten aus DA K.Hiltmann S.65
+/com  Materialdaten aus Diplomarbeit Kai Hiltmann S.65
 MPTEMP,1,298,373,473,573,673,773
 MPTEMP,7,873,973,1073,1173,1273,1373
 a1=0.80e-6   $a2=1.85e-6   $a3=2.78e-6   $a4=3.31e-6
@@ -35,10 +35,10 @@ MPDATA,ALPX,1,7,a7,a8,a9,a10,a11,a12
 
 /com  --------------------------------------------------------
 /COM  Materialwerte SiO2 (MATERIAL 2)
-/com  Materialdaten aus DA K.Hiltmann S.58
+/com  Materialdaten aus Diplomarbeit Kai Hiltmann S.58
 SOEX=3.89e5        ! mittlerer E-Modul    [N/mm2]
 SOPO=0.3           ! mittlere Poissonzahl
-SORO=2.20E-9       ! Materialdichte       [kg/mm2]
+SORO=2.20E-9       ! Materialdichte       [kg/mm3]
 SOAL=.609e-6       ! therm. Ausdehnung    [1/K]
 SOCP=691           ! Spez. Waermekapaz.   [J/kg*K]
 SOLA=1.256e-3      ! Waermeleitfaehigkeit [W/mm*K]
@@ -61,10 +61,10 @@ MPDATA,ALPX,2,7,a7,a8,a9,a10,a11
 
 /com  --------------------------------------------------------
 /COM  Materialwerte Si<100> in (110-Richtung) (MATERIAL 3)
-/com  Daten aus DA Hiltmann S.46
+/com  Daten aus Diplomarbeit Kai Hiltmann S.46
 SIEM=1.689e5       ! mittlerer E-Modul    [N/mm2]
 SIPO=0.0624        ! mittlere Poissonzahl
-SIRO=2.329E-9      ! Materialdichte       [kg/mm2]
+SIRO=2.329E-9      ! Materialdichte       [kg/mm3]
 SIAL=2.6e-6        ! therm. Ausdehnung    [1/K]
 SICP=703           ! Spez. Waermekapaz.   [J/kg*K]
 SILA=156e-3        ! Waermeleitfaehigkeit [W/mm*K]
@@ -94,7 +94,7 @@ MPDATA,ALPX,3,7,a7,a8,a9,a10,a11,a12
 /com  Daten aus: Schroeder - Spezialglastechnik
 PYEM=.61e5         ! mittlerer E-Modul    [N/mm2]
 PYPO=0.20          ! mittlere Poissonzahl
-PYRO=2.23E-9       ! Materialdichte       [kg/mm2]
+PYRO=2.23E-9       ! Materialdichte       [kg/mm3]
 PYAL=3.2e-6        ! therm. Ausdehnung    [1/K]
 /COM  zuweisen der Materialeigenschaften
 MP,EX,4,PYEM  $MP,NUXY,4,PYPO  $MP,DENS,4,PYRO  $MP,ALPX,4,PYAL
