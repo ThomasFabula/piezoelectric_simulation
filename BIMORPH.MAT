@@ -7,7 +7,7 @@
 /COM from: Siemens-Datenblatt VIBRIT, Stand 1981
 /COM *********************************************************
 
-/PREP7             ! enter Pre-processor
+/PREP7                ! enter Pre-processor
 mp,dens,3,7594.3      ! material density [kg/m3]
 
 /COM ******** CE-matrix: stiffness moduli [N/m2]
