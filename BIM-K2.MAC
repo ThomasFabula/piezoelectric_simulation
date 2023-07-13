@@ -4,7 +4,7 @@
 /COM
 /COM *********************************************************
 /COM Piezoelectric BIMORPH Microactuator
-/COM evaluate results of MODAL ANALYSIS (KAN=2)
+/COM evaluate results of MODAL ANALYSIS (KAN = 2)
 /COM *********************************************************
 
 /POST1               ! enter general Post-processor
