@@ -3,8 +3,8 @@
 ## FEM
 
 ### silicon
-- piezoelectric simulation of MEMS-sensors 
-- based on silicon with thin-film layers
+- piezoelectric simulation of MEMS-sensors & actuators
+- based on silicon resonators & actors with thin-film layers for excitation
 - ZnO, AlN thin-films and PZT ceramics
 
 ### quartz
