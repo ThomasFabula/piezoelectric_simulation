@@ -14,3 +14,7 @@
 
 ## Further information
 - https://tfconsult.com/piezoelectrical-driven-force-sensor/
+- https://tfconsult.com/entwurf-und-auslegung-mikromechanischer-strukturen/
+- https://tfconsult.com/microsystems-modeling/
+- https://tfconsult.com/berechnung-von-quarz-kraftsensoren/
+- 
