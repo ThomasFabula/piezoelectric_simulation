@@ -3,15 +3,15 @@
 ## FEM - Finite Element Method
 
 ### Silicon
-- piezoelectric simulation of MEMS-sensors & actuators
+- piezoelectric simulation of MEMS sensors & actuators
 - based on silicon resonators & actuators with thin-film layers for excitation & detection
-- aditional layers: ZnO & AlN thin-films
+- aditional layers: ZnO & AlN piezoelectric thin-films
 - hybrid bimorph with PZT ceramics
 
 ### Quartz
 - KOH-etched quartz crystals
 - different quartz cuts 
-- doubble-ended-tuning-forks (DETF)
+- Doubble-Ended-Tuning-Forks (DETF)
 
 ## Further information
 - https://tfconsult.com/piezoelectrical-driven-force-sensor/
