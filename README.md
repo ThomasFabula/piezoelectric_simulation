@@ -11,7 +11,7 @@
 ### Quartz
 - KOH-etched quartz crystals
 - different quartz cuts 
-- Doubble-Ended-Tuning-Forks (DETF)
+- Double-Ended-Tuning-Fork (DETF)
 
 ## Further information
 - https://tfconsult.com/piezoelectrical-driven-force-sensor/
