@@ -4,7 +4,7 @@
 
 ### Silicon
 - piezoelectric simulation of MEMS sensors & actuators
-- based on silicon resonators & actuators with thin-film layers for excitation & detection
+- silicon resonators & actuators with thin-film layers for excitation & detection
 - aditional layers: ZnO & AlN piezoelectric thin-films
 - hybrid bimorph with PZT ceramics
 
