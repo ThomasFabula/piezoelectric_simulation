@@ -1,0 +1,456 @@
+Information ueber STIF13: (ANSYS Rev. 5.0)
+==========================================
+ausgedruckt mit Hilfe der on-line help facility
+
+
+  PLANE13: 2-D coupled-field solid
+
+ To access additional information on PLANE13,
+ use HELP,PLANE13,Label  where Label is one of
+ the following (e.g. HELP,PLANE13,FEAT):
+
+  FEATures      Features of PLANE13
+  REAL const    Real constants for PLANE13
+  MATErials     Material properties for PLANE13
+  LOAD_1        Structural loads for PLANE13 (KEYOPT(1)=3 or 4);
+  LOAD_2        Thermal loads for PLANE13 (KEYOPT(1)=2 or 4);
+  LOAD_3        Magnetic loads for PLANE13 (KEYOPT(1)=0, 4 or 6);
+  LOAD_4        Electrical loads for PLANE13 (KEYOPT(1)=6);
+  KEY_1         KeyOpt(1) Selects degree(s) of freedom
+  KEY_2         KeyOpt(2) Shape functions
+  KEY_3         KeyOpt(3) Plane or axisymmetric
+  KEY_4         KeyOpt(4) Element coordinate system orientation
+  KEY_5         KeyOpt(5) Element output options
+  KEY_6         KeyOpt(6) Stiffness or compliance matrix
+  OUTPut        Output information for PLANE13
+  ETABle        Numbered ETABLE results data specific to PLANE13
+  RESTrictions  Restrictions and assumptions for PLANE13
+  IFIG_1        Input figure for PLANE13           (menu on only)
+  OFIG_1        Output figure for PLANE13          (menu on only)
+                                                                 
+
+ Features: Features of PLANE13.
+
+  4 nodes    I  J  K  L
+
+  Up to 4 DOF per node, depending on KEYOPT(1):
+                 Translations          UX, UY
+                 Temperature           TEMP
+                 Voltage               VOLT
+                 Magnetic Potential    AZ
+
+  A 2-D element (planar or axisymmetric) Vector magnetic
+  potential, temperature, voltage, and displacement field
+  capability may exist in a coupled-field analysis with
+  limited coupling between the fields.
+
+  Has nonlinear magnetic capability for modeling B-H curves or
+  permanent magnet demagnetization curves.
+
+  Coupled field analysis for magnetic-structural (requires an
+  iterative solution) and thermal-structural interaction is
+  available.
+
+  Special features: Large deflection   for a structural analysis
+                    Large strain
+                    Stress stiffening
+
+
+
+  MatProp: Applicable material properties for PLANE13.
+  Specified using the MP command.
+
+    Property                    Isotropic     Orthotropic
+
+    Young's modulus             EX            EX, EY, EZ
+    Poisson's ratio             NUXY          NUXY, NUYZ, NUXZ
+    Thermal expansion coeff.    ALPX          ALPX, ALPY, ALPZ
+    Density                     DENS          DENS
+    Shear modulus               GXY           GXY
+    Damping                     DAMP          DAMP
+    Specific heat               C             C
+    Enthalpy                    ENTH          ENTH
+    Thermal conductivity        KXX           KXX, KYY
+    Mag. permeability (space)   MUZERO        MUZERO
+    Ortho. rel. permeability    MURX          MURX, MURY
+    Electrical resistivity      RSVZ          RSVZ
+    Coercive force components   MGXX          MGXX, MGYY
+    Elec. rel. permittivity     PERX          PERX, PERY
+
+    Other magnetic properties   use HELP,BH for add. properties
+    Other piezoelec. properties use HELP,PIEZ for add. properties
+
+  Permanent magnet polarization and orthotropic material
+  directions correspond to the element coordinate directions.
+
+
+HELP,PIEZ
+
+ Piezoele:  Piezoelectric materials.
+
+    Piezoelectric capability allows coupling between the
+ structural and electric fields for the SOLID5, PLANE13, and
+ SOLID98 coupled-field elements.  Material properties required
+ for the piezoelectric effects include the stiffness constants,
+ the piezoelectric constants, and the dielectric constants.
+
+    The dielectric constants are input as the usual linear
+ material properties (PERX, PERY, PERZ).  The elastic coefficient
+ matrix (commonly referred to as the "c" matrix evaluated at a
+ constant electric field) may be input either by specifying the
+ stiffness constants (EX, EY, etc.) by means of the usual linear
+ property commands or by specifying the terms of the matrix by
+ means of the data table commands.  The matrix is symmetric,
+ positive definite (requiring all determinants to be positive).
+
+   Elastic Coefficient        : c11                          :
+   Matrix ("c" matrix)        : c21  c22         Symmetric   :
+                              : c31  c32  c33                :
+                              : c41  c42  c43  c44           :
+                              : c51  c52  c53  c54  c55      :
+                              : c61  c62  c63  c64  c65  c66 :
+
+ See Piezo_2 and Piezo_3 for more on piezoelectric materials.
+
+
+HELP,PIEZo_2
+
+  Piezo_2:  More on piezoelectric materials - "c" matrix input.
+
+    The 6 x 6 elastic coefficient matrix relates terms ordered
+ x,y,z,xy,yz,xz via 21 constants as shown below.  The constants
+ of the matrix are entered in the data table with the TB
+ commands.  The constant table is initialized by using Lab=ANEL
+ on the TB command.  The 21 constants are defined with the TBDATA
+ commands.  The constants (C1-C21) entered on the TBDATA commands
+ (6 per command) are as follows:
+                                     1    2    3    4    5    6
+    Table of constants            ..............................
+    corresponding to           1  :  1
+    "c" matrix terms.          2  :  2    7
+                               3  :  3    8   12
+  For example, "c" matrix      4  :  4    9   13   16
+  term c42 is entered as       5  :  5   10   14   17   19
+  constant C9.                 6  :  6   11   15   18   20   21
+
+    The matrix can be defined (KEYOPT(2)) in either "stiffness"
+ form (operating on the strain vector) or in "compliance" form
+ (operating on the stress vector and is commonly referred to as
+ the "d" matrix evaluated at a constant electric field),
+ whichever is more convenient.
+
+ See Piezo_3 for more on piezoelectric materials.
+
+
+HELP,PIEZo_3
+
+  Piezo_3:  More on piezoelectric materials - "e" matrix input.
+    The piezoelectric matrix (commonly referred to as the "e"
+ matrix) is a full 6 x 3 matrix relating terms x,y,z,xy,yz,xz to
+ x,y,z via 18 constants as shown above.  Note, the order of the
+ vectors in ANSYS is {x,y,z,xy,yz,xz}, while for most published
+ piezoelectric material the order is {x,y,z,yz,xz,xy}.  This
+ difference will require the "c" and "e" matrix terms to be
+ converted to the ANSYS format.  The constants of the matrix are
+ entered in the data table with the TB commands.  The constant
+ table is initialized by using Lab=PIEZ on the TB command.
+ The 18 constants are defined with the TBDATA commands.
+ The constants (C1-C18) entered on the TBDATA commands (6 per
+ command) are as follows:
+                            Table of constants corresponding
+     Piezoelectric               to "e" matrix terms.
+   Matrix ("e" matrix)                  1    2    3
+    e11  e12  e13                    ...............
+    e21  e22  e23                 1  :  1    2    3
+    e31  e32  e33                 2  :  4    5    6
+    e41  e42  e43                 3  :  7    8    9
+    e51  e52  e53                 4  : 10   11   12
+    e61  e62  e63                 5  : 13   14   15
+                                  6  : 16   17   18
+ For example, "e" matrix term e51 is entered as constant C13.
+
+
+HELP,PLANE13,LOAD_1
+
+ Structrl: Structural loads for PLANE13 (KEYOPT(1)=3, 4 or 7)
+
+  Load               Location              Command(s) used
+
+  Displacement       nodes, keypoints,     D, DSYM, DK,
+                      lines, areas          DL, DA
+
+  Force              nodes, keypoints      F, FK
+
+  Pressure           nodes, lines,         SF, SFL,  (label PRES)
+                      areas, elements       SFA, SFE (label PRES)
+                       face JI               load key = 1
+                       face KJ               load key = 2
+                       face LK               load key = 3
+                       face IL               load key = 4
+
+  Inertia loads      thru mass matrix      ACEL, OMEGA, DOMEGA,
+                                           CGLOC, CGOMGA, DCGOMG,
+                                           IRLF
+
+  Temperature        nodes, keypoints,    BF, BFK    (label TEMP)
+  not KEYOPT(1)=4     elements             BFE       (label TEMP)
+                                                                       
+HELP,PLANE13,LOAD_2
+
+  Thermal: Thermal loads for PLANE13 (KEYOPT(1)=2 or 4).
+
+  Load               Location             Command(s) used
+
+  Temperature        nodes, keypoints,     D, DSYM, DK,
+                      lines, areas          DL, DA
+
+  Heat flow rate     nodes, keypoints     F, FK
+
+  Convections        nodes, lines         SF, SFL,   (label CONV)
+                      areas, elements      SFA, SFE  (label CONV)
+                       face IJ              load key = 1
+                       face JK              load key = 2
+                       face KL              load key = 3
+                       face LI              load key = 4
+
+  Heat fluxes        nodes, lines,        SF, SFL   (label HFLUX)
+                      areas, elements      SFA, SFE (label HFLUX)
+                       face IJ              load key = 1
+                       face JK              load key = 2
+                       face KL              load key = 3
+                       face LI              load key = 4
+
+  Heat generation    nodes, keypoints,    BF, BFK    (label HGEN)
+  rate                elements             BFE       (label HGEN)
+
+HELP,PLANE13,LOAD_3
+
+ Magnetic: Magnetic loads for PLANE13 (KEYOPT(1)=0, 4 or 6).
+
+  Load               Location              Command(s) used
+
+  Mag. potential     nodes, keypoints,     D, DSYM, DK,
+                      lines, areas          DL, DA
+
+  Magnetic flux      nodes, keypoints      F, FK
+
+  Current segments   nodes, keypoints      F, FK
+
+  Maxwell force      nodes, lines,         SF, SFL   (label MXWF)
+                      areas, elements       SFA, SFE (label MXWF)
+                       face IJ              load key = 1
+                       face JK              load key = 2
+                       face KL              load key = 3
+                       face LI              load key = 4
+
+  Mag. virtual       nodes, keypoints,     BF, BFK   (label MVDI)
+   displacement       elements              BFE      (label MVDI)
+
+  Source current     nodes, keypoints,     BF, BFK     (label JS)
+   density            elements              BFE        (label JS)
+
+HELP,PLANE13,LOAD_4
+
+ Electric: Electrical loads for PLANE13 (KEYOPT(1)=6).
+
+  Load               Location              Command(s) used
+
+  Voltage            nodes, keypoints,     D, DSYM, DK,
+                      lines, areas          DL, DA
+
+  Current            Nodes, keypoints      F, FK
+
+HELP,PLANE13,KEY_1
+
+ KEYOPT(1) for PLANE13.  Selects degree(s) of freedom.
+
+  KEYOPT(1)   0   (Default) AZ
+
+              2   TEMP
+
+              3   UX, UY
+
+              4   UX, UY, TEMP, AZ
+
+              6   VOLT, AZ
+
+              7   UX, UY, VOLT
+
+
+ KEYOPT(2) for PLANE13.  Shape functions.
+
+  KEYOPT(2)   0   (Default) Modified extra shapes included in the
+                  element formulation.
+
+              1   No extra shapes included.
+
+
+ KEYOPT(3) for PLANE13.  Plane or axisymmetric.
+
+  KEYOPT(3)   0   (Default) Plane  (When used with structural DOF
+                  (KEYOPT(1) = 0 or 4), means plane strain.)
+
+              1   Axisymmetric
+
+              2   Plane stress (used with structural DOF only)
+                                   
+
+ KEYOPT(4) for PLANE13.  Element coordinate system orientation.
+
+  KEYOPT(4)   0   (Default) Element coordinate system is parallel
+                  to the global Cartesian coordinate system.
+
+              1   Element coordinate system is based on the
+                  element I-J side.
+
+
+ KEYOPT(5) for PLANE13.  Element output options.
+
+  KEYOPT(5)   0   (Default) Basic element output
+
+              1 - Repeat basic solution for all
+                   integration points
+
+              2   Basic output + nodal stress solution
+
+
+ KEYOPT(6) for PLANE13.  Stiffness or compliance matrix.
+
+  Used only if the elastic stiffness matrix is input with the TB
+  commands instead of with the EX, EY, EZ commands.
+
+  KEYOPT(6)   0   (Default) Input represents stiffness matrix
+
+              1   Input represents compliance matrix
+                                                              
+
+HELP,PLANE13,outp
+
+ Descrip1: Description of the element output for PLANE13.
+
+         EL              Element number
+         NODES           Nodes - I,J,K,L
+         MAT             Material number
+         VOL             Volume
+         XC,YC           Global X,Y location
+         PRES            P1 at nodes J,I; P2 at K,J;
+                          P3 at L,K; P4 at I,L
+         TEMP(input)     T(I),T(J),T(K),T(L)
+         HGEN(input)     HG(I),HG(J),HG(K),HG(L)
+
+     The following solution values are output only if
+     calculated (based upon input data):
+
+         SINT            Stress intensity
+         SEQV            Equivalent stress
+         EPEL(X,Y,Z,XY)  Elastic strains
+         EPEL(1,2,3)     Principal elastic strains
+         S(X,Y,Z,XY)     Stresses  (SZ=0.0 for plane
+                          stress elements)
+         S(1,2,3)        Principal stresses
+
+ Pick "Descrip2" or use HELP,PLANE13,OUT_2 for additional element
+ output for PLANE13.
+
+HELP,PLANE13,OUT_2
+
+ Descrip2: Additional element output description for PLANE13;
+           only if calculated (based upon input data):
+
+         TG(X,Y,SUM)     Thermal gradient components
+                          and vector sum
+         TF(X,Y,SUM)     Thermal flux (heat flow rate/
+                          cross-sectional area) components
+                          and vector sum
+         EF              Electric field components (X,Y)
+         EFSUM           Vector magnitude of EF
+         D               Electric flux density components (X,Y)
+         DSUM            Vector magnitude of D
+         UE              Elastic energy
+         UD              Dielectric energy
+         UM              Electro-mechanical coupled energy
+         MUX,MUY         Magnetic permeability
+         H               Magnetic field intensity components(X,Y)
+         HSUM            Vector magnitude of H
+         B               Magnetic flux density components (X,Y)
+         BSUM            Vector magnitude of B
+         JS              Source current density
+         JE              Eddy current density
+         JT              Total current density
+ Pick "Descrip3" or use HELP,PLANE13,OUT_3 for additional element
+ output for PLANE13.
+
+HELP,PLANE13,OUT_3
+
+ Descrip3: Additional element output description for PLANE13;
+           only if calculated (based upon input data):
+
+         JHEAT           Joule heat generation rate
+         FJB             Lorentz magnetic force components (x,y)
+         FMX             Maxwell magnetic force components (x,y)
+         FVW             Virtual work force components (x,y)
+
+     Additional solution output at each node
+     (only if KEYOPT(5)=2):
+
+         SINT   SEQV   EPEL   S   H   HSUM   B   BSUM   FJB   FMX
+
+     Additional solution output at each integration point
+     (only if KEYOPT(5)=1):
+
+         SINT   SEQV   EPEL   S   MUX   MUY   H   HSUM   B   BSUM
+
+ Pick "Descrip4" or use HELP,PLANE13,OUT_4 for additional element
+ output for PLANE13.
+
+HELP,PLANE13,etab
+
+   Etable:  ETABLE results specific to PLANE13.
+
+ For postprocessing, results that are specific to an element type
+ are identified on the ETABLE (or ESOL) command by an item label
+ and a sequence number.  See the ETABLE (or ESOL) command for
+ results data that are applicable to a variety of element types.
+
+ Results    Item    Component Number at Solution Points
+            Label
+
+ JS(Z)      SMISC   1
+
+ MU(X)      NMISC   1
+ MU(Y)      NMISC   2
+
+ FVW(X)     NMISC   3
+ FVW(Y)     NMISC   4
+ FVW(SUM)   NMISC   5
+
+ JE(Z)      NMISC   6
+ JT(Z)      NMISC   7
+
+
+HELP,PLANE13,rest
+
+ Restrict: Restrictions and assumptions for PLANE13.
+
+ 1.  The area of the element must be positive.
+
+ 2.  The element must lie in a global X-Y plane and the X-axis
+     must be in the radial direction for axisymmetric problems.
+
+ 3.  An axisymmetric structure should be modeled in the +X
+     quadrants.
+ 4.  For structural problems, extra displaced shapes are
+     automatically deleted for triangular elements so that a
+     constant strain element results.
+
+ 5.  Magnetic material properties are assumed to be isotropic.
+
+ 6.  Transient magnetic analysis with nonlinear material
+     properties should be performed in a Nonlinear Transient
+     Dynamic (ANTYPE=4) analysis.
+
+ 7.  An electro-magnetic analysis (where eddy current formation
+     is permitted in conducting regions with applied current
+     loading) is performed by using KEYOPT(1)=6, specifying a
+     conductivity, and coupling volt DOF's for those elements.
+
