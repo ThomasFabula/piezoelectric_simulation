@@ -1,4 +1,5 @@
 # piezoelectric_simulation
+Multiphysics FEM-simulation of MEMS-sensors based on silicon with pizoelectric thin-film layers and etched quartz crystals with ANSYS
 
 ## FEM - Finite Element Method
 
