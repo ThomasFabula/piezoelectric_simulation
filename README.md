@@ -1,8 +1,9 @@
 # piezoelectric_simulation
 
 ## Multiphysics FEM-simulation 
-- with ANSYS FEM-program
-- MEMS-sensors based on silicon with pizoelectric thin-film layers and etched quartz crystals.
+- with ANSYS(R) FEM-program for UNIX and PC workstations
+- MEMS-sensors based on silicon with piezoelectric thin-film layers
+- and etched quartz crystals.
 
 ## FEM - Finite Element Method
 
@@ -14,7 +15,7 @@
 - triple-beam force sensors 
 
 ### Quartz
-- KOH-etched quartz crystals
+- HF-etched quartz crystals
 - different quartz cuts 
 - Double-Ended-Tuning-Fork (DETF)
 
