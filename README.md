@@ -1,5 +1,8 @@
 # piezoelectric_simulation
-Multiphysics FEM-simulation (ANSYS) of MEMS-sensors based on silicon with pizoelectric thin-film layers and etched quartz crystals.
+
+## Multiphysics FEM-simulation 
+- with ANSYS FEM-program
+- MEMS-sensors based on silicon with pizoelectric thin-film layers and etched quartz crystals.
 
 ## FEM - Finite Element Method
 
@@ -8,6 +11,7 @@ Multiphysics FEM-simulation (ANSYS) of MEMS-sensors based on silicon with pizoel
 - silicon resonators & actuators with thin-film layers for excitation & detection
 - aditional layers: ZnO & AlN piezoelectric thin-films
 - hybrid bimorph with PZT ceramics
+- triple-beam force sensors 
 
 ### Quartz
 - KOH-etched quartz crystals
