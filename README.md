@@ -9,9 +9,10 @@
 
 ### Silicon
 - piezoelectric simulation of MEMS sensors & actuators
-- silicon resonators & actuators with thin-film layers for excitation & detection
+- silicon resonators & actuators (beams, diaphragms, cantilever, etc.) 
+- with thin-film layers for excitation & detection
 - aditional layers: ZnO & AlN piezoelectric thin-films
-- hybrid bimorph with PZT ceramics
+- hybrid bimorph Si-structures with PZT ceramics
 - triple-beam force sensors 
 
 ### Quartz
