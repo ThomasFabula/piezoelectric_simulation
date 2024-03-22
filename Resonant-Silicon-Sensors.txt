@@ -27,12 +27,11 @@ The frequency ratio f2/f1 of the numerically calculated frequencies is 2.757 in 
 data (...???, Lärmer). The difference in the absolute frequency values is mainly due to intrinsic residual stress of the 
 additional piezoelectric zinc oxide (ZnO) thin films, which will be discussed further. 
 
-Table 1:	Comparison of analytically and numerically calculated resonance frequencies with experimental data for a silicon beam 
+Table 1: Comparison of analytically and numerically calculated resonance frequencies with experimental data for a silicon beam 
 
  Frequency	 analytical	 numerical	 experimental
  f1 [Hz]	     12,183	     11,999	     tbd
  f2 [Hz]	     33,584	     33,084	     tbd
-
 
 For mode selective excitation and detection of the resonator vibrations, the stress patterns on the resonator surface has to 
 be estimated, in order to choose the appropriate electrode locations. For this purpose a linear harmonic response analysis 
@@ -87,22 +86,21 @@ ZnO and probably a non homogeneous diaphragm thickness. The decreased experiment
 12 kHz/bar is obviously caused by residual stress in the composite diaphragm. 
 
 
-Table 2:	Comparison of numerically calculated and measured sensor specifications
+Table 2: Comparison of numerically calculated and measured sensor specifications
 ------------------------------------------------------------------------
-sensor characterstics  |	 finite element model	     | experimental data 
+sensor characterstics  	| finite element model	     | experimental data 
 ------------------------------------------------------------------------
-	                     |   (A)	  | (B)	    | (C)	   |
+	        	|   (A)	   | (B)     | (C)   |
 ------------------------------------------------------------------------
- f0 [Hz]	             |  8,927   | 8,689   | 8,517  |  8,317
-                       |  (7.3%)	| (4.5%)	|(2.4%)	 |
+ f0 [Hz]	       	|  8,927   | 8,689   | 8,517 |  8,317
+                       	|  (7.3%)  | (4.5%)  |(2.4%) |
 ------------------------------------------------------------------------
-UZ [μm]	               |  79.3    |  86.2   |  89.0  | 	75.0 
-                       |  (5.7%)  |  (15%)  | (19%)	 |  
+UZ [μm]	               	|  79.3    |  86.2   |  89.0 |  75.0 
+                       	|  (5.7%)  |  (15%)  | (19%) |  
 ------------------------------------------------------------------------
-df0/dp                 | 14.3     | 14.4    | 14.5   !  11.7   
-[Hz/mbar]	             | (22%)    | (23%)	  | (24%)	 ! 
+df0/dp                 	| 14.3     | 14.4    | 14.5  |  11.7   
+[Hz/mbar]	        | (22%)    | (23%)   | (24%) | 
 ------------------------------------------------------------------------
-
 
 Acknowledgements
 This work was supported by the Bundesministerium für Forschnung und Technologie (BMFT) under contract number 13 AS 0114 / 0118. 
@@ -112,35 +110,35 @@ The authors would like to thank Prof. Dr. S. Büttgenbach for his assistance and
 
 Figure captions
 
-Table 1:	Comparison of analytically and numerically calculated resonance frequencies with experimental data for a silicon beam 
+Table 1: Comparison of analytically and numerically calculated resonance frequencies with experimental data for a silicon beam 
 
 Figure 1:	
   a.) Numerically calculated beam displacements for the first and second flexural vibration modes 
   b.) Schematic silicon beam force sensor with clamping region defined by the (111)-crystal planes 
   c.) Numerically calculated axial stress on the beam surface for the first and second flexural vibration modes 
 
-Figure 2:	Pressure-deflection characteristics of a piezoelectrically driven silicon diaphragm pressure sensor
+Figure 2: Pressure-deflection characteristics of a piezoelectrically driven silicon diaphragm pressure sensor
 
-Figure 3:	Pressure-frequency characteristics of a piezoelectrically driven silicon diaphragm pressure sensor
+Figure 3: Pressure-frequency characteristics of a piezoelectrically driven silicon diaphragm pressure sensor
 
-Table 2:	Comparison of numerically calculated and measured sensor specifications
+Table 2: Comparison of numerically calculated and measured sensor specifications
 
 
 References
 
-[Bou91] :	S. Bouwstra, B. Geijselaers, On the resonance frequencies of microbridges, Proc. TRANSDUCERS (1991) 538-542
+[Bou91] : S. Bouwstra, B. Geijselaers, On the resonance frequencies of microbridges, Proc. TRANSDUCERS (1991) 538-542
 
-[Fab92] :	Th. Fabula, A. Schroth, Simulation des dynamischen Verhaltens mikromechanischer Membranen, VDI-Fachtagung 
+[Fab92] : Th. Fabula, A. Schroth, Simulation des dynamischen Verhaltens mikromechanischer Membranen, VDI-Fachtagung 
 für Geräte- und Mikrosystemtechnik, TU Chemnitz (1992), VDI-Bericht 960, VDI-Verlag Düsseldorf (1992)
 
-[Fab93] :	Th. Fabula, H.-J. Wagner, B. Schmidt, S. Büttgenbach, Triple beam resonant silicon force sensor based on piezoelectric 
+[Fab93] : Th. Fabula, H.-J. Wagner, B. Schmidt, S. Büttgenbach, Triple beam resonant silicon force sensor based on piezoelectric 
 thin films, EUROSENSORS VII, Budapest (1993)
 
-[Koh92] :	P. Kohnke, ed., ANSYS User's Manual for Revision 5.0, Volume IV, Theory, Houston, PA, USA (1992)
+[Koh92] : P. Kohnke, ed., ANSYS User's Manual for Revision 5.0, Volume IV, Theory, Houston, PA, USA (1992)
 
-[LB82] :	Landolt-Börnstein, Zahlenwerte und Funktionen aus Naturwissenschaft und Technik, Gruppe III, Band 17a, Berlin, Springer Verlag (1982)
+[LB82] : Landolt-Börnstein, Zahlenwerte und Funktionen aus Naturwissenschaft und Technik, Gruppe III, Band 17a, Berlin, Springer Verlag (1982)
 
-[SASI] :	ANSYS is developed and distributed from Swanson Analysis Systems, Inc., Houston, PA, USA
+[SASI] : ANSYS is developed and distributed from Swanson Analysis Systems, Inc., Houston, PA, USA
 
-[Wea90] :	W. Weaver, S.P. Timoshenko, D.H. Young, Vibration Problems in Engineering, 5th edition, John Wiley & Sons (1990)
+[Wea90] : W. Weaver, S.P. Timoshenko, D.H. Young, Vibration Problems in Engineering, 5th edition, John Wiley & Sons (1990)
 
