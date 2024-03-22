@@ -1,0 +1,146 @@
+Entwurf der Veröffentlichung (DRAFT)
+Titel:   Resonant Silicon Force and Pressure Sensors ...
+Autoren: Fabula, Flik, Funk, Lärmer
+
+Finite Element Modeling 
+The design and fabrication cycles of sensor devices can be considerably reduced and time-economized by utilizing computer simulations.
+In addition modeling provides an unique insight into the functioning of resonant microsensors. Numerical methods like finite element 
+analyses (FEA) are powerful tools to model the dynamical response of resonant sensors and to predict the performance of the sensor 
+device under changing operating conditions. The static and dynamic behaviour of bulk resonant force and pressure sensors were 
+calculated with the general-purpose finite element code ANSYS [SASI] in order to optimize the sensor performance. Modal analyses 
+were used to solve the eigenvalue problem by which the resonance frequencies and flexure vibration mode shapes of beams and 
+diaphragms are determined. Combination of static and subsequent modal analysis allows to calculate the load-dependent frequency 
+shifts of resonant sensors. Utilizing this technique the pressure-deflection and pressure-frequency characteristics of silicon 
+diaphragm pressure sensors were investigated and optimized [Fab92].
+
+Force sensor
+Modeling the dynamical behaviour of the silicon beam force sensor the piezoelectric thin films were neglected in a first approach. 
+The flexural resonance frequencies of silicon beams can be calculated with satisfactory approximation also by analytical methods. 
+The fundamental resonance frequency of doubly clamped, homogeneous beams with thickness t and length l is given by [Wea90]:
+f_1~=~ 1.028~t over l sup 2~sqrt{E over {(1 - ny^2)ρ}}The material behaviour of silicon is assumed to be isotropic, where 
+E = 168,9 GPa is the Young's modulus and ν = 0,063 is the Poisson's ratio in the <110> crystal direction. The material density 
+of silicon is ρ = 2329 kg/m³ at room temperature. The resonance frequency of the first flexural overtone f2 is approximately 
+2.7566 times the fundamental frequency f1 [Bou91]. The analytically and numerically calculated resonance frequencies of 
+a 6 mm long, 400 μm width and 50 μm thick silicon beam are compared with experimental data in table 1. The finite element 
+model consists of 1024 eight-node 3-D elements considering the clamping region defined by the silicon (111)-crystal planes. 
+The frequency ratio f2/f1 of the numerically calculated frequencies is 2.757 in satisfactory agreement with the experimental 
+data (...???, Lärmer). The difference in the absolute frequency values is mainly due to intrinsic residual stress of the 
+additional piezoelectric zinc oxide (ZnO) thin films, which will be discussed further. 
+
+Table 1:	Comparison of analytically and numerically calculated resonance frequencies with experimental data for a silicon beam 
+
+ Frequency	 analytical	 numerical	 experimental
+ f1 [Hz]	     12,183	     11,999	     tbd
+ f2 [Hz]	     33,584	     33,084	     tbd
+
+
+For mode selective excitation and detection of the resonator vibrations, the stress patterns on the resonator surface has to 
+be estimated, in order to choose the appropriate electrode locations. For this purpose a linear harmonic response analysis 
+was carried out to calculate the frequency response of a silicon beam. In the upper part (a) of Figure 1 the numerically 
+calculated transverse beam displacements for the first and second flexural vibration modes are shown. Due to the linear 
+model behaviour the vibration amplitudes are proportional to the exciting force.  A central mechanical force of 10-4 N was 
+assumed leading to a maximum displacement of approximately 6 μm for the fundamental vibration mode. The maximum amplitudes 
+of the second overtone are approximately 14 times smaller. A uniform damping ratio of 10-3 was assumed for the whole 
+frequency range 10-35 kHz. In the middle part (b) of figure 1 the silicon beam force sensor is schematically illustrated 
+with the clamping defined by the (111)-crystal planes. The whole sensor device is fixed along the bottom side of the bulk 
+region. The lower part (c) exhibits the axial stress distribution on the surface of the resonator beam. The first flexure 
+vibration mode shows compressive stress areas near the clamping regions (1.8 % of l) and a central tensile stress area 
+corresponding to the displacement plot in figure 1 (a). The second flexure vibration mode shows two alternating compressive 
+and two tensile stress areas. In the middle section of the beam at approximately ± 1.3 mm (29% of l) from the center 
+(beam coordinate: 4.34 mm) two wide spread stress areas occur with opposite signs (compressive and tensile stress). 
+In order to obtain a mode-selective excitation, the second vibration mode has to be suppressed. This can be achieved 
+by placing two electrodes in the middle section of the beam and applying the same potential to them as described in 
+chapter xx (Funk).
+
+Pressure sensor
+The resonant pressure sensor under consideration consists of a silicon diaphragm with 9.2 mm side length and 50 μm thickness 
+comprising a 11 μm thick ZnO layer for piezoelectric excitation and detection. The diaphragm deflection is calculated by 
+performing a non-linear analysis with the Newton-Raphson equation solver considering stress stiffening and large deflection 
+effects [Koh92]. The static solution provides a load-dependent stiffness matrix of the whole sensor structure which is 
+used in a subsequent modal analysis to determine the frequency shifts. Several FE-models were used to investigate the 
+influence of isotropic and anisotropic material behaviour, different element types, number of master degrees of freedom 
+(MDOF) and the boundary conditions. 
+
+FE-model (A) uses 4-node 2-D plastic shell elements (SHELL43) and consists of 400 elements with 441 nodes and 100 MDOF. 
+Material data are weighted through the different layer thicknesses of silicon and ZnO resulting in mean values for Young's 
+modulus, Poisson's ratio, and density  of 161 GPa, 0.1166 and 2932 kg/m³, respectively. Ideal clamping of the diaphragm is
+assumed as boundary conditions. FE-model (B) uses 20-node 3-D solid elements (SOLID95) and consists of 944 elements with 
+5521 nodes and 500 MDOF. The material behaviour is assumed to be isotropic for both, silicon and the ZnO-layer. For ZnO 
+a Young's modulus of 126 GPa, a Poisson's ratio of 0.36 and density of 5675 kg/m³ is used. Indenter measurements on 
+ZnO thin films (2-3 μm) result in a reduced Young's modulus E/(1-ν2) of approximately 145 GPa [Fab93]. The FE-model 
+comprises the real clamping geometry defined by the (111)-crystal planes. FE-model (C) uses 8-node 3-D solid elements 
+(SOLID64) and consists of 3844 elements with 5230 nodes and 500 MDOF. The material behaviour is assumed to be anisotropic 
+for both materials and bulk data is taken from [LB82]. The FE-model comprises 4 element layers over the diaphragm thickness 
+and the real clamping geometry. The long dashed lines denote the results of model (A), short dashed lines denote model (B) 
+and solid lines denote model (C) in figures 2 and 3, respectively. Due to the pressure loading of 500 mbar a maximum 
+stress on the diaphragm surface in the region of 90-100 MPa at diaphragm center occurs. The membrane stress within the
+diaphragm middle (SHELL-model) was estimated to be approximately 34 MPa.
+In Figure 2 the numerically calculated and measured pressure-deflection characteristics of the sensor device is shown.
+The measured values are denoted in each diagram (figure 2 and 3) with a star symbol. Due to non-linear effects membrane
+stresses occur in the diaphragm leading to a degressive pressure-deflection characteristics. In Figure 3 the results of 
+the numerically calculated and measured pressure-frequency characteristics for the fundamental flexure mode are shown.
+The results are summarized in Table 2. Comparing measured data with the numerical results show a relative error of 2-7% 
+in resonance frequencies f0, 6-19 % in center diaphragm deflection UZ and up to 24 % in pressure sensitivity df0/dp
+indicating a too stiff model behaviour. If greater model inaccuracies can be excluded, the deviations of the numerical
+results are either due to the intrinsic residual stress in the ZnO-layer, the unknown material properties of thin film 
+ZnO and probably a non homogeneous diaphragm thickness. The decreased experimental pressure sensitivity of approximately 
+12 kHz/bar is obviously caused by residual stress in the composite diaphragm. 
+
+
+Table 2:	Comparison of numerically calculated and measured sensor specifications
+------------------------------------------------------------------------
+sensor characterstics  |	 finite element model	     | experimental data 
+------------------------------------------------------------------------
+	                     |   (A)	  | (B)	    | (C)	   |
+------------------------------------------------------------------------
+ f0 [Hz]	             |  8,927   | 8,689   | 8,517  |  8,317
+                       |  (7.3%)	| (4.5%)	|(2.4%)	 |
+------------------------------------------------------------------------
+UZ [μm]	               |  79.3    |  86.2   |  89.0  | 	75.0 
+                       |  (5.7%)  |  (15%)  | (19%)	 |  
+------------------------------------------------------------------------
+df0/dp                 | 14.3     | 14.4    | 14.5   !  11.7   
+[Hz/mbar]	             | (22%)    | (23%)	  | (24%)	 ! 
+------------------------------------------------------------------------
+
+
+Acknowledgements
+This work was supported by the Bundesministerium für Forschnung und Technologie (BMFT) under contract number 13 AS 0114 / 0118. 
+The authors would like to thank Prof. Dr. S. Büttgenbach for his assistance and project coordination.
+
+
+
+Figure captions
+
+Table 1:	Comparison of analytically and numerically calculated resonance frequencies with experimental data for a silicon beam 
+
+Figure 1:	
+  a.) Numerically calculated beam displacements for the first and second flexural vibration modes 
+  b.) Schematic silicon beam force sensor with clamping region defined by the (111)-crystal planes 
+  c.) Numerically calculated axial stress on the beam surface for the first and second flexural vibration modes 
+
+Figure 2:	Pressure-deflection characteristics of a piezoelectrically driven silicon diaphragm pressure sensor
+
+Figure 3:	Pressure-frequency characteristics of a piezoelectrically driven silicon diaphragm pressure sensor
+
+Table 2:	Comparison of numerically calculated and measured sensor specifications
+
+
+References
+
+[Bou91] :	S. Bouwstra, B. Geijselaers, On the resonance frequencies of microbridges, Proc. TRANSDUCERS (1991) 538-542
+
+[Fab92] :	Th. Fabula, A. Schroth, Simulation des dynamischen Verhaltens mikromechanischer Membranen, VDI-Fachtagung 
+für Geräte- und Mikrosystemtechnik, TU Chemnitz (1992), VDI-Bericht 960, VDI-Verlag Düsseldorf (1992)
+
+[Fab93] :	Th. Fabula, H.-J. Wagner, B. Schmidt, S. Büttgenbach, Triple beam resonant silicon force sensor based on piezoelectric 
+thin films, EUROSENSORS VII, Budapest (1993)
+
+[Koh92] :	P. Kohnke, ed., ANSYS User's Manual for Revision 5.0, Volume IV, Theory, Houston, PA, USA (1992)
+
+[LB82] :	Landolt-Börnstein, Zahlenwerte und Funktionen aus Naturwissenschaft und Technik, Gruppe III, Band 17a, Berlin, Springer Verlag (1982)
+
+[SASI] :	ANSYS is developed and distributed from Swanson Analysis Systems, Inc., Houston, PA, USA
+
+[Wea90] :	W. Weaver, S.P. Timoshenko, D.H. Young, Vibration Problems in Engineering, 5th edition, John Wiley & Sons (1990)
+
