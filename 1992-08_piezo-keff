@@ -1,0 +1,76 @@
+1.)Ermittlung der FE-Modelleinflüsse auf die Resonanzfrequenzen fs, fp und den effektiven Kopplungsfaktor keff: 
+
+FE-Modelle mit unterschiedlichen Parameter:
+	- Anzahl Elemente/Knoten
+	- Anzahl: dynamische Hauptfreiheitsgrade (MDOFS)
+	- Randeinspannung: 
+		a.) untere Knotenlage der Si-Membran
+		b.) gesamte Si-Membran
+		c.) Si-Membran und Piezoschicht
+
+Tabelle 1: 3D-Plattenmodell: ZNO-PL.F18
+Tabelle 2: 3D-Modell mit (111)-Einspannung: MEMBI-K2.F18
+Balkendiagramm 3: Übersicht Resonanzfrequenzen, Kopplungsfaktoren
+	
+	Ergebnis:
+Platten-Modell (Nr. 5) mit 800 Elementen und lediglich 100 MDOFs liefert bereits aus¬reichen-de Genauigkeit. Frequenzen nehmen mit steigender Anzahl der Elemente wie erwartet ab, 
+jedoch bleibt der Wert für keff in etwa gleich.
+	Abm: 9,2 x 9,2 mm2, tSi = tZnO = 20 um :  keff = 0,20 
+	(Vergleich: alte FE-Berechnung lieferte keff = 0,25)
+
+2.)Abhängigkeit des effektiven Kopplungsfaktors keff vom Schichtdickenverhältnis: 
+
+FE-Modell: ZNO-PL.F18 
+	(3D-Plattenmodell, 800 Elemente, 2 Elementlagen, 100 MDOFs)
+	- unterschiedliche Si-Membrandicken: 20, 50 um
+	- Randeinspannung: gesamte Si-Membran eingespannt, Piezoschicht frei
+	(siehe entsprechende Grafikabbildungen)
+
+Ergebnis:
+tSi = 20 um : optimale ZnO-Schichtdicke tZnO =  9 um :  keff = 0,22 
+tSi = 50 um : optimale ZnO-Schichtdicke tZnO = 23 um :  keff = 0,22 
+
+
+3.)Berechnung der Resonanzfrequenzen: Vergleich von FE-Modellierung mit analytischen Rechnungen:
+
+a.)	FE-Modell: ZNO-PL.F18 
+		(3D-Plattenmodell, 800 Elemente, 2 Elementlagen, 100 MDOFs)
+		- unterschiedliche Si-Membrandicken: 20, 50 um
+		- Randeinspannung: gesamte Si-Membran eingespannt, Piezoschicht frei
+
+b.) analytische Berechnungen für eine Bimorph-Struktur:
+		Variation der Materialdaten und der Wichtung:
+		Landolt-Börnstein: E = 1,273 * 1011 Pa, Poisson = 0,4367 (Bulk-Material)
+		Messungen an Dünnschicht: Ered = 1,53 * 1011 Pa
+		-Frequenz f1: gewichtete Mittelung der einzelnen Materialparameter E-Modul, Poisson-Zahl und Dichte und anschließende Bildung vom reduzierten E-Modul
+		-Frequenz f2: Berechnung der einzelnen reduzierten E-Module und anschließende Wichtung über die Schichtdicken
+		-Frequenz f3: Berechnung wie bei f2 aber mit Materialdaten für ZnO- Dünnschicht ca. 2,5 um dick (s.o.)
+ 		(siehe entsprechende Grafikabbildungen)
+
+Ergebnis:
+Unterschiedliche Mittelungen der Materialdaten und Verwendung von Dünn¬schicht¬material-daten hat kaum einen Einfluß auf die Resonanzfrequenz. 
+Abweichung von fs zu fi (i = 1,2,3) erst ab Schichtdicken größer der Substratdicke, d.h. tSi / tZnO größer als 1. Dieses liegt aber an dem 
+zunehmenden Einfluß der Wichtung über die Schichtdicken und an der falschen, der analytischen Rechnung zugrundeliegenden Randbedingung 
+(Si-Membran und ZnO-Schicht eingespannt).
+
+4.) Vergleich der Materialien AlN, ZnO und PZT: Abhängigkeit des effektiven Kopplungsfaktors keff vom Schichtdickenverhältnis: 
+
+FE-Modell: ZNO-PL.F18 (Parameter: s.o.)
+	- unterschiedliche Si-Membrandicken: 20, 50 um
+	- Materialdaten für Bulk: Landolt-Börnstein (siehe FASENS-Bericht)
+	(siehe entsprechende Grafikabbildungen)
+
+Ergebnis:	...
+
+5.)Messung der statischen Auslenkung einer Si/ZnO-Membran in Abhängigkeit der angelegten elektrischen Spannung:
+	- Membran: M6 - 2/2
+	- Messung der Amplituden mit dem UBM-Gerät
+	- Ansteuerspannung: U = 0 - 70 V (DC)
+	- Strombegrenzung: max. 30 uA (typisch: einige uA - 10 uA) 
+	- Meßzeit pro Meßpunkt: ca. 5 sec
+	- insgesamt 4 Meßreihen aufgenommen, ca. 2 min Pause zwischendurch
+	- Ergebnis: Relaxation der Membranhübe (von 0,8 auf 0,4 um) um etwa Faktor 2
+
+
+Th.Fabula
+HSG-IMIT 08/1992
