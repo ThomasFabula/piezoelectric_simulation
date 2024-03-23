@@ -1,4 +1,4 @@
-1.)Ermittlung der FE-Modelleinflüsse auf die Resonanzfrequenzen fs, fp und den effektiven Kopplungsfaktor keff: 
+1.) Ermittlung der FE-Modelleinflüsse auf die Resonanzfrequenzen fs, fp und den effektiven Kopplungsfaktor keff: 
 
 FE-Modelle mit unterschiedlichen Parameter:
 	- Anzahl Elemente/Knoten
@@ -12,7 +12,7 @@ Tabelle 1: 3D-Plattenmodell: ZNO-PL.F18
 Tabelle 2: 3D-Modell mit (111)-Einspannung: MEMBI-K2.F18
 Balkendiagramm 3: Übersicht Resonanzfrequenzen, Kopplungsfaktoren
 	
-	Ergebnis:
+Ergebnis:
 Platten-Modell (Nr. 5) mit 800 Elementen und lediglich 100 MDOFs liefert bereits aus¬reichen-de Genauigkeit. Frequenzen nehmen mit steigender Anzahl der Elemente wie erwartet ab, 
 jedoch bleibt der Wert für keff in etwa gleich.
 	Abm: 9,2 x 9,2 mm2, tSi = tZnO = 20 um :  keff = 0,20 
