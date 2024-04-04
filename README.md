@@ -3,7 +3,7 @@
 ## Multiphysics FEM-simulation 
 - with ANSYS(R) FEM-program for UNIX and PC workstations
 - MEMS-sensors based on silicon with piezoelectric thin-film layers
-- and etched quartz crystals.
+- and etched quartz crystals (DETF).
 
 ## FEM - Finite Element Method
 
@@ -27,4 +27,7 @@
 - https://tfconsult.com/berechnung-von-quarz-kraftsensoren/
 - https://tfconsult.com/piezoelectric-micro-actuators/
 - https://tfconsult.com/tag/piezo/
+- https://tfconsult.com/tag/quarz/
+- https://tfconsult.com/tag/zno/
+  
 
