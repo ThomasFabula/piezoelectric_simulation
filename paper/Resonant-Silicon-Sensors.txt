@@ -1,5 +1,5 @@
 Entwurf der Veröffentlichung (DRAFT)
-Titel:   Resonant Silicon Force and Pressure Sensors ...
+Titel: Resonant Silicon Force and Pressure Sensors ...
 Autoren: Fabula, Flik, Funk, Lärmer
 
 Finite Element Modeling 
