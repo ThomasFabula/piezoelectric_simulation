@@ -1,6 +1,6 @@
 program PIEZOMOD;
 
-{ rechnet piezoelektrische Koeffizienten in Moduln um:  d_ij ---> e_ij
+{ TurboPascal-Programm: rechnet piezoelektrische Koeffizienten in Moduln um:  d_ij ---> e_ij
 
   Voraussetzung: hexagonale Kristallsymmetrie (6mm)
                  d.h.: ZnO, AlN, PZT
@@ -13,7 +13,7 @@ program PIEZOMOD;
    e_31, e_33, e_15 : piezoelektrische Module
 }
 
-const  eps0=8.85542e-12;   {Dielektrizit‰stkonstante}
+const  eps0=8.85542e-12;   {Dielektrizit√§stkonstante}
 
 var d31,d33,d15,e31,e33,e15    : real;
     c11,c12,c13,c33,c44,s11    : real;
