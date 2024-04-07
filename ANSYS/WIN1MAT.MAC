@@ -1,0 +1,88 @@
+/com   MACRO: win1mat.mac
+
+/com         
+
+/com   ALPX in Abh. der Temperatur fuer 4 Multilayer
+
+/com   Darstellung von 4 rechteckig
+
+/com   angeordneten Fenstern
+
+/com   8 Farben
+
+/com
+
+/titel, Waermeausdehnkoeff.: Si3N4, SiO2, Si(110), PYREX
+
+/wind,1,-1,0,0,1
+
+/wind,2,0,1,0,1
+
+/wind,3,-1,0,-1,0
+
+/wind,4,0,1,-1,0
+
+/view,1,,,1
+
+/view,2,,,1
+
+/view,3,,,1
+
+/view,4,,,1
+
+/erase
+
+/com  1.Lastfall in Window 1
+
+/wind,1,on
+
+/wind,2,off
+
+/wind,3,off
+
+/wind,4,off
+
+mpplo,alpx,1
+
+/noerase
+
+/com  2.Lastfall in Window 2
+
+/wind,1,off
+
+/wind,2,on
+
+/wind,3,off
+
+/wind,4,off
+
+mpplo,alpx,2
+
+/com  3.Lastfall in Window 3
+
+/wind,1,off
+
+/wind,2,off
+
+/wind,3,on
+
+/wind,4,off
+
+mpplo,alpx,3
+
+/com  4.Lastfall in Window 4
+
+/wind,1,off
+
+/wind,2,off
+
+/wind,3,off
+
+/wind,4,on
+
+mpplo,alpx,4
+
+/erase
+
+
+
