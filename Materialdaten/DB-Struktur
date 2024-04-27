@@ -1,0 +1,61 @@
+Datenbankstruktur: Materialdaten
+Einheiten: SI-System
+
+1.) Allgemeine Angaben:
+- Bezeichnung:			Silizium
+- Synonym:			(Produkt-, Handelsname)
+- Formelzeichen:		Si
+- Kristallart:			kristallin / nicht kr. / Poly / amorph
+- Kristallklasse:		
+  a.) Schönflies-Bezeichnung    C6V
+	b.) Anzahl Symmetriebenen:	6 Stück
+	c.) Kristallsystem: 		Hexagonal
+- Typ:				Leiter / Halbleiter / Isolator
+- piezoresistiv:		ja / nein
+- piezoelektrisch:		ja / nein
+- optisch aktiv:		ja / nein
+- magnetoresistiv:		ja / nein
+- magnetorestriktiv:	ja / nein
+
+2.) Mechanische Eigenschaften:	(Bezugstemperatur: T = 25°C)
+- Elastizitätsmodul:	in [N/m2]		(isotroper E-Modul)
+- Elast.koeff.: 		in [N/m2]		(anisotrop: 21)
+- Poissonzahl:			dimlos		(Querkontraktion: 3)
+- Schermodul:			in [N/m2]
+- Torsionsmodul:		in [N/m2]
+- Dichte:				in [kg/m3]
+- Härte:				in [Knoop, Mohs]
+- Bruchspannung:		in [N/m2]		(orthotrop: 3)
+
+
+3.) Thermische Eigenschaften:		(Bezugsdruck: p = 1 atm)
+- therm. Leitfähigkeit:	in [W/cm K]
+- spezifische Wärme:	in [J/kg K]
+- therm. Ausdehnung:	in [1/K]
+- Schmelzpunkt:		in [K]
+- Siedepunkt:			in [K]
+- TK Leitfähigkeit:
+- TK Widerstand:		in [ppm/K]
+- TK E-Modul:
+
+4.) Elektro-Magnetische Eigenschaften:	(Bezugstemp.: T = 25°C)
+- Widerstand:					in [Ohm cm]
+- Dielektrizitätskonstanten:		dimlos
+- Permittivität:
+- Piezoresistive Koeffizienten:	dimlos
+- piezoelektrische Konstanten: 	in [C/N]	(Bezugsfrequenz)
+- piezoelektrische Moduln: 		
+- elektromechanische Kopplungsfaktor:
+- magnetische Suszeptibilität:
+- Pyroelektrischer Effekt:
+- Elektrostriktion:
+- Magnetostriktion
+
+
+5.) Optische Eigenschaften:
+- Elektrooptischer Effekt (1. Ordn. Pockels)
+
+	
+
+Th.Fabula
+07/1990
