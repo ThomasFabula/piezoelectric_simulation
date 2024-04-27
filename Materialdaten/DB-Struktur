@@ -15,35 +15,35 @@ Einheiten: SI-System
 - piezoelektrisch:		ja / nein
 - optisch aktiv:		ja / nein
 - magnetoresistiv:		ja / nein
-- magnetorestriktiv:	ja / nein
+- magnetorestriktiv:		ja / nein
 
 2.) Mechanische Eigenschaften:	(Bezugstemperatur: T = 25°C)
-- Elastizitätsmodul:	in [N/m2]		(isotroper E-Modul)
+- Elastizitätsmodul:		in [N/m2]		(isotroper E-Modul)
 - Elast.koeff.: 		in [N/m2]		(anisotrop: 21)
 - Poissonzahl:			dimlos		(Querkontraktion: 3)
 - Schermodul:			in [N/m2]
 - Torsionsmodul:		in [N/m2]
-- Dichte:				in [kg/m3]
-- Härte:				in [Knoop, Mohs]
+- Dichte:			in [kg/m3]
+- Härte:			in [Knoop, Mohs]
 - Bruchspannung:		in [N/m2]		(orthotrop: 3)
 
 
 3.) Thermische Eigenschaften:		(Bezugsdruck: p = 1 atm)
-- therm. Leitfähigkeit:	in [W/cm K]
-- spezifische Wärme:	in [J/kg K]
-- therm. Ausdehnung:	in [1/K]
-- Schmelzpunkt:		in [K]
+- therm. Leitfähigkeit:		in [W/cm K]
+- spezifische Wärme:		in [J/kg K]
+- therm. Ausdehnung:		in [1/K]
+- Schmelzpunkt:			in [K]
 - Siedepunkt:			in [K]
 - TK Leitfähigkeit:
 - TK Widerstand:		in [ppm/K]
 - TK E-Modul:
 
 4.) Elektro-Magnetische Eigenschaften:	(Bezugstemp.: T = 25°C)
-- Widerstand:					in [Ohm cm]
+- Widerstand:				in [Ohm cm]
 - Dielektrizitätskonstanten:		dimlos
 - Permittivität:
-- Piezoresistive Koeffizienten:	dimlos
-- piezoelektrische Konstanten: 	in [C/N]	(Bezugsfrequenz)
+- Piezoresistive Koeffizienten:		dimlos
+- piezoelektrische Konstanten: 		in [C/N]	(Bezugsfrequenz)
 - piezoelektrische Moduln: 		
 - elektromechanische Kopplungsfaktor:
 - magnetische Suszeptibilität:
