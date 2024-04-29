@@ -7,7 +7,7 @@ Einheiten: SI-System
 - Formelzeichen:		Si
 - Kristallart:			kristallin / nicht kr. / Poly / amorph
 - Kristallklasse:		
-  a.) Schönflies-Bezeichnung    C6V
+  	a.) Schönflies-Bezeichnung    	C6V
 	b.) Anzahl Symmetriebenen:	6 Stück
 	c.) Kristallsystem: 		Hexagonal
 - Typ:				Leiter / Halbleiter / Isolator
@@ -18,14 +18,14 @@ Einheiten: SI-System
 - magnetorestriktiv:		ja / nein
 
 2.) Mechanische Eigenschaften:	(Bezugstemperatur: T = 25°C)
-- Elastizitätsmodul:		in [N/m2]		(isotroper E-Modul)
-- Elast.koeff.: 		in [N/m2]		(anisotrop: 21)
+- Elastizitätsmodul:		in [N/m2]	(isotroper E-Modul)
+- Elast.koeff.: 		in [N/m2]	(anisotrop: 21)
 - Poissonzahl:			dimlos		(Querkontraktion: 3)
 - Schermodul:			in [N/m2]
 - Torsionsmodul:		in [N/m2]
 - Dichte:			in [kg/m3]
 - Härte:			in [Knoop, Mohs]
-- Bruchspannung:		in [N/m2]		(orthotrop: 3)
+- Bruchspannung:		in [N/m2]	(orthotrop: 3)
 
 
 3.) Thermische Eigenschaften:		(Bezugsdruck: p = 1 atm)
@@ -43,7 +43,7 @@ Einheiten: SI-System
 - Dielektrizitätskonstanten:		dimlos
 - Permittivität:
 - Piezoresistive Koeffizienten:		dimlos
-- piezoelektrische Konstanten: 		in [C/N]	(Bezugsfrequenz)
+- piezoelektrische Konstanten: 		in [C/N] (Bezugsfrequenz)
 - piezoelektrische Moduln: 		
 - elektromechanische Kopplungsfaktor:
 - magnetische Suszeptibilität:
