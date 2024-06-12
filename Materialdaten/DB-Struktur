@@ -28,7 +28,7 @@ Einheiten: SI-System
 - Bruchspannung:		in [N/m2]	(orthotrop: 3)
 
 
-3.) Thermische Eigenschaften:		(Bezugsdruck: p = 1 atm)
+3.) Thermische Eigenschaften:	(Bezugsdruck: p = 1 atm)
 - therm. Leitfähigkeit:		in [W/cm K]
 - spezifische Wärme:		in [J/kg K]
 - therm. Ausdehnung:		in [1/K]
