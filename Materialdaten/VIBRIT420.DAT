@@ -2,22 +2,23 @@
 /COM	Datei : VIBRIT420.DAT
 /COM
 /COM	SIEMENS Piezokeramik PZT, VIBRIT 420
-/COM	Datenblatt VIBRIT ®, Piezoelectric Ceramics from Siemens,
+/COM	Datenblatt VIBRIT®, Piezoelectric Ceramics from Siemens
 /COM	Data Sheet, Edition 1981 
 /COM
 
-/prep7			*ANSYS PRE-Prozessor
+/prep7			        * ANSYS PRE-Prozessor
 
 /COM
 /COM   Materialdaten
 /COM
-et,1,5             	* Piezoelement 
+et,1,5             	* Piezoelement STIF5
 nlsize,300
 dens,3,7594.3      	* Dichte: kg/m3
 
 /COM
 /COM     CE-Matrix: Elastizitaets-Matrix
 /COM
+
 nl,3,271,109e9,61.8e9,54.8e9
 nl,3,277,109e9,54.8e9
 nl,3,282,88.7e9
