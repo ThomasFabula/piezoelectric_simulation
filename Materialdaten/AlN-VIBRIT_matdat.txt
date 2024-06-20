@@ -2,7 +2,6 @@ ANHANG: Materialdaten (FASENS-Zwischenbericht Nr. 6, Zeitraum: 01.01.-30.06.1992
 	
 Bei den analytischen und numerischen Berechnungen wurden folgende Materialdaten verwendet.
 
-
 Aluminiumnitrid:  
 (aus Franz,J., Fortschrittberichte VDI, Reihe 10, Nr.87, 1988
 https://katalog.slub-dresden.de/id/0-016158210)
