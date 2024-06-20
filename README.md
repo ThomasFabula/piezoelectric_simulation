@@ -20,6 +20,7 @@
 - Double-Ended-Tuning-Fork (DETF)
 
 ## Further information
+- https://katalog.slub-dresden.de/id/0-016158210
 - https://tfconsult.com/piezoelectrical-driven-force-sensor/
 - https://tfconsult.com/entwurf-und-auslegung-mikromechanischer-strukturen/
 - https://tfconsult.com/microsystems-modeling/
