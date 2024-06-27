@@ -15,7 +15,7 @@
 - triple-beam force sensors based on silicon / ZnO thin films   
 
 ### Quartz
-- HF-etched quartz crystals
+- HF-etched quartz crystals with Au electrodes
 - use of different quartz cuts 
 - Double-Ended-Tuning-Fork (DETF)
 
