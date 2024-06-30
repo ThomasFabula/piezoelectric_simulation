@@ -18,7 +18,7 @@ jedoch bleibt der Wert für keff in etwa gleich.
 	Abm: 9,2 x 9,2 mm2, tSi = tZnO = 20 um :  keff = 0,20 
 	(Vergleich: alte FE-Berechnung lieferte keff = 0,25)
 
-2.)Abhängigkeit des effektiven Kopplungsfaktors keff vom Schichtdickenverhältnis: 
+2.) Abhängigkeit des effektiven Kopplungsfaktors keff vom Schichtdickenverhältnis: 
 
 FE-Modell: ZNO-PL.F18 
 	(3D-Plattenmodell, 800 Elemente, 2 Elementlagen, 100 MDOFs)
@@ -31,7 +31,7 @@ tSi = 20 um : optimale ZnO-Schichtdicke tZnO =  9 um :  keff = 0,22
 tSi = 50 um : optimale ZnO-Schichtdicke tZnO = 23 um :  keff = 0,22 
 
 
-3.)Berechnung der Resonanzfrequenzen: Vergleich von FE-Modellierung mit analytischen Rechnungen:
+3.) Berechnung der Resonanzfrequenzen: Vergleich von FE-Modellierung mit analytischen Rechnungen:
 
 a.)	FE-Modell: ZNO-PL.F18 
 		(3D-Plattenmodell, 800 Elemente, 2 Elementlagen, 100 MDOFs)
@@ -48,7 +48,7 @@ b.) analytische Berechnungen für eine Bimorph-Struktur:
  		(siehe entsprechende Grafikabbildungen)
 
 Ergebnis:
-Unterschiedliche Mittelungen der Materialdaten und Verwendung von Dünn¬schicht¬material-daten hat kaum einen Einfluß auf die Resonanzfrequenz. 
+Unterschiedliche Mittelungen der Materialdaten und Verwendung von Dünnschichtmaterialdaten hat kaum einen Einfluß auf die Resonanzfrequenz. 
 Abweichung von fs zu fi (i = 1,2,3) erst ab Schichtdicken größer der Substratdicke, d.h. tSi / tZnO größer als 1. Dieses liegt aber an dem 
 zunehmenden Einfluß der Wichtung über die Schichtdicken und an der falschen, der analytischen Rechnung zugrundeliegenden Randbedingung 
 (Si-Membran und ZnO-Schicht eingespannt).
@@ -62,7 +62,7 @@ FE-Modell: ZNO-PL.F18 (Parameter: s.o.)
 
 Ergebnis:	...
 
-5.)Messung der statischen Auslenkung einer Si/ZnO-Membran in Abhängigkeit der angelegten elektrischen Spannung:
+5.) Messung der statischen Auslenkung einer Si/ZnO-Membran in Abhängigkeit der angelegten elektrischen Spannung:
 	- Membran: M6 - 2/2
 	- Messung der Amplituden mit dem UBM-Gerät
 	- Ansteuerspannung: U = 0 - 70 V (DC)
