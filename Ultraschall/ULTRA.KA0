@@ -1,6 +1,7 @@
 /COM  Datei:  ULTRA.KAN0
 
 /COM  ANSYS-Analyseoption: statisch
+/COM  ANSYS Version 4.4A1
 
 einh=1e-9
 span=100*einh    ! Anregungsspannung in Volt
