@@ -20,14 +20,17 @@
 - Double-Ended-Tuning-Fork (DETF)
 
 ## Further information
+### German
 - https://katalog.slub-dresden.de/id/0-016158210
-- https://tfconsult.com/piezoelectrical-driven-force-sensor/
 - https://tfconsult.com/entwurf-und-auslegung-mikromechanischer-strukturen/
 - https://tfconsult.com/fe-modellierung-resonanter-sensoren/
-- https://tfconsult.com/microsystems-modeling/
 - https://tfconsult.com/berechnung-von-quarz-kraftsensoren/
-- https://tfconsult.com/piezoelectric-micro-actuators/
 - https://tfconsult.com/tag/piezo/
 - https://tfconsult.com/tag/quarz/
 - https://tfconsult.com/tag/zno/
   
+### English
+- https://tfconsult.com/piezoelectrical-driven-force-sensor/
+- https://tfconsult.com/fe-modeling-of-resonant-sensors/
+- https://tfconsult.com/microsystems-modeling/
+- https://tfconsult.com/piezoelectric-micro-actuators/
