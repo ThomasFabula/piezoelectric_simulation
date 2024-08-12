@@ -1,9 +1,9 @@
 # piezoelectric_simulation
 
 ## Multiphysics FEM-simulation 
-- with ANSYS(R) FEM-program for UNIX and PC workstations
+- with ANSYS(R) FEM-program for UNIX (DEC-Ultrix, HP-UX) and PC (MS-DOS) workstations
 - MEMS-sensors based on silicon with piezoelectric thin-film layers
-- and etched quartz crystals (DETF).
+- and etched quartz crystals (DETF: Double-Ended Tuning Fork)
 
 ## FEM - Finite Element Method
 
@@ -11,7 +11,7 @@
 - piezoelectric simulation of MEMS sensors & actuators
 - silicon resonators & actuators (beams, diaphragms, cantilever, etc.) 
 - with ZnO & AlN piezoelectric thin-film layers for excitation & detection
-- hybrid bimorph Si bimorph-structures with PZT ceramics (PoC) 
+- hybrid bimorph Si bimorph-structures with PZT ceramics (PoC), Siemens VIBRIT420 
 - triple-beam force sensors based on silicon / ZnO thin films   
 
 ### Quartz
@@ -31,4 +31,3 @@
 - https://tfconsult.com/tag/quarz/
 - https://tfconsult.com/tag/zno/
   
-
