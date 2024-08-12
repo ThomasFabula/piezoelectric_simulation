@@ -20,6 +20,7 @@
 - Double-Ended-Tuning-Fork (DETF)
 
 ## Further information
+
 ### Deutsch
 - https://katalog.slub-dresden.de/id/0-016158210
 - https://tfconsult.com/entwurf-und-auslegung-mikromechanischer-strukturen/
@@ -27,6 +28,7 @@
 - https://tfconsult.com/berechnung-von-quarz-kraftsensoren/
 - https://tfconsult.com/piezoelectric-micro-actuators/
 
+### TAG archives
 - https://tfconsult.com/tag/piezo/
 - https://tfconsult.com/tag/quarz/
 - https://tfconsult.com/tag/zno/
