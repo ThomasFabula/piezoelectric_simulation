@@ -4,6 +4,7 @@
 - with ANSYS(R) FEM-program for UNIX (DEC-Ultrix, HP-UX) and PC (MS-DOS) workstations
 - MEMS-sensors based on silicon with piezoelectric thin-film layers
 - and etched quartz crystals (DETF: Double-Ended Tuning Fork)
+- bimorh structures (silicon & PZT ceramic)
 
 ## FEM - Finite Element Method
 
@@ -11,13 +12,19 @@
 - piezoelectric simulation of MEMS sensors & actuators
 - silicon resonators & actuators (beams, diaphragms, cantilever, etc.) 
 - with ZnO & AlN piezoelectric thin-film layers for excitation & detection
-- hybrid bimorph Si bimorph-structures with PZT ceramics (PoC), Siemens VIBRIT420 
+- hybrid bimorph Si bimorph-structures with PZT ceramics (PoC)
 - triple-beam force sensors based on silicon / ZnO thin films   
 
 ### Quartz
 - HF-etched quartz crystals with Au electrodes
 - use of different quartz cuts 
 - Double-Ended-Tuning-Fork (DETF)
+
+### PZT ceramics 
+lead zirconium titanate, commonly abbreviated as PZT:
+- PZT, or lead zirconate titanate (Pb[Zr(x)Ti(1-x)]O3), is one of the world’s most widely used piezoelectric ceramic materials.
+- here: Siemens VIBRIT420 (Data sheet 1981)
+- https://en.wikipedia.org/wiki/Lead_zirconate_titanate
 
 ## Further information
 
@@ -32,6 +39,7 @@
 - https://tfconsult.com/tag/piezo/
 - https://tfconsult.com/tag/quarz/
 - https://tfconsult.com/tag/zno/
+- https://tfconsult.com/tag/pzt/
   
 ### English
 - https://tfconsult.com/piezoelectrical-driven-force-sensor/
