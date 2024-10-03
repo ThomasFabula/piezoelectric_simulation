@@ -1,7 +1,13 @@
 # piezoelectric_simulation
 
 ## Multiphysics FEM-simulation 
-- with ANSYS(R) FEM-program for UNIX (DEC-Ultrix, HP-UX) and PC (MS-DOS) workstations
+
+### Hardware
+- with ANSYS(R) FEM-program for
+- UNIX (DEC-Ultrix, HP-UX) and
+- PC (MS-DOS) workstations
+
+### MEMS Micro-sensors
 - MEMS-sensors based on silicon with piezoelectric thin-film layers
 - and etched quartz crystals (DETF: Double-Ended Tuning Fork)
 - bimorh structures (silicon & PZT ceramic)
@@ -37,15 +43,15 @@ lead zirconium titanate, commonly abbreviated as PZT:
 - https://tfconsult.com/berechnung-von-quarz-kraftsensoren/
 - https://tfconsult.com/piezoelectric-micro-actuators/
 
+### English
+- https://tfconsult.com/piezoelectrical-driven-force-sensor/
+- https://tfconsult.com/fe-modeling-of-resonant-sensors/
+- https://tfconsult.com/microsystems-modeling/
+
 ### TAG archives
 - https://tfconsult.com/tag/piezo/
 - https://tfconsult.com/tag/quarz/
 - https://tfconsult.com/tag/zno/
 - https://tfconsult.com/tag/pzt/
-  
-### English
-- https://tfconsult.com/piezoelectrical-driven-force-sensor/
-- https://tfconsult.com/fe-modeling-of-resonant-sensors/
-- https://tfconsult.com/microsystems-modeling/
 
 ... to be continued !
