@@ -23,7 +23,9 @@
 ### PZT ceramics 
 lead zirconium titanate, commonly abbreviated as PZT:
 - PZT (Pb[Zr(x)Ti(1-x)]O3), one of the world’s most widely used piezoelectric ceramic materials
-- here: Siemens VIBRIT420 (Data sheet 1981)
+- here: Siemens VIBRIT420 (Data sheet 1981), SIEMENS Piezokeramik PZT
+- Datenblatt VIBRIT®, Piezoelectric Ceramics from Siemens
+- VIBRIT - Piezoceramics from Siemens, Ord.-No.: N-281/5035-101
 - https://en.wikipedia.org/wiki/Lead_zirconate_titanate
 
 ## Further information
