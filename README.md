@@ -2,10 +2,10 @@
 
 ## Multiphysics FEM-simulation 
 
-### Hardware
+### Hardware & Software 
 - with ANSYS(R) FEM-program for
-- UNIX (DEC-Ultrix, HP-UX) and
-- PC (MS-DOS) workstations
+- UNIX (DEC-Ultrix, HP-UX) workstations
+- and PC-486 (MS-DOS) personal computers 
 
 ### MEMS Micro-sensors
 - MEMS-sensors based on silicon with piezoelectric thin-film layers
