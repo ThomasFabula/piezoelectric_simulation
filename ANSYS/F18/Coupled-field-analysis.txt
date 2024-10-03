@@ -312,7 +312,7 @@ nl,3,211,6.7e9
 
 /COM  Datei: ZNO.DAT
 
-/COM  Materialdaten von Zinkoxyd (ZnO)
+/COM  Materialdaten von Zinkoxyd (ZnO-Bulkmaterial)
 /COM  Quelle: Landolt-Boernstein
 /COM  Referenztemperatur: 25 Celsius
 
@@ -382,7 +382,7 @@ gyz,5, 44.00e+09
 /com    MATERIAL 2:    SiO2     -  Siliziumoxid
 /com    MATERIAL 3:    Si       -  Silizium
 /com    MATERIAL 4:    PYREX    -  PYREX-Borsilikatglas
-/com    MATERIAL 5:    ZnO      -  Zinkoxid
+/com    MATERIAL 5:    ZnO      -  Zinkoxid, Bulkmaterial
 
 /com    Bezugstemperatur: T=25 C
 
@@ -437,7 +437,7 @@ MPDATA,ALPX,2,7,a7,a8,a9,a10,a11
 
 /com  --------------------------------------------------------
 /COM  Materialwerte Si<100> in (110-Richtung) (MATERIAL 3)
-/com  Daten aus DA Hiltmann S.46
+/com  Daten aus Diplomarbeit Kai Hiltmann S.46
 SIEM=1.689e5       ! mittlerer E-Modul    [N/mm2]
 SIPO=0.0624        ! mittlere Poissonzahl
 SIRO=2.329E-9      ! Materialdichte       [kg/mm3]
