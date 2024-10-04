@@ -8,9 +8,9 @@
 - and PC-486 (MS-DOS) personal computers 
 
 ### MEMS Micro-sensors
-- MEMS-sensors based on silicon with piezoelectric thin-film layers
+- MEMS-sensors based on silicon resonators with piezoelectric thin-film layers (AlN, ZnO)
 - and etched quartz crystals (DETF: Double-Ended Tuning Fork)
-- bimorh structures (silicon & PZT ceramic)
+- bimorph structures (silicon & PZT ceramic)
 
 ## FEM - Finite Element Method
 
