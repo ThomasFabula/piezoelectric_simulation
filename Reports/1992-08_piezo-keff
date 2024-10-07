@@ -40,11 +40,11 @@ a.)	FE-Modell: ZNO-PL.F18
 
 b.) analytische Berechnungen für eine Bimorph-Struktur:
 		Variation der Materialdaten und der Wichtung:
-		Landolt-Börnstein: E = 1,273 * 1011 Pa, Poisson = 0,4367 (Bulk-Material)
-		Messungen an Dünnschicht: Ered = 1,53 * 1011 Pa
+		Landolt-Börnstein: E = 1,273 * 10e11 Pa, Poisson = 0,4367 (Bulk-Material)
+		Messungen an Dünnschicht: Ered = 1,53 * 10e11 Pa
 		-Frequenz f1: gewichtete Mittelung der einzelnen Materialparameter E-Modul, Poisson-Zahl und Dichte und anschließende Bildung vom reduzierten E-Modul
 		-Frequenz f2: Berechnung der einzelnen reduzierten E-Module und anschließende Wichtung über die Schichtdicken
-		-Frequenz f3: Berechnung wie bei f2 aber mit Materialdaten für ZnO- Dünnschicht ca. 2,5 um dick (s.o.)
+		-Frequenz f3: Berechnung wie bei f2 aber mit Materialdaten für ZnO-Dünnschicht ca. 2,5 um dick (s.o.)
  		(siehe entsprechende Grafikabbildungen)
 
 Ergebnis:
