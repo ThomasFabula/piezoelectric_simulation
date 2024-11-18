@@ -3,7 +3,7 @@
 ## Multiphysics FEM-simulation 
 
 ### Hardware & Software 
-- with ANSYS(R) FEM-program for
+- with ANSYS(R) FEM-program 
 - UNIX (DEC-Ultrix, HP-UX) workstations
 - and PC-486 (MS-DOS) personal computers 
 
