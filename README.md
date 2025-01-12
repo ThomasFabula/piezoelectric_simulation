@@ -10,7 +10,7 @@
 ### MEMS Micro-sensors
 - MEMS-sensors based on silicon resonators with piezoelectric thin-film layers (AlN, ZnO)
 - and etched quartz crystals (DETF: Double-Ended Tuning Fork)
-- bimorph structures (silicon & PZT ceramic)
+- bimorph structures (silicon & PZT ceramics)
 
 ## FEM - Finite Element Method
 
