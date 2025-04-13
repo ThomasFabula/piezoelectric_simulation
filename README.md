@@ -1,9 +1,9 @@
 # piezoelectric_simulation
 
-## Multiphysics FEM-simulation 
+## Multiphysics Finite-Element-Method (FEM) Simulation 
 
 ### Hardware & Software 
-- with ANSYS(R) FEM-program 
+- with ANSYS(R) FEM-program (FEA) 
 - UNIX (DEC-Ultrix, HP-UX) workstations
 - and PC-486 (MS-DOS) personal computers 
 
