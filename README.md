@@ -4,7 +4,7 @@
 
 ### Hardware & Software 
 - with ANSYS(R) FEM-program (FEA) 
-- UNIX (DEC-Ultrix, HP-UX) workstations
+- UNIX workstations: DECstation-Ultrix, HP-UX
 - and PC-486 (MS-DOS) personal computers 
 
 ### MEMS Micro-sensors
@@ -22,7 +22,7 @@
 - triple-beam force sensors based on silicon / ZnO thin films   
 
 ### Quartz
-- HF-etched quartz crystals with Au electrodes
+- HF-etched quartz crystals with Au (gold) electrodes
 - use of different quartz cuts (AT, etc.)
 - Double-Ended-Tuning-Fork (DETF)
 
