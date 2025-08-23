@@ -54,4 +54,9 @@ lead zirconium titanate, commonly abbreviated as PZT:
 - https://tfconsult.com/tag/quarz/
 - https://tfconsult.com/tag/zno/
 
+## Reviews
+- https://tfconsult.com/research-development-of-microsensors/
+- https://tfconsult.com/30y-anniversary-mems-semiconductors/
+- https://tfconsult.com/resonant-microsensors/
+
 ... to be continued !
