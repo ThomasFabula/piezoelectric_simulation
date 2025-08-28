@@ -4,7 +4,7 @@
 
 ### Hardware & Software 
 - with ANSYS(R) FEM-program (FEA) 
-- UNIX workstations: DECstation-Ultrix, HP7x0 HP-UX
+- UNIX workstations: DECstation-Ultrix, HP9000/7x0 HP-UX
 - and PC-486 (MS-DOS) personal computers 
 
 ### MEMS Micro-sensors
