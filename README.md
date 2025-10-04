@@ -3,7 +3,7 @@
 ## Multiphysics Finite-Element-Method (FEM) Simulation 
 
 ### Hardware & Software 
-- with ANSYS(R) FEM-program (FEA) 
+- with ANSYS(R) FEM-program (FEA: finite element analysis) 
 - UNIX workstations: DECstation3100 - Ultrix, HP9000/7x0 - HP-UX
 - and PC-486 (MS-DOS) personal computers 
 
