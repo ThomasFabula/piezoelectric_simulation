@@ -4,27 +4,27 @@
 
 ### Hardware & Software 
 - with ANSYS(R) FEM-program (FEA: finite element analysis) 
-- UNIX workstations: DECstation3100 - Ultrix, HP9000/7x0 - HP-UX
+- UNIX workstations: Digital DECstation3100 - Ultrix, Hewlett-PAckard HP9000/7x0 - HP-UX
 - and PC-486 (MS-DOS) personal computers 
 
 ### MEMS Micro-sensors
 - MEMS-sensors based on silicon resonators with piezoelectric thin-film layers (AlN, ZnO)
-- and etched quartz crystals (DETF: Double-Ended Tuning Fork)
-- bimorph structures (silicon & PZT ceramics)
+- and etched quartz crystals (e.g. DETF: Double-Ended Tuning Fork)
+- bimorph structures (i.e. silicon & PZT ceramics)
 
 ## FEM - Finite Element Method
 
 ### Silicon
 - piezoelectric simulation of MEMS sensors & actuators
-- silicon resonators & actuators (beams, diaphragms, cantilever, etc.) 
+- silicon resonators & actuators (single beams, diaphragms, cantilever, etc.) 
 - with ZnO & AlN piezoelectric thin-film layers for excitation & detection
-- hybrid bimorph Si bimorph-structures with PZT ceramics (PoC)
-- triple-beam force sensors based on silicon / ZnO thin films   
+- hybrid silicon bimorph-structures with PZT ceramics (PoC)
+- triple-beam force sensors based on silicon & piezo-electric ZnO thin films   
 
 ### Quartz
 - HF-etched quartz crystals with Au (gold) electrodes
 - use of different quartz cuts (AT, etc.)
-- Double-Ended-Tuning-Fork (DETF)
+- Double-Ended-Tuning-Fork (= DETF)
 
 ### PZT ceramics 
 lead zirconium titanate, commonly abbreviated as PZT:
