@@ -7,7 +7,7 @@
 - UNIX workstations: Digital DECstation3100 - Ultrix, Hewlett-Packard HP9000/7x0 - HP-UX
 - and PC-486 (MS-DOS) personal computers 
 
-### MEMS Micro-sensors
+### MEMS sensors
 - MEMS-sensors based on silicon resonators with piezoelectric thin-film layers (AlN, ZnO)
 - and etched quartz crystals (e.g. DETF: Double-Ended Tuning Fork)
 - bimorph structures (i.e. silicon & PZT ceramics)
