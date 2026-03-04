@@ -4,7 +4,7 @@
 
 ### Hardware & Software 
 - with ANSYS(R) FEM-program (FEA: finite element analysis) 
-- UNIX workstations: Digital DECstation3100 - Ultrix, Hewlett-PAckard HP9000/7x0 - HP-UX
+- UNIX workstations: Digital DECstation3100 - Ultrix, Hewlett-Packard HP9000/7x0 - HP-UX
 - and PC-486 (MS-DOS) personal computers 
 
 ### MEMS Micro-sensors
