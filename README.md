@@ -9,7 +9,7 @@
 
 ### MEMS sensors
 - MEMS-sensors based on silicon resonators with piezoelectric thin-film layers (AlN, ZnO)
-- and etched quartz crystals (e.g. DETF: Double-Ended Tuning Fork)
+- etched quartz crystals (e.g. DETF: Double-Ended Tuning Fork)
 - bimorph structures (i.e. silicon & PZT ceramics)
 
 ## FEM - Finite Element Method
