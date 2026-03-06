@@ -23,7 +23,7 @@
 
 ### Quartz
 - HF-etched quartz crystals with Au (gold) electrodes
-- use of different quartz cuts (AT, etc.)
+- use of different quartz cuts (e.g. AT, etc.)
 - Double-Ended-Tuning-Fork (= DETF)
 
 ### PZT ceramics 
