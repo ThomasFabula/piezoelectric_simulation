@@ -79,6 +79,7 @@ mapdl.mplist(MAT_ID)
 Key Modernization Changes
 -------------------------
 Old APDL                    Modern PyMAPDL                    Benefit
+------------------------------------------------------------------------------------
 tb,anel + manual tbdata      tb("ANEL") + clear matrix         Cleaner & safer
 ecc=1e9 scaling              Direct physical units (C/m²)      No artificial scaling
 mp,perx etc.                 Same, but clearer                 Better readability
