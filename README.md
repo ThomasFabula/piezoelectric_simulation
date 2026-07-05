@@ -1,6 +1,6 @@
 # piezoelectric_simulation
 
-## Multiphysics: couple-field analysis Finite-Element-Method (FEM) Simulation 
+## Multiphysics: coupled-field analysis Finite-Element-Method (FEM) Simulation 
 
 ### Hardware & Software 
 - with ANSYS(R) FEM-program (FEA: finite element analysis) 
