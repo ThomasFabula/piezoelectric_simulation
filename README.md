@@ -1,5 +1,30 @@
 # piezoelectric_simulation
 
+## Summary
+Summary of my  historical work on multiphysics FEM simulations of piezoelectric MEMS sensors and resonators using ANSYS. This GitHub repo archives pioneering 
+coupled-field piezoelectric simulations from the era of UNIX workstations (DECstation 3100/Ultrix, HP 9000/730/HP-UX) and early PCs, focusing on silicon-based
+resonators with thin-film piezo layers, quartz DETFs, and hybrid PZT bimorphs.
+
+## Key Topics
+- Silicon Resonators & Actuators: Single beams, cantilevers, diaphragms, triple-beam force sensors with ZnO or AlN thin films for excitation/sensing. Hybrid silicon-PZT bimorphs (proof-of-concept).
+- Quartz Structures: HF-etched crystals with Au electrodes, various cuts (e.g., AT-cut), especially Double-Ended Tuning Fork (DETF) resonators.
+- PZT Ceramics: Siemens VIBRIT 420 (from 1981 datasheet, Redwitz plant) — a classic lead zirconate titanate (Pb[Zr(x)Ti(1-x)]O₃) material widely used for its strong piezoelectric properties. 
+- Multiphysics Approach: Coupled structural-electric (piezoelectric) analysis in ANSYS, handling direct and inverse piezoelectric effects, modal/resonant behavior, etc.
+
+## Modern Context & Relevance
+This early simulations align with today's Thin-film Piezoelectric-on-Silicon (TPoS) resonators and AlN/ZnO-based MEMS, which are used in high-Q sensors, RF filters,
+and timing devices. Techniques have advanced with better meshing, PMLs for anchor loss, and handling of TED (thermoelastic damping) and electrode losses. DETF structures remain popular for resonant sensors (force, acceleration, temperature) due to high sensitivity via frequency shift.
+
+## Modern literatrure
+Thin-Film Piezoelectric-On-Silicon Resonators: A Comprehensive Review
+- https://advanced.onlinelibrary.wiley.com/doi/10.1002/admt.202501772
+- https://www.mdpi.com/1424-8220/20/17/4978
+
+## Resources from tfconsult.com 
+My website provides deeper dives (in German/English) on FE modeling of resonant sensors, quartz force sensors, piezoelectric micro-actuators, and microsystems 
+modeling. Publications and reviews document triple-beam resonant silicon force sensors with piezoelectric thin films and broader MEMS R&D.
+
+
 ## Multiphysics: coupled-field analysis Finite-Element-Method (FEM) Simulation 
 
 ### Hardware & Software 
