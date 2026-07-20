@@ -20,7 +20,7 @@ Thin-Film Piezoelectric-On-Silicon Resonators: A Comprehensive Review
 - https://advanced.onlinelibrary.wiley.com/doi/10.1002/admt.202501772
 - https://www.mdpi.com/1424-8220/20/17/4978
 
-## Resources from tfconsult.com 
+## Resources from TFConsult.com 
 My website provides deeper dives (in German/English) on FE modeling of resonant sensors, quartz force sensors, piezoelectric micro-actuators, and microsystems 
 modeling. Publications and reviews document triple-beam resonant silicon force sensors with piezoelectric thin films and broader MEMS R&D.
 
