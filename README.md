@@ -3,7 +3,7 @@
 ## Summary
 Summary of my  historical work on multiphysics FEM simulations of piezoelectric MEMS sensors and resonators using ANSYS. This GitHub repo archives pioneering 
 coupled-field piezoelectric simulations from the era of UNIX workstations (DECstation 3100/Ultrix, HP 9000/730/HP-UX) and early PCs (386/486 & Coprocessor x87) , 
-focusing on silicon-based resonators with thin-film piezo layers, quartz DETFs, and hybrid PZT bimorphs.
+focusing on silicon-based resonators with thin-film piezo (AlN, ZnO) layers, quartz DETFs, and hybrid PZT bimorphs.
 
 ## Key Topics
 - Silicon Resonators & Actuators: Single beams, cantilevers, diaphragms, triple-beam force sensors with ZnO or AlN thin films for excitation/sensing. Hybrid silicon-PZT bimorphs (proof-of-concept).
