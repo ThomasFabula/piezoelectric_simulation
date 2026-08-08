@@ -90,4 +90,4 @@ lead zirconium titanate, commonly abbreviated as PZT:
 ## Publications
 - https://tfconsult.com/publications/
 
-... to be continued 
+=> to be continued 
