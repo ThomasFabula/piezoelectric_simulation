@@ -2,13 +2,13 @@
 
 ## Summary
 Summary of my  historical work on multiphysics FEM simulations of piezoelectric MEMS sensors and resonators using ANSYS. This GitHub repo archives pioneering 
-coupled-field piezoelectric simulations from the era of UNIX workstations (DECstation 3100/Ultrix, HP 9000/730/HP-UX) and early PCs (386/486 & Coprocessor x87) , 
+coupled-field piezoelectric simulations from the era of UNIX workstations (DECstation 3100 - Ultrix, HP 9000/730 - HP-UX) and early PCs (386/486 & Coprocessor x87 - MS-DOS), 
 focusing on silicon-based resonators with thin-film piezo (AlN, ZnO) layers, quartz DETFs, and hybrid PZT bimorphs.
 
 ## Key Topics
 - Silicon Resonators & Actuators: Single beams, cantilevers, diaphragms, triple-beam force sensors with ZnO or AlN thin films for excitation/sensing. Hybrid silicon-PZT bimorphs (proof-of-concept).
 - Quartz Structures: HF-etched crystals with Au electrodes, various cuts (e.g., AT-cut), especially Double-Ended Tuning Fork (DETF) resonators.
-- PZT Ceramics: Siemens VIBRIT 420 (from 1981 datasheet, Redwitz plant) — a classic lead zirconate titanate (Pb[Zr(x)Ti(1-x)]O₃) material widely used for its strong piezoelectric properties. 
+- PZT Ceramics: Siemens VIBRIT 420 (from 1981 datasheet, Redwitz plant) - a classic lead zirconate titanate (Pb[Zr(x)Ti(1-x)]O₃) material widely used for its strong piezoelectric properties. 
 - Multiphysics Approach: Coupled structural-electric (piezoelectric) analysis in ANSYS, handling direct and inverse piezoelectric effects, modal/resonant behavior, etc.
 
 ## Modern Context & Relevance
@@ -35,7 +35,7 @@ modeling. Publications and reviews document triple-beam resonant silicon force s
 ### MEMS sensors
 - MEMS-sensors based on silicon resonators with piezoelectric thin-film layers (AlN, ZnO)
 - etched quartz crystals (e.g. DETF: Double-Ended Tuning Fork)
-- bimorph structures (i.e. silicon & PZT ceramics)
+- bimorph structures, i.e. silicon & PZT ceramics as PoC (proof-of-concept)
 
 ## FEM - Finite Element Method
 
@@ -44,7 +44,7 @@ modeling. Publications and reviews document triple-beam resonant silicon force s
 - silicon resonators & actuators (single beams, diaphragms, cantilever, etc.) 
 - with ZnO & AlN piezoelectric thin-film layers for excitation & detection
 - hybrid silicon bimorph-structures with PZT ceramics (PoC)
-- triple-beam force sensors based on silicon & piezo-electric ZnO thin films   
+- triple-beam force sensors based on silicon & sputtered piezo-electric ZnO thin films   
 
 ### Quartz
 - HF-etched quartz crystals with Au (gold) electrodes
