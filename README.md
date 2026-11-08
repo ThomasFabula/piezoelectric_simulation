@@ -1,9 +1,7 @@
 # piezoelectric_simulation
 
 ## Summary
-Summary of my  historical work on multiphysics FEM simulations of piezoelectric MEMS sensors and resonators using ANSYS. This GitHub repo archives pioneering 
-coupled-field piezoelectric simulations from the era of UNIX workstations (DECstation 3100 - Ultrix, HP 9000/730 - HP-UX) and early PCs (386/486 & Coprocessor x87 - MS-DOS), 
-focusing on silicon-based resonators with thin-film piezo (AlN, ZnO) layers, quartz DETFs, and hybrid PZT bimorphs.
+Historical archive of pioneering multiphysics FEM simulations of piezoelectric MEMS sensors and resonators performed with ANSYS. The models cover silicon-based resonators and actuators with thin-film piezoelectric layers (AlN, ZnO), HF-etched quartz Double-Ended Tuning Fork (DETF) structures, and hybrid silicon–PZT bimorphs. All simulations were carried out in the early 1990s on UNIX workstations (DECstation 3100 under Ultrix and HP 9000/730 under HP-UX) as well as on early PCs (386/486 systems with x87 coprocessors running MS-DOS).
 
 ## Key Topics
 - Silicon Resonators & Actuators: Single beams, cantilevers, diaphragms, triple-beam force sensors with ZnO or AlN thin films for excitation/sensing. Hybrid silicon-PZT bimorphs (proof-of-concept).
